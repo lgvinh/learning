@@ -1,0 +1,37 @@
+.life-banner{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  max-height: 250px;
+  overflow: hidden;
+  img {
+    width: 100%;
+    filter: brightness(0.7);
+  }
+  h1 {
+    position: absolute;
+    color: white;
+    font-size: 30px;
+    font-weight: bold;
+    letter-spacing: 10px;
+  }
+}
+
+.life-main-content {
+  background-image: radial-gradient(#18171875, #000000), url("../img/fixed-img.png");
+  padding-bottom: 102px;
+  padding-top: 72px;
+  display: flex;
+  align-items: center;
+  flex-flow: column;
+  p {
+    text-align: center;
+    color: white;
+    font-size: 14px;
+    letter-spacing: 2.8px;
+    line-height: 2.643;
+  }
+  img {
+    margin-top: 88px;
+  }
+}

@@ -1,0 +1,52 @@
+{
+   "name": "new-typeorm-project",
+   "version": "0.0.1",
+   "description": "Awesome project developed with TypeORM.",
+   "dependencies": {
+      "@babel/cli": "^7.10.5",
+      "@babel/plugin-proposal-decorators": "^7.10.5",
+      "ajv": "^6.12.4",
+      "babel-eslint": "^10.1.0",
+      "bcrypt": "^5.0.0",
+      "class-transformer": "^0.3.1",
+      "class-validator": "^0.12.2",
+      "cors": "^2.8.5",
+      "dotenv": "^8.2.0",
+      "eslint": "^7.7.0",
+      "eslint-config-airbnb": "^18.2.0",
+      "eslint-plugin-import": "^2.22.0",
+      "express": "^4.17.1",
+      "jsonwebtoken": "^8.5.1",
+      "method-override": "^3.0.0",
+      "pg": "^8.3.2",
+      "reflect-metadata": "^0.1.10",
+      "rimraf": "^3.0.2",
+      "routing-controllers": "^0.9.0-alpha.6",
+      "typedi": "^0.8.0",
+      "typeorm": "0.2.25",
+      "typeorm-typedi-extensions": "^0.2.3"
+   },
+   "devDependencies": {
+      "@babel/core": "^7.11.4",
+      "@babel/preset-typescript": "^7.10.4",
+      "@types/bcrypt": "^3.0.0",
+      "@types/express": "^4.17.7",
+      "@types/node": "^8.0.29",
+      "@typescript-eslint/parser": "^4.1.0",
+      "babel-loader": "^8.1.0",
+      "babel-node": "0.0.1-security",
+      "nodemon": "^2.0.4",
+      "ts-node": "3.3.0",
+      "typescript": "^4.0.2"
+   },
+   "scripts": {
+      "start": "node ./dist",
+      "dev": "nodemon ./src/index.ts --exec \"npm run eslint && ts-node\"",
+      "eslint": "eslint ./**/*.ts",
+      "build": "npm run clean && tsc --build",
+      "migration:generate": "npm run build && typeorm migration:generate -f ./dist/infrastructure/Config/index.js -n InitMigration",
+      "migration:run": "npm run build && typeorm migration:run --config ./dist/infrastructure/config/index.js",
+      "migration:revert": "npm run build && typeorm migration:revert --config ./dist/infrastructure/config/index.js",
+      "clean": "node ./node_modules/rimraf/bin.js ./dist"
+   }
+}

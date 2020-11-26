@@ -1,0 +1,13 @@
+type: object
+properties:
+  body:
+    type: string
+  statusCode:
+    type: number
+  headers:
+    type: object
+    properties:
+      Access-Control-Allow-Origin:
+        type: string
+      Access-Control-Allow-Credentials:
+        type: boolean

@@ -1,0 +1,40 @@
+{
+	"env": {
+		"browser": true,
+		"es6": true,
+		"node": true
+	},
+	"globals": {
+		"Atomics": "readonly",
+		"SharedArrayBuffer": "readonly"
+	},
+	"parserOptions": {
+		"ecmaVersion": 2018,
+		"sourceType": "module"
+	},
+	"rules": {
+		"semi": ["error", "always"],
+		"no-extra-semi": "error",
+		"no-empty": "error",
+		"eqeqeq": 0,
+		"no-empty-function": "error",
+		"init-declarations": "error",
+		"no-useless-return": "error",
+		"no-const-assign": "error",
+		"arrow-spacing": "error",
+		"no-unused-vars": 0,
+		"no-undef": 0,
+		"no-useless-escape": 0
+	},
+	"parser": "@typescript-eslint/parser",
+	"extends": [
+		"eslint:recommended"
+	],
+  "settings": {
+    "import/resolver": {
+      "node": {
+        "extensions": [".js", ".jsx", ".ts", ".tsx"]
+      }
+    }
+  }
+}

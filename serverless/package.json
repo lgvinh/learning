@@ -1,0 +1,27 @@
+{
+  "name": "test-DAL",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "@kaercher/commonlambdahelper": "2.1.1"
+  },
+  "optionalDependencies": {
+    "aws-sdk": "^2.771.0"
+  },
+  "devDependencies": {
+    "serverless-offline": "^6.8.0",
+    "dotenv": "^8.2.0",
+    "eslint": "^7.11.0",
+    "eslint-config-airbnb": "^18.2.0",
+    "eslint-plugin-import": "^2.22.1",
+    "jest": "^26.5.3",
+    "@types/jest": "^26.0.14"
+  }
+}

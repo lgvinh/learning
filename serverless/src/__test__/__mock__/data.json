@@ -1,0 +1,8 @@
+[{
+	"language": "de",
+	"message": "Bitte prüfen Sie die Internetverbindung Ihres Gateways.",
+	"title": "Ihr Gateway ist offline",
+	"messageId": "bridgeOffline",
+	"push": true,
+	"type": "warning"
+}]

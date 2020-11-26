@@ -1,0 +1,18 @@
+type: object
+properties:
+  details:
+    type: object
+    properties:
+      code:
+        type: number
+        format: int
+        description: Error code
+        enum: [26001, 26999]
+      actor:
+        type: string
+      message:
+        type: string
+      exceptionType:
+        type: string
+      stackTrace:
+        type: string

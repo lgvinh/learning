@@ -1,0 +1,356 @@
+swagger: '2.0'
+info:
+  version: 1.0.2
+  title: Controls API
+  description: The service is responsible for sending commands to things. This includes setting things in pairing and firmware update mode.
+  contact:
+    name: Rainer Lutsch
+    email: rainer.lutsch@zoi.de
+host: api.ENV.kaercher.com
+basePath: /capi
+paths:
+  '/things/{thingId}/control':
+    put:
+      schemes:
+        - https
+      description: Send Command to thing
+      parameters:
+        - name: thingId
+          in: path
+          description: ID of thing
+          required: true
+          type: string
+        - name: controlOption
+          in: body
+          description: '`controlOption` object'
+          required: true
+          schema:
+            title: controlOption
+            type: object
+            properties:
+              command:
+                type: string
+              commandData:
+                $ref: '#/definitions/controlData'
+      responses:
+        '200':
+          description: Sent command successfully
+        '400':
+          description: Command Data not Valid
+        '401':
+          description: ThingId is missing
+        '403':
+          description: Unauthorized
+        '404':
+          description: Command could not be sent
+      tags:
+        - Command
+  '/things/{thingId}/pairing/{installCode}':
+    get:
+      schemes:
+        - https
+      description: Get status of pairing
+      parameters:
+        - name: thingId
+          in: path
+          description: ID of bridge
+          required: true
+          type: string
+        - name: installCode
+          in: path
+          description: installCode of pairing
+          required: true
+          type: string
+      responses:
+        '200':
+          description: Returns state of pairing
+          schema:
+            title: Pairing state
+            type: object
+            properties:
+              state:
+                type: string
+                enum:
+                  - sent
+                  - accepted
+                  - rejected
+                  - offline
+                  - succeeded
+                  - failed
+              thingId:
+                type: string
+                example: aaaa-bbbb-cccc-dddd:VD1:123456789 //Only valid for succeeded state
+        '400':
+          description: Bad Request
+        '403':
+          description: Forbidden
+        '404':
+          description: Not Found
+        '500':
+          description: Internal Server Error
+      tags:
+        - Pairing
+  '/things/{thingId}/pairing':
+    put:
+      schemes:
+        - https
+      description: Starts pairing mode on bridge to be able to pair indirect devices
+      parameters:
+        - name: thingId
+          in: path
+          description: ID of bridge (direct device)
+          required: true
+          type: string
+        - name: installCode
+          in: body
+          description: Install code of the indirect device that should be paired
+          required: true
+          schema:
+            title: installCode
+            type: object
+            properties:
+              installCode:
+                type: string
+      responses:
+        '200':
+          description: Successfully sent command to trigger start of pairing mode on bridge
+        '400':
+          description: Bad Request
+        '403':
+          description: Forbidden
+        '404':
+          description: Not Found
+        '500':
+          description: Internal Server Error
+          schema:
+            $ref: '#/definitions/ErrorResponse'
+      tags:
+        - Pairing
+  '/things/{thingId}/fota':
+    get:
+      schemes:
+        - https
+      description: Gets the Firmware Update Status of a Thing
+      parameters:
+        - in: header
+          name: Authorization
+          required: true
+          type: string
+          description: Bearer JWT
+        - in: header
+          name: x-api-version
+          type: string
+          description: Define api-version (default is 1)
+        - name: thingId
+          in: path
+          description: ThingId
+          required: true
+          type: string
+      responses:
+        '200':
+          description: ''
+          schema:
+            title: FirmwareResponse
+            type: array
+            items:
+              type: object
+              properties:
+                thingId:
+                  type: string
+                bridgeId:
+                  type: string
+                deviceType:
+                  type: string
+                firmwareType:
+                  type: string
+                firmwareVersion:
+                  type: string
+                step:
+                  type: string
+                transferProgress:
+                  type: number
+        '400':
+          description: Bad Request
+        '401':
+          description: Unauthorized
+        '404':
+          description: Thing with given thingId not found
+        '500':
+          description: Internal Server Error
+      tags:
+        - Fota
+    put:
+      schemes:
+        - https
+      description: Send Command for firmware update
+      parameters:
+        - in: header
+          name: Authorization
+          required: true
+          type: string
+          description: Bearer JWT
+        - in: header
+          name: x-api-version
+          type: string
+          description: Define api-version (default is 1)
+        - name: thingId
+          in: path
+          description: ThingId
+          required: true
+          type: string
+        - name: firmwareType
+          in: body
+          description: FirmwareType which should be updated
+          required: true
+          schema:
+            title: firmwareType
+            type: object
+            properties:
+              firmwareType:
+                type: string
+                enum:
+                  - zigBee
+                  - application
+                  - kernel
+      responses:
+        '200':
+          description: Update sent
+        '400':
+          description: Bad Request
+        '401':
+          description: Unauthorized
+        '404':
+          description: Thing with given thingId not found
+        '409':
+          description: FW Update already exists
+        '503':
+          description: Internal Server Error
+      tags:
+        - Fota
+  '/things/{thingId}/pause':
+    parameters:
+      - in: header
+        name: Authorization
+        required: true
+        type: string
+        description: Bearer JWT
+      - in: header
+        name: x-api-version
+        type: string
+        description: Define api-version (default is 1)
+      - name: thingId
+        in: path
+        description: ThingId
+        required: true
+        type: string
+    get:
+      description: Get all pauses for a thing
+      responses:
+        '200':
+          description: Array will be empty if no pause exists for given thingId
+          schema:
+            title: Thing
+            type: array
+            items:
+              type: object
+              properties:
+                thingId:
+                  type: string
+                command:
+                  type: string
+                timeToLive:
+                  type: number
+        '400':
+          description: Bad request
+        '401':
+          description: Unauthorized
+        '403':
+          description: Forbidden
+        '500':
+          description: Internal Server Error
+      tags:
+        - Pause
+    post:
+      description: Post a pause for a command
+      parameters:
+        - name: body
+          in: body
+          description: body (the "command" property is only required for a VD1 device type!)
+          required: true
+          schema:
+            title: body
+            type: object
+            properties:
+              command:
+                type: string
+              durationInSeconds:
+                type: number
+      responses:
+        '200':
+          description: Pause created
+        '400':
+          description: Bad request
+        '401':
+          description: Unauthorized
+        '403':
+          description: Forbidden
+        '500':
+          description: Internal Server Error
+      tags:
+        - Pause
+    delete:
+      description: Delete all pauses for a given thing
+      responses:
+        '200':
+          description: Successfully deleted all pauses for given thingId
+          schema:
+            title: Thing
+            type: object
+            properties:
+              thingId:
+                type: string
+              command:
+                type: string
+              durationInSeconds:
+                type: number
+        '400':
+          description: Bad request
+        '401':
+          description: Unauthorized
+        '403':
+          description: Forbidden
+        '500':
+          description: Internal Server Error
+      tags:
+        - Pause
+definitions:
+  controlData:
+    type: object
+    properties:
+      duration:
+        type: integer
+      valve:
+        type: integer
+  ErrorResponse:
+    type: object
+    properties:
+      code:
+        type: number
+        format: int
+        description: Error code
+        enum: [12000,12003,12004,12005,12006,12007,12008,12009,12010,12011,12099]
+        example: 12003
+      details:
+        type: object
+        properties:
+          actor:
+            type: string
+            example: Bearer JWT validation
+          message:
+            type: string
+            example: Missing Bearer JWT in Header
+          exceptionType:
+            type: string
+            example: 	MissingParameter
+          stackTrace:
+            type: string

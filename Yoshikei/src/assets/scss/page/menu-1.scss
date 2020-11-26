@@ -1,0 +1,214 @@
+.menu-1-banner {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  max-height: 250px;
+  overflow: hidden;
+  img {
+    width: 100%;
+  }
+  h1 {
+    position: absolute;
+    color: white;
+    font-size: 30px;
+    font-weight: bold;
+    letter-spacing: 13px;
+    padding-left: 7px;
+    padding-bottom: 28px;
+    @media screen and (max-width: 768px) {
+      font-size: vwmath(30px, 768px)+1;
+    }
+  }
+}
+
+.menu-1-main-content {
+  background-image: radial-gradient(#18171875, #000000), url("../img/fixed-img.png");
+  padding-bottom: 71px;
+  padding-top: 73px;
+  .content {
+    max-width: 990px;
+    width: percentmath(990px, 1280px);
+    margin: auto;
+    color: white;
+    display: flex;
+    flex-flow: column;
+    justify-content: center;
+    > p {
+      font-size: 14px;
+      text-align: center;
+      line-height: 2.643;
+      letter-spacing: 2.8px;
+    }
+    > span {
+      font-size: 25px;
+      font-weight: bold;
+      margin-top: 34px;
+      text-align: center;
+      letter-spacing: 12.5px;
+    }
+    section {
+      margin-top: 132px;
+      color: white;
+      h2 {
+        font-size: 18px;
+        font-weight: bold;
+        letter-spacing: 9px;
+        margin-bottom: 28px;
+        text-align: center;
+      }
+    }
+    /* end of section */
+    @media screen and (max-width: 768px) {
+      > p {font-size: 12px;}
+      > span {font-size: 23px;}
+      section h2 {font-size: 16px;}
+      .link-btn a {font-size: 14px;}
+    }
+  }
+  /* end of content */
+
+
+  /* 
+    link btn modify
+  */
+  .link-btn {
+    background-color: white;
+    display: flex;
+    position: relative;
+    div {
+      width: percentmath(330px, 990px);
+      &:nth-child(n+2):before {
+        content: "";
+        display: inline-block;
+        height: 10px;
+        border-left: 1px solid rgb(227, 10, 28);
+        position: absolute;
+        top: 20px;
+        @media screen and (max-width: 768px) {
+          display: none;
+        }
+      }
+    }
+    a {
+      padding: 11px 10px;
+      width: 100%;
+      font-size: 16px;
+      font-weight: bold;
+      letter-spacing: 3.2px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      text-decoration: none;
+      color: rgb(227, 10, 28);
+      &:hover {
+        text-decoration: underline;
+      }
+      &:after {
+        content: "";
+        display: none;
+        border-top: 11px solid #e30a1c;
+        border-left: 11px solid transparent;
+        border-right: 11px solid transparent;
+        position: absolute;
+        top: 50%;
+        right: 10px;
+        @media screen and (max-width: 768px) {
+          display: inline-block;
+        }
+      }
+    }
+    @media screen and (max-width: 768px) {
+      display: block;
+      div {
+        width: 100%;
+        position: relative;
+        border: 2px solid rgb(227, 10, 28);
+      }
+      a {
+        display: flex;
+        justify-content: flex-start;
+        align-items: center;
+      }
+    }
+  }
+
+  /* end of link-btn */
+
+  /* 
+    info modify
+  */
+  .info {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    .box  {
+      width: percentmath(270px, 990px);
+      margin: percentmath(28px, 990px) 0px;
+      background-color: rgb(227, 10, 28);
+      overflow: hidden;
+      img {
+        max-width: inherit;
+      }
+      @media screen and (max-width: 768px) {
+        width: 45%;
+      }
+      @media screen and (max-width: 550px) {
+        width: 100%;
+        > img {
+          width: 100%;
+        }
+      }
+    }
+    /* end of .box */
+  }
+
+  .red-zone {
+    padding: 7px 30px 17px 25px;
+    .text {
+      p {
+        font-size: 16px;
+        font-weight: bold;
+        letter-spacing: 2.2px;
+        margin-bottom: 6px;
+        text-align: center;
+      }
+      span {
+        font-size: 14px;
+        font-weight: 500;
+        line-height: 1.607;
+      }
+    }
+    /* end of text */
+    .btn  {
+      width: 100%;
+      padding-top: 22px;
+      margin: auto;
+      display: flex;
+      flex-flow: column;
+      a {
+        width: percentmath(80px, 150px);
+        margin: 0 auto;
+        display: flex;
+        flex-flow: column;
+        align-items: center;
+        justify-content: center;
+        text-decoration: none;
+        color: white;
+      }
+      /* end of a in > div */
+      p {
+        margin-top: 6px;
+        letter-spacing: 1.8px;
+        font-size: 12px;
+      }
+    }
+    /* end of .btn */
+    @media screen and (max-width:768px) {
+      .btn p {font-size: 14px;}
+    }
+  }
+  
+  /* end of info */
+
+
+}

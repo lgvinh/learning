@@ -1,0 +1,77 @@
+.login,
+.register {
+  h3 {
+    display: block;
+    text-align: center;
+    font-size: 30px;
+    font-weight: 500;
+    background-color: #fafafa;
+    border: 1px solid #eaeaea;
+    line-height: 2;
+  }
+  .content {
+    display: flex;
+    padding: 50px;
+  }
+  .login-form {
+    width: 50%;
+    input {
+      display: block;
+    }
+    label {
+      display: block;
+      margin: 10px 0;
+      font-size: 20px;
+      font-weight: bold;
+    }
+    input[type=submit] {
+      margin-top: 15px;
+      border: 1px solid black;
+      background: none;
+      outline: none;
+      width: 30%;
+      background-color: black;
+      color: white;
+      font-size: 15px;
+      font-weight: 600;
+      line-height: 2.5;
+      transition: 0.3s ease-out;
+      &:hover {
+        background-color: white;
+        color: black;
+      }
+    }
+    input[type=text],
+    input[type=password] {
+      width: 60%;
+      line-height: 1.8;
+      padding-left: 15px;
+    }
+    p {
+      padding-top: 20px;
+      font-size: 16px;
+      a {
+        font-size: 16px;
+        color: red;
+      }
+    }
+  }
+  .convice {
+    width: 50%;
+    h4 {
+      font-size: 20px;
+    }
+    p {
+      padding-top: 20px;
+      font-size: 16px;
+      word-break: break-all;
+    }
+    p:nth-child(n+2) {
+      a {
+        font-size: 16px;
+        color: palevioletred;
+        text-decoration: underline;
+      }
+    }
+  }
+}

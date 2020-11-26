@@ -1,0 +1,16 @@
+type: object
+properties:
+  data:
+    type: array
+    items: 
+      type: object
+      properties:
+        "type":
+          type: string
+          example: "WeatherDataV2"
+        "locationId":
+          type: string
+          example: "WeatherDataV2Location"
+        "id":
+          type: string
+          example: "WeatherDataV2#1"

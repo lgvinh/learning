@@ -1,0 +1,95 @@
+footer {
+  background-color: #2d2d2d;
+}
+
+.main-footer {
+  display: flex;
+  justify-content: space-between;
+  max-width: 1200px;
+  width: 100%;
+  margin: 0 auto;
+  padding: 15px 10px;
+  overflow: hidden;
+  .footer-logo {
+    color: white;
+    max-width: 300px;
+    h4 {
+      margin: auto;
+    }
+    a {
+      display: block;
+      img {
+        width: 100%;
+        height: 70px;
+      }
+    }
+    p {text-align: justify; padding-top: 15px;}
+  }
+
+  /* start ul */
+  ul {
+    color: white;
+    font-size: 20px;
+    font-weight: bold;
+    list-style: none;
+  }
+  /* end ul */
+
+  /* start explore */
+  .explore {
+    a {
+      display: block;
+      color: white;
+      font-weight: normal;
+      padding: 5px 0;
+      font-size: 14px;
+      &:hover {
+        text-decoration: underline;
+      }
+    }
+    /* end a */
+  }
+  /* end explore */
+
+  /* start contact */
+  .contact {
+    li {
+      color: white;
+      font-weight: normal;
+      padding: 5px 0;
+      font-size: 14px;
+    }
+  }
+  /* end contact */
+  
+  /* feedback */
+  .feedback {
+    color: white;
+    font-size: 20px;
+    font-weight: bold;
+    input {
+      display: block;
+      color: white;
+      padding: 10px 15px;
+      margin-top: 10px;
+      background-color: #333;
+      outline: none;
+      border: none;
+    }
+    textarea {
+      position: relative;
+      color: white;
+      margin-top: 10px;
+      outline: none;
+      padding: 0 15px;
+      line-height: 1.5;
+      background-color: #333;
+      border: none;
+    }
+    .submit-btn {
+      width: 100%;
+      cursor: pointer;
+      background-color: #f6416c;
+    }
+  }
+}

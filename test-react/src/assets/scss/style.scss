@@ -1,0 +1,238 @@
+@import './src/header.scss';
+@import './src/index.scss';
+@import './lb/lb1.scss';
+@import './src/footer.scss';
+@import './src/single.scss';
+@import './src/login.scss';
+
+body {
+  margin: 0;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen",
+    "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue",
+    sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+* {
+  padding: 0;
+  margin: 0;
+  font-size: 15px;
+  /* google chrome old version */
+  -webkit-box-sizing: border-box;
+  /* firefox old version */
+     -moz-box-sizing: border-box;
+          box-sizing: border-box;
+  font-family: 'Roboto', sans-serif;
+}
+
+a {
+  text-decoration: none;
+  color: black;
+}
+
+img {
+  vertical-align: baseline;
+  max-width: 100%;
+}
+
+.titanic {
+  float: none;
+}
+
+
+.nav-bar {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  align-content: center;
+  max-width: 1200px;
+  width: 100%;
+  list-style: none;
+  margin: 0 auto;
+  padding: 15px 0;
+  > li {
+    position: relative;
+    /* padding: 10px 0; */
+    > a {
+      display: block;
+      font-weight: 500;
+      padding: 15px 30px;
+      position: relative;
+      &:after {
+        content: "";
+        width: 0;
+        transition: 0.3s;
+        position: absolute;
+        left: 10%;
+        bottom: 20%;
+        border-top: 3px solid black;
+      }
+      &:hover {
+        &:after {
+          width: 80%;
+        }
+      }
+    }
+    &:hover {
+      .sub-menu {
+        display: block;
+      }
+      //-------
+    }
+    //--------
+  }
+}
+
+.sub-menu {
+  display: none;
+  width: 150%;
+  list-style-type: none;
+  background-color: white;
+  border: 1px solid black;
+  z-index: 99;
+  position: absolute;
+  a {
+    padding: 8px 15px;
+    display: flex;
+    align-items: center;
+    &:before {
+      content: "";
+      width: 0px;
+      margin-right: 5px;
+      transition: 0.4s;
+      border-top: 1px solid black;
+    }
+    &:hover {
+      text-decoration: none;
+      &:before {
+        width: 15px;
+      }
+    }
+  }
+  /* end a */
+}
+
+.drop-down {
+  position: absolute;
+  right: 0;
+  bottom: 50%;
+  transform: translateY(50%);
+  border-top: 5px solid black;
+  border-right: 5px solid transparent;
+  border-left: 5px solid transparent;
+}
+
+.container {
+  max-width: 1240px;
+  width: 100%;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+.product {
+  width: 280px;
+  margin: 15px 10px;
+  text-decoration: none;
+  text-align: center;
+  position: relative;
+  .title {
+    margin: 10px 0;
+  }
+  &:hover {
+    .size {
+      display: block;
+    }
+    .fast-review {
+      display: block;
+    }
+    figure {
+      img {
+        background-color: #fff;
+        filter: opacity(0.5);
+      }
+    }
+  }
+  .product-title {
+    text-decoration: none;
+    font-size: 18px;
+    font-weight: 400;
+    margin: 10px 0;
+  }
+  > span {
+    font-size: 13px;
+    font-weight: bold;
+  }
+}
+
+.product-thumbnail {
+  width: 100%;
+  height: 280px;
+  position: relative;
+  margin: 0;
+  img {
+    transition: 0.7s;
+    max-height: 280px;
+  }
+  .size {
+    display: none;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    border: 2px solid black;
+    background-color: $background_color_1;
+    color: $color_3;
+    padding: 5px 20px;
+    transition: 0.4s;
+    &:hover {
+      background-color: $background_color_2;
+      color: $color_4;
+    }
+  }
+  .fast-review {
+    cursor: pointer;
+    position: absolute;
+    bottom: 0;
+    border: none;
+    outline: none;
+    background: none;
+    display: none;
+    width: 100%;
+    background-color: $background_color_3;
+    color: $color_4;
+    padding: 5px 0;
+    font-size: 16px;
+  }
+}
+
+.d-none {
+  display: none;
+}
+
+#dark-bg {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgb(0, 0, 0);
+  opacity: 0.4;
+  z-index: 9998;
+  transition: 0.5s all;
+  &.hide {
+    opacity: 0;
+    pointer-events: none;
+  }
+}
+
+@keyframes effectOne {
+  from {
+    top: -100%;
+    opacity: 0;
+  }
+  to {
+    top: 50%;
+    opacity: 1;
+  }
+}

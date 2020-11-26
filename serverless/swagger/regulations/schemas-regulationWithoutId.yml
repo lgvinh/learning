@@ -1,0 +1,25 @@
+type: object
+properties:
+  type:
+    type: string
+  country:
+    type: string
+  created:
+    type: number
+  links:
+    type: array
+    items:
+      type: object
+      properties:
+        lang:
+          type: string
+        uri:
+          type: string
+  name:
+    type: string
+  required:
+    type: boolean
+  version:
+    type: string
+required:
+  - type

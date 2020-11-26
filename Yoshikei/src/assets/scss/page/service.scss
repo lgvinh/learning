@@ -1,0 +1,188 @@
+.service-banner {
+  max-height: 250px;
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  img {
+    width: 100%;
+    filter: brightness(0.8);
+  }
+  h1 {
+    position: absolute;
+    color: white;
+    font-size: 30px;
+    font-weight: bold;
+    letter-spacing: 10px;
+  }
+}
+
+.service-main-content {
+  padding-top: 73px;
+  padding-bottom: 96px;
+  width: 100%;
+  background-image: radial-gradient(#18171875, #000000), url("../img/fixed-img.png");
+  .content {
+    width: percentmath(990px, 1280px);
+    max-width: 990px;
+    margin: auto;
+  }
+  /* end of content */
+  .content-1 {
+    color: white;
+    text-align: center;
+    h2 {
+      margin-bottom: 48px;
+      font-size: 25px;
+      font-weight: bold;
+      letter-spacing: 12.5px;
+    }
+    /* end of h2 */
+    p {
+      font-size: 14px;
+      line-height: 2.643;
+      letter-spacing: 2.8px;
+    }
+  }
+  /* end of content-1 */
+  .content-2 {
+    margin-top: 79px;
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-flow: column;
+  }
+  /* end of content-2 */
+
+
+  /* 
+    services modify
+  */
+  
+  .services  {
+    display: flex;
+    justify-content: space-around;
+    flex-flow: wrap;
+    padding-top: 23px;
+    article {
+      position: relative;
+      &:nth-of-type(2)::after,
+      &:nth-of-type(3)::after,
+      &:nth-of-type(5)::after,
+      &:nth-of-type(6)::after {
+        content: "";
+        display: inline-block;
+        border-left: 1px solid white;
+        height: 100%;
+        min-height: 200px;
+        position: absolute;
+        top: -4px;
+        left: - percentmath(1px, 330px);
+        @media screen and (max-width: 1000px) {
+          display: none;
+        }
+      }
+      &:nth-of-type(n+4) { 
+        margin-top: 102px;
+        @media screen and (max-width: 1000px) {
+          margin-top: 0;
+        }
+      }
+      &:nth-of-type(n+4)::before {
+        content: "";
+        display: block;
+        border-bottom: 1px solid white;
+        width: percentmath(270px, 300px);
+        max-width: 270px;
+        position: absolute;
+        /* top: -34px; */
+        top: - percentmath(34px, 200px);
+        @media screen and (max-width: 1000px) {
+          display: none;
+        }
+      }
+    }
+    article {
+      width: percentmath(330px, 990px); //250px
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      @media screen and (max-width: 1000px) {
+        width: 50%;
+        &:nth-of-type(n+3) {
+          margin-top: 102px;
+          &:before {
+            content: "";
+            display: block;
+            border-bottom: 1px solid white;
+            width: percentmath(270px, 300px);
+            max-width: 270px;
+            position: absolute;
+            top: - percentmath(34px, 200px);
+            @media screen and (max-width: 600px) {
+              display: none;
+            }
+          }
+        }
+        &:nth-of-type(even):after {
+          content: "";
+          display: inline-block;
+          border-left: 1px solid white;
+          height: 100%;
+          min-height: 200px;
+          position: absolute;
+          left: 0;
+          @media screen and (max-width: 600px) {
+            display: none;
+          }
+        }
+      }
+      @media screen and (max-width: 600px) {
+        width: 100%;
+        &:nth-of-type(n+2) {
+          margin-top: 70px;
+        }
+      }
+      h4 {
+        font-size: 16px;
+        font-weight: bold;
+        letter-spacing: 2.56px;
+        height: 50px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        text-align: center;
+      }
+      p {
+        width: percentmath(250px, 330px);
+        margin-top: 45px;
+        padding-left: 4px;
+        font-size: 14px;
+        line-height: 1.5;
+        letter-spacing: 1.8px;
+        position: relative;
+      }
+      &:nth-of-type(3),
+      &:nth-of-type(4),
+      &:nth-of-type(6) {
+        h4 {
+          line-height: 1.625;
+        }
+      }
+    }
+    p::before {
+      content: "";
+      display: block;
+      border-bottom: 2px solid rgb(227, 10, 28);
+      width: 26px;
+      position: absolute;
+      left: 50%;
+      top: -29px;
+      transform: translateX(-50%);
+    }
+  }
+  
+  /* end of services */
+  
+}

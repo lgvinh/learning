@@ -1,0 +1,21 @@
+type: object
+properties:
+  data:
+    type: array
+    items: 
+      type: object
+      properties:
+        "type":
+          type: string
+        "locationId":
+          type: string
+        "id":
+          type: string
+        ttl:
+          type: number
+        checkForecast:
+          type: boolean
+        lastForecastDate:
+          type: number
+        creationDate:
+          type: number

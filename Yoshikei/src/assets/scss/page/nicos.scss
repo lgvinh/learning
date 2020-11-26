@@ -1,0 +1,129 @@
+.nicos-banner {
+  max-height: 250px;
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  img {
+    width: 100%;
+  }
+  h1 {
+    position: absolute;
+    color: white;
+    font-size: 30px;
+    font-weight: bold;
+    letter-spacing: 5px;
+  }
+}
+
+.nicos-main-content {
+  padding-top: 69px;
+  padding-bottom: 99px;
+  background-image: radial-gradient(#18171875, #000000), url("../img/fixed-img.png");
+  .content {
+    width: percentmath(990px, 1280px);
+    max-width: 990px;
+    margin: auto;
+    color: white;
+  }
+  /* end of content */
+  .content-1 {
+    display: flex;
+    flex-flow: column;
+    align-items: center;
+    h2 {
+      font-size: 25px;
+      text-align: center;
+      letter-spacing: 8px;
+      line-height: 1.83;
+      margin-bottom: 35px;
+    }
+    img {
+      margin-bottom: 45px;
+    }
+    p {
+      font-size: 18px;
+      font-weight: bold;
+      letter-spacing: 2.6px;
+    }
+  }
+  /* end of content 1 */
+  .content-2 {
+    display: flex;
+    flex-flow: wrap;
+    justify-content: space-between;
+    padding-top: 42px;
+    article {
+      width: 47%;
+      margin-bottom: 45px;
+      @media screen and (max-width: 768px) {
+        width: 100%;
+      }
+      h3 {
+        font-size: 18px;
+        font-weight: bold;
+        letter-spacing: 3.6px;
+        line-height: 2.056;
+        display: flex;
+        justify-content: flex-start;
+        align-items: center;
+        img {
+          margin-right: 9px;
+        }
+      }
+      /* end of h3 */
+      p {
+        padding-top: 7px;
+        font-size: 14px;
+        letter-spacing: 1.8px;
+        line-height: 1.786;
+      }
+    }
+    /* end of article */
+  }
+  /* end of cotent 2 */
+  .content-3 {
+    margin-top: 33px;
+    display: flex;
+    flex-flow: column;
+    align-items: center;
+    > p {
+      font-size: 18px;
+      font-weight: bold;
+      letter-spacing: 2.6px;
+    }
+    .btn-link {
+      width: 100%;
+      margin-top: 17px;
+      background-color: rgb(227, 10, 28);
+      display: flex;
+      a {
+        color: white;
+        text-decoration: none;
+        font-size: 18px;
+        font-weight: bold;
+        letter-spacing: 2.6px;
+        width: 100%;
+        height: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        padding: 20px 0px;
+      }
+      /* end of a */
+    }
+    /* end of btn-link */
+    > span {
+      margin-top: 50px;
+      font-size: 16px;
+      font-weight: bold;
+      line-height: 1.812;
+      letter-spacing: 3.2px;
+      background-color: white;
+      color: rgb(227, 10, 28);
+      border: 1px solid rgb(227, 10, 28);
+      padding: 17px 21px;
+    }
+  }
+  /* end of content 3 */
+}

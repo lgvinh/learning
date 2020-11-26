@@ -1,0 +1,86 @@
+.deli-banner {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  max-height: 250px;
+  overflow: hidden;
+  img {
+    width: 100%;
+    filter: brightness(0.8);
+  }
+  h1 {
+    position: absolute;
+    color: white;
+    font-size: 30px;
+    font-weight: bold;
+    letter-spacing: 10px;
+    @media screen and (max-width: 768px) {
+      font-size: vwmath(30px, 768px)+1;
+    }
+  }
+}
+
+.deli-main-content {
+  padding-top: 71px;
+  padding-bottom: 100px;
+  background-image: radial-gradient(#18171875, #000000), url("../img/fixed-img.png");
+  .content {
+    width: percentmath(990px, 1280px);
+    margin: auto;
+    color: white;
+    display: flex;
+    flex-flow: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    h2 {
+      margin-bottom: 44px;
+      font-size: 25px;
+      font-weight: bold;
+      letter-spacing: 8px;
+    }
+    p {
+      margin-bottom: 45px;
+      letter-spacing: 2.8px;
+      a {
+        color: white;
+      }
+    }
+    @media screen and (max-width: 768px) {
+      h2 {font-size: vwmath(25px, 768px)+1;}
+      p {font-size: vwmath(14px, 768px)+1;}
+    }
+    .table-info {
+      width: 100%;
+      overflow-x: auto;
+    }
+    table {
+      margin: 0 auto;
+      width: 990px;
+      border-collapse: collapse;
+      tr {
+        background-color: white;
+        height: 40px;
+        &:nth-of-type(n+2) {
+          border-top: 2px solid black;
+        }
+      }
+      /* end tr */
+      td {
+        width: percentmath(99px, 990px);
+        padding: 1px 0px;
+        color: black;
+        text-align: center;
+        font-size: 16px;
+        font-weight: 500;
+        line-height: 2.313;
+        letter-spacing: 0.8px;
+        &:nth-of-type(n+2) {
+          border-left: 2px solid black;
+        }
+      }
+    }
+    /* end table */
+  }
+  /* end of content */
+}

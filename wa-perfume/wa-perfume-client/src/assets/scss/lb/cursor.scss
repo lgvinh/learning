@@ -1,0 +1,48 @@
+// .cursor {
+//   width: 30px;
+//   height: 30px;
+//   position: absolute;
+//   border-radius: 50%;
+//   border: 5px solid $main-color;
+//   transform: translate(-50%, -50%);
+//   transition: all .1s ease-out;
+//   transition-property: transform;
+//   animation: cursorAnimation .5s infinite alternate;
+//   z-index: 999999;
+//   pointer-events: none;
+//   backdrop-filter: blur();
+//   &::after {
+//     content: "";
+//     width: 30px;
+//     height: 30px;
+//     top: -5px;
+//     left: -5px;
+//     position: absolute;
+//     border: 13px solid purple;
+//     border-radius: 50%;
+//     opacity: .5;
+//     transform: translate(-50%, -50%);
+//     transition: all .1s ease-out;
+//     transition-property: transform;
+//     animation: cursorAnimation2 .5s infinite alternate;
+//     backdrop-filter: blur();
+//   }
+// }
+
+
+
+// @keyframes cursorAnimation {
+//   from {
+//     transform: scale(1);
+//   } to {
+//     transform: scale(0.7);
+//   }
+// }
+
+// @keyframes cursorAnimation2 {
+//   from {
+//     transform: scale(1);
+//   } to {
+//     transform: scale(0.5);
+//   }
+// }

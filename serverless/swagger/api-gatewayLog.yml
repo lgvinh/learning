@@ -1,0 +1,67 @@
+openapi: 3.0.0
+info:
+  description: Service to manage the gateway log
+  version: 1.0.0
+  title: Gateway Log Management
+  contact:
+    name: Son Bui
+    email: son.bui@zoi.de
+
+servers:
+  - url: https://api.{environment}.kaercher.com/mgmt-capi
+    variables:
+      environment:
+        default: dev-iot  # Development environment
+        enum:
+          - iot           # Production environment
+          - dev-iot       # Development environment
+          - stage-iot     # Staging environment
+
+tags:
+  - name: Controls
+
+security:
+  - bearerAuth: []
+
+paths:
+  /things/{thingId}/logs/{timestamp}/signedUrl:
+    get:
+      description: return a signed url to get gateway log
+      parameters:
+        - in: path
+          required: true
+          name: thingId
+          schema:
+            type: string
+        - in: path
+          required: true
+          name: timestamp
+          schema:
+            type: string
+      responses:
+        200:
+          description: OK
+          content:
+            application/json:
+              schema:
+                type: string
+              example:
+                $ref: examples-signedUrl.yml
+        403:
+          description: Forbidden
+        500:
+          description: Internal Server Error
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/errorResponse"
+
+components:
+  securitySchemes:
+    bearerAuth:
+      type: http
+      scheme: bearer
+      bearerFormat: JWT
+  schemas:
+    errorResponse:
+      $ref: schemas-errorResponse.yml

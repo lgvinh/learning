@@ -1,0 +1,38 @@
+{
+  "resource": "/parameter/{parameter}",
+  "path": "/mgmt-tapi/parameter/%2Faka-iot-productionData%2Ftest2",
+  "httpMethod": "GET",
+  "headers": {
+    "Accept": "*/*",
+    "Authorization": "Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiIsIng1dCI6IjU1OGR6OHQwMHVjWTNPSW9CWHUyaEttaXlKUSIsImtpZCI6IjU1OGR6OHQwMHVjWTNPSW9CWHUyaEttaXlKUSJ9.eyJpc3MiOiJodHRwczovL2xvZ2luLXN0YWdlLmFwcC5rYWVyY2hlci5jb20iLCJhdWQiOiJodHRwczovL2xvZ2luLXN0YWdlLmFwcC5rYWVyY2hlci5jb20vcmVzb3VyY2VzIiwiZXhwIjoxNTk4MzUzNTU3LCJuYmYiOjE1OTgzNDk5NTcsImNsaWVudF9pZCI6ImlvdC1hZG1pbiIsInNjb3BlIjpbIm9wZW5pZCIsImVtYWlsIiwiaW90LWZ1bGwtYWRtaW4iLCJpb3Qtc3VwcG9ydCJdLCJzdWIiOiIzNDdlZTY2ZC0xMmY4LTRlNjktOWVmZC01YjNiMWZhODAxMTYiLCJhdXRoX3RpbWUiOjE1OTc5OTEyOTgsImlkcCI6IkFEIiwianRpIjoiMDY4OGExM2U1ZWFhOGU4NTdjYWJmMjQ3ZTNmOWJhN2QiLCJhbXIiOlsiZXh0ZXJuYWwiXX0.1znxoB-VjaCWu_ikJHShsecc5OexlIpPQQVZYmQ4HkDM6GGivFkCTTJFxiWsMloe6B7FKG8DBR9arRC2OKhElFaoqsRuEhGeGVYptbIwvxXk-NqduJh_Dh0qJipIbp9AyOOueJlEjMBXLh1fN-2923V8dVAyFLv-ue39ljQnJrPGNvEwTZj5I0GwG0KI0gXhMLlGqwXXnxGEnV9Y2qqJv2kgIidPucBftmZYJeWh19uIcN79sBHTagcNCBxg0mw2JKugFq2uspBueeoQPpBksnOcb-opAG15fO21CceGSPJAKUnuIex-3ZA6I16bJBIuvcE-RlnW0s7n-ew_FgY3EciaVIHC_RjzT6jZQYBnWoPaQy7x_YOyuupX0SN6Y-OIwDVONhWE28pjFQCVgtJL5PqAbm9FS1U4YoboDf_SpHZARHVIdSBEwc42Y0DlVSIKb-OgOasm50FZRhYb3Gt0jgOgLnelBm9MZDoC53pPirG6Gf7v-YMIU2fyDJ-ezigIYOdTCyLKCxP-b7jcV7T0r4owTO_IutGaYXr_C3N6qkFrYSF9F_FHUOYXbcBio_qnhIe6XTzL2X2E5jXDMJtj326QtwwzbB2HghAFPxrceOTAn33g6tA6Qw7H1Y26ZKyrYbXNGRfrB9Jrtsgw0LJviK8OvClkLJpCIbl1A9ruy5o"
+  },
+  "multiValueQueryStringParameters": null,
+  "pathParameters": {
+    "thingId": "thingId",
+    "timestamp": "timestamp"
+  },
+  "queryStringParameters": {
+    "messageId": "#MESSAGE#ID#1",
+    "language": "#LANGUAGE#VN"
+  },
+  "stageVariables": null,
+  "requestContext": {
+    "resourceId": "jclt4k",
+    "authorizer": {
+      "idp": "AD",
+      "scope": "iot-admin",
+      "principalId": "347ee66d-12f8-4e69-9efd-5b3b1fa80116",
+      "integrationLatency": 454,
+      "userId": "347ee66d-12f8-4e69-9efd-5b3b1fa80116"
+    }
+  },
+  "body": {
+    "messageId": "#MESSAGE#ID#1",
+    "language": "#LANGUAGE#VN",
+    "message": "this is a fucking message from a fucking dynamodb have been fucking updated",
+    "push": true,
+    "title": "The fucking message notification",
+    "type": "The fucking message"
+  },
+  "isBase64Encoded": false
+}

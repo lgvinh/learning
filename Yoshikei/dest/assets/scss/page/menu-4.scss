@@ -1,0 +1,309 @@
+.menu-4-banner {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  max-height: 250px;
+  overflow: hidden;
+  img {
+    width: 100%;
+  }
+  h1 {
+    position: absolute;
+    color: white;
+    font-size: 30px;
+    font-weight: bold;
+    letter-spacing: 10px;
+    @media screen and (max-width: 768px) {
+      font-size: vwmath(30px, 768px)+1;
+    }
+  }
+}
+
+.menu-4-main-content {
+  width: 100%;
+  background-image: radial-gradient(#18171875, #000000), url("../img/fixed-img.png");
+  .content {
+    padding-top: 73px;
+    width: percentmath(990px, 1280px);
+    max-width: 990px;
+    margin: auto;
+    color: white;
+    .content-1 {
+      text-align: center;
+      p {
+        font-size: 14px;
+        line-height: 2.643;
+        letter-spacing: 1.8px;
+        margin-bottom: 33px;
+      }
+      span {
+        font-size: 25px;
+        font-weight: bold;
+        letter-spacing: 12.5px;
+      }
+      @media screen and (max-width: 768px) {
+        p {font-size: 12px};
+        span {font-size: 22px;}
+      }
+    }
+    /* end of content-1 */
+    .content-2 {
+      margin-top: 88px;
+      position: relative;
+      > h2 {
+        text-align: center;
+        letter-spacing: 9px;
+        font-size: 18px;
+        font-weight: bold;
+      }
+      > p {
+        font-size: 14px;
+        letter-spacing: 2.8px;
+        line-height: 1.786;
+        position: absolute;
+        top: 6px;
+        right: 0;
+        @media screen and (max-width: 1024px) {
+          position: relative;
+          text-align: right;
+          padding-top: 15px;
+        }
+      }
+      .link-btn {
+        margin-top: 27px;
+        margin-bottom: 36px;
+        width: 100%;
+        display: flex;
+        @media screen and (max-width: 768px) {
+          display: block;
+        }
+      }
+      /* end of link-btn */
+      .tablinks {
+        color: rgb(227, 10, 28);
+        width: percentmath(330px, 990px);
+        padding: 13px 0;
+        padding-top: 14px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        font-weight: bold;
+        text-decoration: none;
+        border: none;
+        outline: none;
+        background-color: white;
+        cursor: pointer;
+        &:hover {
+          background-color: rgb(227, 10, 28);
+          color: white;
+        }
+        @media screen and (max-width: 768px) {
+          width: 100%;
+        }
+      }
+      .active {
+        background-color: rgb(227, 10, 28);
+        color: white;
+      }
+      @media screen and (max-width: 768px){
+        > h2 {font-size: 16px;}
+      }
+    }
+  }
+  /* end of content */
+
+
+  /* 
+    Menu modify
+  */
+
+  .meal {
+    padding-bottom: 92px;
+    padding-top: 26px;
+    /* 
+      modified meal #1
+    */
+    &:nth-of-type(1) {
+      .meal-name img {
+        padding-bottom: 9px;
+        padding-left: 9px;
+        padding-right: 5px;
+      }
+      .meal-name p {
+        padding-bottom: 7px;
+      }
+    }
+    /* 
+      modified meal #2
+    */
+    &:nth-of-type(2) {
+      .meal-name img {
+        padding-bottom: 11px;
+        padding-left: 7px;
+        padding-right: 9px;
+      }
+      .meal-name p {
+        padding-top: 6px;
+      }
+    }
+    /* 
+      modified meal #3
+    */
+    &:nth-of-type(3) {
+      padding-bottom: 87px;
+      .meal-name p {
+        padding-top: 3px;
+      }
+    }
+    /* 
+      modified meal #4
+    */
+    &:nth-of-type(4) {
+      .meal-name p {
+        padding-top: 4px;
+      }
+    }
+    /* 
+      modified meal #5
+    */
+    &:nth-of-type(5) {
+      padding-top: 23px;
+      padding-bottom: 80px;
+      .meal-name p {
+        padding-top: 3px;
+        padding-left: 5px;
+      }
+    }
+    /* 
+      modified meal #6
+    */
+    &:nth-of-type(6) {
+      padding-bottom: 89px;
+      .meal-name {
+        img {
+          margin-right: 16px;
+        }
+        p {
+          padding-top: 3px;
+        }
+      }
+    }
+  }
+  /* end meal */
+
+  .meal-name {
+    display: flex;
+    align-items: center;
+    margin-bottom: 20px;
+    padding: 0px percentmath(25px, 990px);
+    @media screen and (max-width:768px) {
+      display: block;
+    }
+    img {
+      margin-right: 21px;
+    }
+    p {
+      font-size: 16px;
+      font-weight: bold;
+      line-height: 1.375;
+      letter-spacing: 1.68px;
+      @media screen and (max-width: 768px) {
+        font-size: 14px;
+      }
+    }
+  }
+  /* end of meal name */
+  .meal-img {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    flex-wrap: wrap;
+    > a {
+      text-decoration: none;
+      display: flex;
+      flex-flow: column;
+      width: percentmath(270px, 990px);
+      @media screen and (max-width: 600px) {
+        width: 45%;
+        &:nth-of-type(n+3) {
+          margin-top: 10px;
+        }
+      }
+      img {
+        max-width: inherit;
+        max-height: 206px;
+      }
+      p {
+        width: 100%;
+        padding: percentmath(13px, 280px) percentmath(20px, 270px);
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        background-color: white;
+        color: black;
+        text-align: center;
+        font-size: 14px;
+        font-weight: 500;
+        @media screen and (max-width: 768px) {
+          font-size: 12px;
+        }
+      }
+      /* end of p in div */
+    }
+    /* end of div in meal img */
+  }
+  /* end of meal img */
+  .meal-info {
+    margin-top: 22px;
+    padding: 0px 30px;
+    display: flex;
+    justify-content: space-between;
+    @media screen and (max-width:768px) {
+      display: block;
+    }
+    > div {
+      width: 419px;
+      figure {
+        padding: 11px 0;
+        float: left;
+        margin-right: 10px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        width: percentmath(106px, 419px);
+      }
+      span {
+        display: inline;
+        font-size: 14px;
+        font-weight: bold;
+        line-height: 2.143;
+        letter-spacing: 1.4px;
+        background-image: url("../img/back-ground/underline-red.png");
+        background-position: bottom;
+        background-repeat: repeat-x;
+      }
+      @media screen and (max-width:768px) {
+        width: 100%;
+        overflow: hidden;
+        span {font-size: 12px;}
+      }
+    }
+    /* end of div */
+    p {
+      width: 465px;
+      padding-top: 5px;
+      font-size: 14px;
+      letter-spacing: 1.8px;
+      @media screen and (max-width:768px) {
+        width: 100%;
+        font-size: 12px;
+      }
+    }
+  }
+  /* end meal info */
+
+  /* 
+    end of menu 
+  */
+  #menu-2, #menu-3 {display: none;}
+}

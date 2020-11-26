@@ -1,0 +1,11 @@
+id: id
+type: type
+country: es
+created: 1602588615387
+links:
+  -
+    lang: es
+    uri: https://www.kaercher.com/int/condiciones-de-uso-home-garden.html
+name: "termsAndConditions"
+required: true
+version: "2020-09-30"

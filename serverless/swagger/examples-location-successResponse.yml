@@ -1,0 +1,21 @@
+type: object
+properties:
+  data:
+    type: array
+    items: 
+      type: object
+      properties:
+        "type":
+          example: "LOCATION"
+        "locationId":
+          example: "32.241#5.762"
+        "id":
+          example: "LOCATION#32.241#5.762"
+        ttl:
+          example: 1603437931260
+        checkForecast:
+          example: false
+        lastForecastDate:
+          example: 1603437931260
+        creationDate:
+          example: 1603351741976

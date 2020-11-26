@@ -1,0 +1,104 @@
+.news-2-banner{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  max-height: 250px;
+  overflow: hidden;
+  > img  {
+    width: 100%;
+  }
+  h1 {
+    position: absolute;
+    color: white;
+    font-size: 30px;
+    font-weight: bold;
+    letter-spacing: 7px;
+  }
+}
+
+.news-2-main-content {
+  width: 100%;
+  background-color: white;
+  padding-top: 78px;
+  padding-bottom: 95px;
+  h2 {
+    display: flex;
+    flex-flow: column;
+    justify-content: center;
+    align-items: center;
+    border-bottom: 1px solid gray;
+    text-align: center;
+    font-size: 25px;
+    font-weight: bold;
+    letter-spacing: 12.5px;
+    padding-bottom: 5px;
+    span {
+      font-family: $crimson;
+      font-size: 16px;
+      font-weight: bold;
+      letter-spacing: 1.6px;
+    }
+  }
+  .content {
+    width: percentmath(1005px, 1280px);
+    max-width: 1005px;
+    margin: auto;
+    display: flex;
+    flex-flow: column;
+    img {
+      margin: 0 auto;
+    }
+    .paragraph {
+      p {
+        font-size: 14px;
+        letter-spacing: 2.8px;
+        line-height: 2.14;
+      }
+    }
+    /* end of paragraph */
+    .link-btn {
+      width: 100%;
+      margin: auto;
+      margin-top: 91px;
+      position: relative;
+      right: 8px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      > a {
+        &:first-of-type {
+          padding-left: 10px;
+          &::after  {
+            content: "";
+            display: inline-block;
+            height: 10px;
+            width: 10px;
+            border-bottom: 1px solid black;
+            border-left: 1px solid black;
+            transform: rotate(45deg);
+          }
+        }
+        &:nth-of-type(2) {
+          padding-bottom: 3px;
+          color: black;
+          margin: 0 45px;
+        }
+        &:nth-of-type(3) {
+          padding-right: 10px;
+          &::after {
+            content: "";
+            display: inline-block;
+            height: 10px;
+            width: 10px;
+            border-top: 1px solid black;
+            border-right: 1px solid black;
+            transform: rotate(45deg);
+          }
+        }
+      }
+      /* end of a */
+    }
+    /* end of link btn */
+  }
+  /* end of cam_2-content */
+}

@@ -1,0 +1,109 @@
+#scroll-top {
+  position: fixed;
+  bottom: 30px;
+  right: 30px;
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  background-color: $main-color;
+  opacity: 0;
+  transition: 0.5s ease-in-out;
+  cursor: pointer;
+  z-index: 9;
+  pointer-events: none;
+  &.active {
+    opacity: 1;
+    pointer-events: initial;
+  }
+  &::before {
+    content: "";
+    width: 15px;
+    height: 15px;
+    position: absolute;
+    top: 55%;
+    left: 50%;
+    transform: translate(-50%, -50%) rotate(-45deg);
+    border-top: 5px solid white;
+    border-right: 5px solid white;
+  }
+}
+
+html {
+  &.disable {
+    pointer-events: none;
+    overflow: hidden;
+  }
+}
+
+.container-wrapper {
+  padding: 40px 20px;
+}
+
+.section-diviner {
+  margin: 20px 0;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  > div {
+    width: 40px;
+    height: 40px;
+    svg {
+      width: 100%;
+      height: 100%;
+    }
+  }
+  &::before,
+  &::after {
+    content: "";
+    width: 120px;
+    height: 2px;
+    background-color: black;
+  }
+  &:after {
+    margin-left: 10px;
+  }
+  &:before {
+    margin-right: 10px;
+  }
+}
+
+.main-content {
+  width: 100%;
+  padding: 20px 0 60px;
+}
+
+// * Input effect */
+.c-input-eff {
+  position: relative;
+  margin: 10px auto;
+}
+
+.c-input-eff input::placeholder {
+  transition: 0.4s;
+  opacity: 0;
+  font-weight: bold;
+}
+
+.c-input-eff label {
+  position: absolute;
+  top: 50%;
+  left: 12px;
+  transform: translateY(-50%);
+  pointer-events: none;
+  transition: 0.3s;
+  background-color: white;
+  font-weight: 600;
+  font-size: 16px;
+}
+
+.c-input-eff input:focus ~ label {
+  top: -1px;
+  font-size: 15px;
+  font-weight: 700;
+  color: #ee2d7a;
+}
+
+.c-input-eff input:focus::placeholder {
+  opacity: 1;
+}

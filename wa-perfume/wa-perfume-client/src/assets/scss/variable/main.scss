@@ -1,0 +1,138 @@
+$main-color: #ee2d7a;
+ 
+ 
+ 
+ 
+ 
+ /* 
+  *  Fonts define 
+  */
+  @font-face {
+     font-family: 'FreightDispProLight-Italic';
+     src: url('../../fonts/Freight/FreightDispProLight-Italic.eot');
+     src: url('../../fonts/Freight/FreightDispProLight-Italic.eot?#iefix') format('embedded-opentype'),
+          url('../../fonts/Freight/FreightDispProLight-Italic.svg#FreightDispProLight-Italic') format('svg'),
+          url('../../fonts/Freight/FreightDispProLight-Italic.ttf') format('truetype'),
+          url('../../fonts/Freight/FreightDispProLight-Italic.woff') format('woff'),
+          url('../../fonts/Freight/FreightDispProLight-Italic.woff2') format('woff2');
+     font-weight: normal;
+     font-style: normal;
+ }
+ 
+ @font-face {
+     font-family: 'FreightDispProBook-Italic';
+     src: url('../../fonts/Freight/FreightDispProBook-Italic.eot');
+     src: url('../../fonts/Freight/FreightDispProBook-Italic.eot?#iefix') format('embedded-opentype'),
+          url('../../fonts/Freight/FreightDispProBook-Italic.svg#FreightDispProBook-Italic') format('svg'),
+          url('../../fonts/Freight/FreightDispProBook-Italic.ttf') format('truetype'),
+          url('../../fonts/Freight/FreightDispProBook-Italic.woff') format('woff'),
+          url('../../fonts/Freight/FreightDispProBook-Italic.woff2') format('woff2');
+     font-weight: normal;
+     font-style: normal;
+ }
+ 
+ @font-face {
+     font-family: 'FreightDispProMedium-Italic';
+     src: url('../../fonts/Freight/FreightDispProMedium-Italic.eot');
+     src: url('../../fonts/Freight/FreightDispProMedium-Italic.eot?#iefix') format('embedded-opentype'),
+          url('../../fonts/Freight/FreightDispProMedium-Italic.svg#FreightDispProMedium-Italic') format('svg'),
+          url('../../fonts/Freight/FreightDispProMedium-Italic.ttf') format('truetype'),
+          url('../../fonts/Freight/FreightDispProMedium-Italic.woff') format('woff'),
+          url('../../fonts/Freight/FreightDispProMedium-Italic.woff2') format('woff2');
+     font-weight: normal;
+     font-style: normal;
+ }
+ 
+ @font-face {
+     font-family: 'FreightDispProBold-Italic';
+     src: url('../../fonts/Freight/FreightDispProBold-Italic.eot');
+     src: url('../../fonts/Freight/FreightDispProBold-Italic.eot?#iefix') format('embedded-opentype'),
+          url('../../fonts/Freight/FreightDispProBold-Italic.svg#FreightDispProBold-Italic') format('svg'),
+          url('../../fonts/Freight/FreightDispProBold-Italic.ttf') format('truetype'),
+          url('../../fonts/Freight/FreightDispProBold-Italic.woff') format('woff'),
+          url('../../fonts/Freight/FreightDispProBold-Italic.woff2') format('woff2');
+     font-weight: normal;
+     font-style: normal;
+ }
+   
+ @font-face {
+     font-family: 'FoundersGrotesk-Medium';
+     src: url('../../fonts/Founders/FoundersGrotesk-Medium.eot');
+     src: url('../../fonts/Founders/FoundersGrotesk-Medium.eot?#iefix') format('embedded-opentype'),
+          url('../../fonts/Founders/FoundersGrotesk-Medium.svg#FoundersGrotesk-Medium') format('svg'),
+          url('../../fonts/Founders/FoundersGrotesk-Medium.ttf') format('truetype'),
+          url('../../fonts/Founders/FoundersGrotesk-Medium.woff') format('woff'),
+          url('../../fonts/Founders/FoundersGrotesk-Medium.woff2') format('woff2');
+     font-weight: normal;
+     font-style: normal;
+ }
+ 
+ @font-face {
+     font-family: 'FoundersGrotesk-Regular';
+     src: url('../../fonts/Founders/FoundersGrotesk-Regular.eot');
+     src: url('../../fonts/Founders/FoundersGrotesk-Regular.eot?#iefix') format('embedded-opentype'),
+          url('../../fonts/Founders/FoundersGrotesk-Regular.svg#FoundersGrotesk-Regular') format('svg'),
+          url('../../fonts/Founders/FoundersGrotesk-Regular.ttf') format('truetype'),
+          url('../../fonts/Founders/FoundersGrotesk-Regular.woff') format('woff'),
+          url('../../fonts/Founders/FoundersGrotesk-Regular.woff2') format('woff2');
+     font-weight: normal;
+     font-style: normal;
+ }
+
+@font-face {
+  font-family: 'BalooPaaji2-Bold';
+  src: url('../../fonts/Ballo_Paaji_2/BalooPaaji2-Bold.eot');
+  src: url('../../fonts/Ballo_Paaji_2/BalooPaaji2-Bold.eot?#iefix') format('embedded-opentype'),
+       url('../../fonts/Ballo_Paaji_2/BalooPaaji2-Bold.svg#BalooPaaji2-Bold') format('svg'),
+       url('../../fonts/Ballo_Paaji_2/BalooPaaji2-Bold.ttf') format('truetype'),
+       url('../../fonts/Ballo_Paaji_2/BalooPaaji2-Bold.woff') format('woff'),
+       url('../../fonts/Ballo_Paaji_2/BalooPaaji2-Bold.woff2') format('woff2');
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'BalooPaaji2-ExtraBold';
+  src: url('../../fonts/Ballo_Paaji_2/BalooPaaji2-ExtraBold.eot');
+  src: url('../../fonts/Ballo_Paaji_2/BalooPaaji2-ExtraBold.eot?#iefix') format('embedded-opentype'),
+       url('../../fonts/Ballo_Paaji_2/BalooPaaji2-ExtraBold.svg#BalooPaaji2-ExtraBold') format('svg'),
+       url('../../fonts/Ballo_Paaji_2/BalooPaaji2-ExtraBold.ttf') format('truetype'),
+       url('../../fonts/Ballo_Paaji_2/BalooPaaji2-ExtraBold.woff') format('woff'),
+       url('../../fonts/Ballo_Paaji_2/BalooPaaji2-ExtraBold.woff2') format('woff2');
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'BalooPaaji2-Medium';
+  src: url('../../fonts/Ballo_Paaji_2/BalooPaaji2-Medium.eot');
+  src: url('../../fonts/Ballo_Paaji_2/BalooPaaji2-Medium.eot?#iefix') format('embedded-opentype'),
+       url('../../fonts/Ballo_Paaji_2/BalooPaaji2-Medium.svg#BalooPaaji2-Medium') format('svg'),
+       url('../../fonts/Ballo_Paaji_2/BalooPaaji2-Medium.ttf') format('truetype'),
+       url('../../fonts/Ballo_Paaji_2/BalooPaaji2-Medium.woff') format('woff'),
+       url('../../fonts/Ballo_Paaji_2/BalooPaaji2-Medium.woff2') format('woff2');
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
+  font-family: 'BalooPaaji2-Regular';
+  src: url('../../fonts/Ballo_Paaji_2/BalooPaaji2-Regular.eot');
+  src: url('../../fonts/Ballo_Paaji_2/BalooPaaji2-Regular.eot?#iefix') format('embedded-opentype'),
+       url('../../fonts/Ballo_Paaji_2/BalooPaaji2-Regular.svg#BalooPaaji2-Regular') format('svg'),
+       url('../../fonts/Ballo_Paaji_2/BalooPaaji2-Regular.ttf') format('truetype'),
+       url('../../fonts/Ballo_Paaji_2/BalooPaaji2-Regular.woff') format('woff'),
+       url('../../fonts/Ballo_Paaji_2/BalooPaaji2-Regular.woff2') format('woff2');
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
+  font-family: 'BalooPaaji2-SemiBold';
+  src: url('../../fonts/Ballo_Paaji_2/BalooPaaji2-SemiBold.eot');
+  src: url('../../fonts/Ballo_Paaji_2/BalooPaaji2-SemiBold.eot?#iefix') format('embedded-opentype'),
+       url('../../fonts/Ballo_Paaji_2/BalooPaaji2-SemiBold.svg#BalooPaaji2-SemiBold') format('svg'),
+       url('../../fonts/Ballo_Paaji_2/BalooPaaji2-SemiBold.ttf') format('truetype'),
+       url('../../fonts/Ballo_Paaji_2/BalooPaaji2-SemiBold.woff') format('woff'),
+       url('../../fonts/Ballo_Paaji_2/BalooPaaji2-SemiBold.woff2') format('woff2');
+  font-weight: normal;
+  font-style: normal;
+}

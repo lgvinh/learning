@@ -1,0 +1,6 @@
+details:
+  code: 26001
+  actor: Firebase Error
+  message: Error found trying to deliver the message
+  exceptionType: FirebaseError
+  stackTrace: string

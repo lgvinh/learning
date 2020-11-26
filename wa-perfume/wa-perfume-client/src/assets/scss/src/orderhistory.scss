@@ -1,0 +1,343 @@
+.order {
+  &--container {
+    padding: 10px 0;
+  }
+  &__header {
+    display: flex;
+    justify-content: space-between;
+    padding: 0 5px 10px;
+    border-bottom: 1px solid;
+    font-size: 14px;
+    &--text {
+      font-size: inherit;
+      font-weight: bold;
+      &.id {
+        width: 30%;
+      }
+      &.address {
+        width: 20%;
+        text-align: center;
+      }
+      &.total {
+        width: 20%;
+        text-align: center;
+      }
+      &.date {
+        width: 20%;
+        text-align: center;
+      }
+      &.status {
+        width: 10%;
+        text-align: right;
+      }
+    }
+  }
+  &__body {
+    &--content {
+      padding: 10px 5px;
+      border-bottom: 1px solid;
+      transition: 0.3s ease-in-out;
+      cursor: pointer;
+      &:last-of-type {
+        border: none;
+      }
+      &:hover {
+        background-color: #e4e4e4;
+      }
+    }
+  }
+}
+
+.body {
+  &--title {
+    padding: 10px 0;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    &__text {
+      font-size: 18px;
+      align-self: center;
+      &.id {
+        width: 30%;
+      }
+      &.address {
+        width: 20%;
+        text-align: center;
+      }
+      &.total {
+        width: 20%;
+        text-align: center;
+      }
+      &.date {
+        width: 20%;
+        text-align: center;
+      }
+      &.status {
+        width: 10%;
+        text-align: right;
+        text-transform: uppercase;
+        font-weight: bold;
+        font-size: 16px;
+        &.pending {
+          color: blue;
+        }
+        &.confirmed {
+          color: green;
+        }
+        &.canceled {
+          color: orange;
+        }
+        &.denied {
+          color: red;
+        }
+      }
+    }
+  }
+}
+
+.detail {
+  display: flex;
+  &--content {
+    &.image {
+      width: 200px;
+      height: 100px;
+      img {
+        width: 100%;
+        height: 100%;
+      }
+    }
+    
+  }
+}
+
+.order-detail {
+  &--modal {
+    opacity: 0;
+    transition: 0.3s ease-in-out;
+    position: fixed;
+    top: 45%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    // width: 100%;
+    z-index: 99;
+    pointer-events: none;
+    background-color: white;
+    &.show {
+      opacity: 1;
+      top: 55%;
+      pointer-events: initial;
+    }
+    .close {
+      position: absolute;
+      top: 5px;
+      right: 10px;
+      cursor: pointer;
+      z-index: 999999;
+    }
+  }
+  &--header {
+    text-align: center;
+    margin: 0 0 5px;
+    font-size: 30px;
+    font-weight: 400;
+    font-family: 'FreightDispProBold-Italic';
+    letter-spacing: 2px;
+  }
+}
+
+#invoice {
+  h2.to {
+    font-weight: bold;
+    &.pending {
+      color: blue;
+      text-transform: uppercase;
+      font-size: 20px;
+    }
+    &.confirmed {
+      color: green;
+      text-transform: uppercase;
+      font-size: 20px;
+    }
+    &.canceled {
+      color: orange;
+      text-transform: uppercase;
+      font-size: 20px;
+    }
+    &.denied {
+      color: red;
+      text-transform: uppercase;
+      font-size: 20px;
+    }
+  }
+}
+
+.invoice {
+  position: relative;
+  background-color: #FFF;
+  min-height: 680px;
+  padding: 15px
+}
+
+.invoice header {
+  padding: 10px 0;
+  margin-bottom: 20px;
+  border-bottom: 1px solid #3989c6;
+  box-shadow: none !important;
+}
+
+.invoice .company-details {
+  text-align: right
+}
+
+.invoice .company-details .name {
+  margin-top: 0;
+  margin-bottom: 0
+}
+
+.invoice .contacts {
+  margin-bottom: 20px
+}
+
+.invoice .invoice-to {
+  text-align: left
+}
+
+.invoice .invoice-to .to {
+  margin-top: 0;
+  margin-bottom: 0;
+  font-size: 2rem;
+}
+
+.invoice .invoice-details {
+  text-align: right;
+}
+
+.invoice .invoice-details .invoice-id {
+  margin-top: 0;
+  color: #3989c6;
+  margin-left: auto;
+  margin-bottom: 5px;
+  font-size: 16px;
+  max-width: 250px;
+  width: 100%;
+  line-height: 1.2;
+  letter-spacing: 0.5px;
+}
+
+.invoice main {
+  padding-bottom: 50px
+}
+
+.invoice main .thanks {
+  margin-top: -100px;
+  font-size: 2em;
+  margin-bottom: 50px
+}
+
+.invoice main .notices {
+  padding-left: 6px;
+  border-left: 6px solid #3989c6
+}
+
+.invoice main .notices .notice {
+  font-size: 1.2em
+}
+
+.invoice table {
+  width: 100%;
+  border-collapse: collapse;
+  border-spacing: 0;
+  margin-bottom: 20px
+}
+
+.invoice table td,.invoice table th {
+  padding: 15px;
+  background: #eee;
+  border-bottom: 1px solid #fff
+}
+
+.invoice table th {
+  white-space: nowrap;
+  font-weight: 400;
+  font-size: 16px
+}
+
+.invoice table td h3 {
+  margin: 0;
+  font-weight: 400;
+  color: #3989c6;
+  font-size: 1.2em
+}
+
+.invoice table .qty,.invoice table .total,.invoice table .unit {
+  text-align: right;
+  font-size: 1.2em
+}
+
+.invoice table .no {
+  color: #fff;
+  font-size: 1.6em;
+  background: #3989c6
+}
+
+.invoice table .unit {
+  background: #ddd
+}
+
+.invoice table .total {
+  background: #3989c6;
+  color: #fff
+}
+
+.invoice table tbody tr:last-child td {
+  border: none
+}
+
+.invoice table tfoot td {
+  background: 0 0;
+  border-bottom: none;
+  white-space: nowrap;
+  text-align: right;
+  padding: 10px 20px;
+  font-size: 1.2em;
+  border-top: 1px solid #aaa
+}
+
+.invoice table tfoot tr:first-child td {
+  border-top: none
+}
+
+.invoice table tfoot tr:last-child td {
+  color: #3989c6;
+  font-size: 1.4em;
+  border-top: 1px solid #3989c6
+}
+
+.invoice table tfoot tr td:first-child {
+  border: none
+}
+
+.invoice footer {
+  width: 100%;
+  text-align: center;
+  color: #777;
+  border-top: 1px solid #aaa;
+  padding: 8px 0
+}
+
+@media print {
+  .invoice {
+      font-size: 11px!important;
+      overflow: hidden!important
+  }
+
+  .invoice footer {
+      position: absolute;
+      bottom: 10px;
+      page-break-after: always
+  }
+
+  .invoice>div:last-child {
+      page-break-before: always
+  }
+}

@@ -1,0 +1,17 @@
+#signup {
+  padding: 20px 30px;
+  .input--content {
+    max-width: 350px;
+    margin: 10px auto;
+    // padding: 020px;
+      input {
+        max-width: 350px;
+        min-width: 250px;
+        width: 100%;
+        padding: 10px;
+      }
+  }
+  // @media screen and (max-width: 768px) {
+    
+  // }
+}

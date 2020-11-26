@@ -1,0 +1,280 @@
+.flow-banner {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  max-height: 250px;
+  overflow: hidden;
+  img {
+    width: 100%;
+  }
+  h1 {
+    position: absolute;
+    color: white;
+    font-size: 30px;
+    font-weight: bold;
+    letter-spacing: 10px;
+    @media screen and (max-width: 768px) {
+      font-size: vwmath(30px, 768px)+1;
+    }
+  }
+}
+
+.flow-main-content {
+  padding-top: 85px;
+  padding-bottom: 106px;
+  background-image: radial-gradient(#18171875, #000000), url("../img/fixed-img.png");
+  .content {
+    max-width: 800px;
+    width: 62.5%;
+    margin: auto;
+  }
+  /* end of content */
+  .content-1 {
+    display: flex;
+    justify-content: space-around;
+    padding: 0 percentmath(118px, 800px);
+    margin-bottom: 33px;
+    > div {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      background-color: #e40a1b;
+      border-radius: 50%;
+      width: 10.9375vw;
+      height: 10.9375vw;
+      max-width: 140px; 
+      max-height: 140px;
+      > p {
+        color: white;
+        font-size: 20px;
+        font-weight: bold;
+        text-align: center;
+        letter-spacing: 4px;
+        line-height: 1.35;
+        padding-top: 3px;
+        @media screen and (max-width: 768px) {
+          font-size: vwmath(14px, 768px);
+        }
+      }
+      /* end of p in div */
+    }
+    /* end of div */
+  }
+  /* end of content-1 */
+
+  /* 
+    Step box modify
+    8====3
+  */
+  .step-box {
+    padding: 36px 0 31px 46px;
+    display: flex;
+    border-bottom: 1px solid white;
+    position: relative;
+    .step {
+      color: white;
+      display: flex;
+      flex-flow: column;
+      > p {
+        font-size: 20px;
+        font-weight: bold;
+        font-family: 'Crimson Text', serif;
+        letter-spacing: 1.4px;
+        line-height: 1;
+      }
+      > span {
+        font-size: 90px;
+        font-weight: bold;
+        font-family: 'Crimson Text', serif;
+        line-height: 1;
+        text-align: center;
+      }
+    }
+    /* end of step */
+    &::after {
+      content: "";
+      width: 0;
+      height: 0;
+      display: block;
+      border-left: 8px solid transparent;
+      border-right: 8px solid transparent;
+      border-top: 8px solid white;
+      position: absolute;
+      bottom: -9px;
+      left: 50%;
+      transform: translate(50%, 0);
+    }
+    /* end of guide */
+    > figure {
+      width: 61%;
+      padding-top: 39px;
+    }
+    &:nth-of-type(n+2) {
+      h2 {
+        margin-bottom: 5px;
+      }
+    }
+    &:nth-of-type(2),
+    &:nth-of-type(3),
+    &:nth-of-type(5) {
+      padding-bottom: 31px;
+    }
+    &:nth-of-type(2) {
+      article {
+        &::after {
+          top: 60px;
+          left: 267px;
+        }
+      }
+    }
+    &:nth-of-type(3) {
+      padding-bottom: 40px;
+      article {
+        &::after {
+          top: 42px;
+          left: 268px;
+        }
+      }
+    }
+    &:nth-of-type(4) {
+      article {
+        &::after {
+          left: 266px;
+        }
+      }
+    }
+    &:nth-of-type(5) {
+      article {
+        &::after {
+          top: 48px;
+          left: 268px;
+        }
+      }
+    }
+    &:last-of-type {
+      article {
+        p {
+          font-size: 14px;
+          line-height: 1.5;
+          letter-spacing: 2.8px;
+        }
+      }
+    }
+    @media screen and (max-width: 768px) {
+      display: block;
+      span {text-align: left !important;}
+    }
+  }
+
+  .guide {
+    width: 100%;
+    padding-top: 21px;
+    padding-left: percentmath(38px, 800px);
+    margin-bottom: 3px;
+    color: white;
+    h2 {
+      font-size: 18px;
+      font-weight: bold;
+      margin-bottom: 0px;
+      letter-spacing: 0.8px;
+    }
+    p {
+      font-size: 18px;
+      font-weight: bold;
+      letter-spacing: 0.8px;
+    }
+    span {
+      line-height: 1.5;
+      letter-spacing: 2.8px;
+    }
+    .info {
+      width: 100%;
+      margin-top: 40px;
+      margin-bottom: 22px;        
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      p {
+        font-size: 18px;
+      }
+      @media screen and (max-width: 768px) {
+        display: block;
+        overflow: hidden;
+        figure {
+          display: flex;
+          width: 100%;
+          float: left;
+          padding: 20px;
+          justify-content: center;
+        }
+        p {float: left; width: 50%;}
+        img { display: block; float: right;}
+      }
+    }
+    .vegetable {
+      display: flex;
+    }
+  }
+
+  .btn-link {
+    margin: 0px;
+    display: flex;
+    padding-top: 15px;
+    @media screen and (max-width: 768px) {
+      display: block;
+    }
+    > span {
+      padding-top: 16px;
+      font-size: 14px;
+      letter-spacing: 2.8px;
+    }
+    /* end of span */
+    div {
+      background-color: white;
+      margin-top: 8px;
+      margin-left: 13px;
+      a {
+        color: #e30a1c;
+        text-decoration: none;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-size: 17px;
+        font-weight: bold;
+        letter-spacing: 2px;
+        padding: 5px 17px;
+      }
+      a:hover {
+        text-decoration: underline; 
+      }
+    }
+    /* end of div */
+  }
+  /* end of step box */
+
+  .content-3 {
+    margin-top: 59px;
+    position: relative;
+    p {
+      text-align: center;
+      color: white;
+      height: 35px;
+      font-size: 18px;
+      font-weight: bold;
+      letter-spacing: 8px;
+    }
+  }
+  .content-3::after {
+    content: "";
+    display: inline-block;
+    justify-content: center;
+    align-items: center;
+    width: percentmath(574px, 800px);
+    position: absolute;
+    transform: translateX(-50%);
+    left: 50%;
+    bottom: -20px;
+    border-bottom: 2px solid rgb(228, 10, 27);
+  }
+  /* end of content-3 */
+}

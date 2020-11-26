@@ -1,0 +1,22 @@
+type: object
+properties:
+  details:
+    type: object
+    properties:
+      code:
+        type: number
+        format: int
+        description: Error code
+        enum: [26001, 26999]
+        example: 26001
+      actor:
+        type: string
+        example: Firebase Error
+      message:
+        type: string
+        example: Error found trying to deliver the message
+      exceptionType:
+        type: string
+        example: FirebaseError
+      stackTrace:
+        type: string

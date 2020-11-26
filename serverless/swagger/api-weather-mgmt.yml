@@ -1,0 +1,131 @@
+openapi: 3.0.0
+info:
+  description: Service to the weather management
+  version: 1.0.0
+  title: Weather Management
+  contact:
+    name: Son Bui
+    email: son.bui@zoi.de
+
+servers:
+  - url: https://api.{environment}.kaercher.com/mgmt-wapi
+    variables:
+      environment:
+        default: dev-iot  # Development environment
+        enum:
+          - iot           # Production environment
+          - dev-iot       # Development environment
+          - stage-iot     # Staging environment
+
+tags:
+  - name: location
+  - name: thing
+
+security:
+  - bearerAuth: []
+
+paths:
+  /location:
+    get:
+      tags: [location]
+      description: Return a list of location
+      parameters:
+        - in: query
+          name: nextTokens
+          schema:
+            type: string
+        - in: query
+          name: limit
+          schema:
+            type: number
+      responses:
+        200:
+          description: OK
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/responses/locationSuccessResponse"
+        403:
+          description: Forbidden
+        500:
+          description: Internal Server Error
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/responses/errorResponse"
+  /thing:
+    get:
+      tags: [thing]
+      description: Return a list of things
+      parameters:
+        - in: query
+          required: true
+          name: nextTokens
+          schema:
+            type: string
+        - in: query
+          required: true
+          name: limit
+          schema:
+            type: number
+      responses:
+        200:
+          description: OK
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/responses/successResponse"
+        403:
+          description: Forbidden
+        500:
+          description: Internal Server Error
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/responses/errorResponse"
+  /things/{thingId}:
+    get:
+      tags: [thing]
+      description: Return a single thing by id
+      parameters:
+        - in: path
+          required: true
+          name: thingId
+          schema:
+            type: string
+      responses:
+        200:
+          description: OK
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/responses/successResponse"
+        403:
+          description: Forbidden
+        500:
+          description: Internal Server Error
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/responses/errorResponse"
+
+components:
+  securitySchemes:
+    bearerAuth:
+      type: http
+      scheme: bearer
+      bearerFormat: JWT
+  schemas:
+    errorResponse:
+      $ref: schemas-errorResponse.yml
+    successResponse:
+      $ref: schemas-successResponse.yml
+    locationSuccessResponse:
+      $ref: schemas-location-successResponse.yml
+  responses:
+    errorResponse:
+      $ref: examples-errorResponse.yml
+    successResponse:
+      $ref: examples-successResponse.yml
+    locationSuccessResponse:
+      $ref: examples-location-successResponse.yml

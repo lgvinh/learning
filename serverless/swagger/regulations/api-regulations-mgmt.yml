@@ -1,0 +1,129 @@
+openapi: 3.0.0
+info:
+  description: Service to the regulation management
+  version: 1.0.0
+  title: Regulation Management
+  contact:
+    name: Son Bui
+    email: son.bui@zoi.de
+
+servers:
+  - url: https://api.{environment}.kaercher.com/mgmt-rapi
+    variables:
+      environment:
+        default: dev-iot  # Development environment
+        enum:
+          - iot           # Production environment
+          - dev-iot       # Development environment
+          - stage-iot     # Staging environment
+
+tags:
+  - name: regulation
+
+security:
+  - bearerAuth: []
+
+paths:
+  /regulations:
+    get:
+      tags: [regulation]
+      description: Return a list of location
+      parameters:
+        - in: query
+          name: nextTokens
+          schema:
+            type: string
+        - in: query
+          name: limit
+          schema:
+            type: number
+      responses:
+        200:
+          description: OK
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/regulation"
+              example:
+                - $ref: examples-regulation.yml
+        403:
+          description: Forbidden
+        500:
+          $ref: "#/components/responses/500"
+    post:
+      tags: [regulation]
+      description: Create a regulation
+      requestBody:
+        $ref: "#/components/requestBodies/regulation"
+      responses:
+        201:
+          description: Created regulation successfully
+        403:
+          description: Forbidden
+        500:
+          $ref: "#/components/responses/500"
+  /regulations/{id}:
+    put:
+      tags: [regulation]
+      description: Update a regulation by id
+      parameters:
+        - in: path
+          name: id
+          schema:
+            type: string
+          required: true
+      requestBody:
+        $ref: "#/components/requestBodies/regulation"
+      responses:
+        200:
+          description: Updated regulation successfully
+        403:
+          description: Forbidden
+        500:
+          $ref: "#/components/responses/500"
+    delete:
+      tags: [regulation]
+      description: Delete a regulation by id
+      parameters:
+        - in: path
+          name: id
+          schema:
+            type: string
+          required: true
+      responses:
+        204:
+          description: Deleted regulation successfully
+        403:
+          description: Forbidden
+        500:
+          $ref: "#/components/responses/500"
+
+components:
+  securitySchemes:
+    bearerAuth:
+      type: http
+      scheme: bearer
+      bearerFormat: JWT
+  schemas:
+    regulation:
+      $ref: schemas-regulation.yml
+    errorResponse:
+      $ref: schemas-errorResponse.yml
+  requestBodies:
+    regulation:
+      content:
+        application/json:
+          schema:
+            $ref: schemas-regulationWithoutId.yml
+          example:
+            $ref: examples-regulationWithoutId.yml
+  responses:
+    "500":
+      description: Internal Server Error
+      content:
+        application/json:
+          schema:
+            $ref: schemas-errorResponse.yml
+          example:
+            $ref: examples-errorResponse.yml
+    

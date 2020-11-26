@@ -1,0 +1,10 @@
+/* a for the element, b for the container */
+@function percentmath($a, $b) {
+  @return ($a*100%)/$b;
+}
+
+/* a for the px size, b for view width port */
+@function vwmath($a, $b) {
+  $vw: $b * 0.01;
+  @return ($a / $vw * 1vw);
+}

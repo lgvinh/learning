@@ -1,0 +1,75 @@
+@startuml
+
+title Class Diagram
+
+class Base {
+    +Number id
+    -String createdAt
+    -String updatedAt
+    -String deletedAt
+    +Entity<T> getPagination()
+    +Entity<T> getById(id)
+    +Entity<T> createAndSave(Entity)
+    +Entity<T> updateById(id)
+    +Entity<T> deleteById(id)
+    +Entity<T> restoreById(id)
+}
+
+Base <|-down- Comic: Inheritance
+Base <|-down- Chapter: Inheritance
+Base <|-down- Author: Inheritance
+Base <|-down- Tag: Inheritance
+Base <|-down- User: Inheritance
+Base <|-down- Art: Inheritance
+
+class Comic {
+  -String name
+  -String subName
+  -String description
+  -String translator
+  +Number status
+  +Number progress
+}
+
+Comic "one" ||---o{ "many" Chapter
+
+class Chapter {
+  -String name
+  -String[] images
+  +Number status
+}
+
+class Author {
+  -String name
+  -String description
+}
+
+Author "many" }|------o{ "many" Comic
+
+class Tag {
+  -String name
+  -String description
+}
+
+Tag "many" }|----o{ "many" Comic
+
+class User {
+  -String name
+  -String email
+  -String password
+  -String avatar
+  -String about
+  +Number role
+  +Number status
+}
+
+User  ||----o{ "many" Comic
+User  ||----o{ "many" Art
+
+class Art {
+  -String name
+  -String image
+  -String description
+}
+
+@enduml

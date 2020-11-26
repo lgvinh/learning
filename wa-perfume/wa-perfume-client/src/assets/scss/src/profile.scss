@@ -1,0 +1,246 @@
+#profile {
+  display: flex;
+  padding: 80px 20px;
+  min-height: 90vh;
+  .update--btn {
+    display: block;
+    margin: 50px auto 0;
+    padding: 10px 20px;
+    background-color: $main-color;
+    color: white;
+    border: 2px solid $main-color;
+    outline: none;
+    border-radius: 8px;
+    transition: 0.2s ease-in-out;
+    &:hover {
+      background-color: white;
+      color: $main-color;
+    }
+  }
+  .tab--menu {
+    border-right: 1px solid;
+    padding-right: 20px;
+    &__item {
+      padding: 10px 20px;
+      margin: 20px 0;
+      font-weight: bold;
+      cursor: pointer;
+      line-height: 1.4;
+      &:first-of-type {
+        margin: 0 0 20px;
+      }
+      &.active {
+        background-color: $main-color;
+        pointer-events: none;
+        color: white;
+      }
+    }
+  }
+  .tab--content {
+    max-width: 80%;
+    width: 100%;
+    height: 500px;
+    overflow: auto;
+  }
+  .profile {
+    &__image {
+      width: 150px;
+      height: 150px;
+      margin: 0 auto;
+      text-align: center;
+      img {
+        border-radius: 50%;
+        width: 100px;
+        height: 100px;
+      }
+      input[type="file"] {
+        width: 100%;
+        opacity: 0;
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        pointer-events: none;
+      }
+      label[for="avatar-choose"] {
+        margin: 10px 0 0;
+        cursor: pointer;
+        position: relative;
+        display: block;
+        width: 100%;
+        padding: 10px 20px;
+        color: white;
+        font-size: 15px;
+        font-weight: bold;
+        background-color: $main-color;
+        border: 2px solid $main-color;
+        border-radius: 8px;
+        transition: 0.2s ease-in;
+        z-index: 9;
+        &:hover {
+          background-color: white;
+          color: $main-color;
+        }
+      }
+    }
+    &--container {
+      max-width: 1200px;
+      width: 100%;
+      margin: 0 auto;
+      position: relative;
+      &__main {
+        margin-top: 30px;
+        display: flex;
+        justify-content: space-between;
+      }
+    }
+    &--content {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      align-items: center;
+      padding: 20px 20px;
+      &.change--pass {
+        flex-direction: column;
+        .profile--content__input {
+          margin: 10px auto;
+        }
+      }
+      &.preview-image {
+        position: absolute;
+        top: 0;
+        .preview-image__content {
+          position: relative;
+          transition: 0.5s ease-out;
+          opacity: 0;
+          pointer-events: none;
+          &.show {
+            opacity: 1;
+            pointer-events: initial;
+          }
+        }
+      }
+      &__input {
+        width: 40%;
+        margin: 20px 5% 0;
+        position: relative;
+        .border-bot__input {
+          position: absolute;
+          bottom: -0.5px;
+          left: 0;
+          width: 100%;
+          height: 2px;
+          background-color: $main-color;
+          transition: 0.3s ease-out;
+          transform: rotateY(90deg);
+          transform-origin: center center;
+          &.disable {
+            background-color: white;
+          }
+        }
+        &:nth-of-type(2n+2) {
+          margin-left: 20px;
+        }
+        label,
+        input {
+          display: block;
+          width: 100%;
+        }
+        label {
+          font-size: 15px;
+          margin-bottom: 8px;
+          color: $main-color;
+          font-weight: bold;
+          padding-left: 5px;
+        }
+        input {
+          border-radius: 0;
+          padding: 5px 10px;
+          outline: none;
+          border: none;
+          border-bottom: 1px solid white;
+          transition: 0.5s ease-in-out;
+          transform-origin: center bottom;
+          position: relative;
+          border-bottom: 0.5px solid;
+          &[name="email"] {
+            background: none;
+            color: black;
+            cursor: no-drop;
+          }
+          &:focus {
+            & ~ .border-bot__input {
+              // width: 100%;
+              transform: rotateY(0);
+            }
+          }
+        }
+      }
+    }
+  }
+  .user {
+    &-id {
+      text-align: center;
+      margin: 0 0 5px;
+      font-size: 15px;
+      font-weight: 400;
+      font-family: 'FreightDispProBold-Italic';
+      letter-spacing: 2px;
+    }
+    &-name {
+      text-align: center;
+      margin: 0 0 5px;
+      font-size: 30px;
+      font-weight: 400;
+      font-family: 'FreightDispProBold-Italic';
+      letter-spacing: 2px;
+    }
+  }
+
+  @media screen and (max-width: 768px) {
+    display: block;
+    .tab--content {
+      width: 100%;
+      max-width: 100%;
+      min-height: 350px;
+      height: 100%;
+    }
+    .profile {
+      &--container__main {
+        display: block;
+        padding-top: 20px;
+        .tab--menu {
+          border: none;
+          border-top: 1px solid;
+          border-bottom: 1px solid;
+          margin-top: 20px;
+          display: flex;
+          justify-content: space-around;
+          flex-wrap: wrap;
+          padding: 0;
+          &__item {
+            display: block;
+            width: 100%;
+            text-align: center;
+            font-size: 15px;
+            margin: 5px 0;
+            &:first-of-type {
+              margin: 5px 0;
+            }
+          }
+        }
+      }
+      &--content {
+        display: block;
+        width: 100%;
+        &__input {
+          width: 100%;
+          margin-left: 0 !important;
+          margin-right: 0 !important;
+        }
+      }
+    }
+  }
+
+}

@@ -1,0 +1,50 @@
+[
+  {
+    "id" : 1,
+    "name" : "áo 1",
+    "url" : "/img/cloth1.png",
+    "price" : 2000 
+  },
+  {
+    "id" : 2,
+    "name" : "áo 2",
+    "url" : "/img/cloth2.png",
+    "price" : 3000 
+  },
+  {
+    "id" : 3,
+    "name" : "áo 3",
+    "url" : "/img/cloth3.png",
+    "price" : 4000 
+  },
+  {
+    "id" : 4,
+    "name" : "áo 4",
+    "url" : "/img/cloth4.png",
+    "price" : 6969 
+  },
+  {
+    "id" : 5,
+    "name" : "áo 5",
+    "url" : "/img/cloth5-1.png",
+    "price" : 9696 
+  },
+  {
+    "id" : 6,
+    "name" : "áo 6",
+    "url" : "/img/cloth5-2.png",
+    "price" : 6699 
+  },
+  {
+    "id" : 7,
+    "name" : "áo 7",
+    "url" : "/img/cloth5-3.png",
+    "price" : 9966 
+  },
+  {
+    "id" : 8,
+    "name" : "áo 8",
+    "url" : "/img/cloth5-4.png",
+    "price" : 6996 
+  }
+]

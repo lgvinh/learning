@@ -1,0 +1,270 @@
+#sectionNine{ 
+    $color1: #000000;
+    $color2: #FFFFFF;
+    $color3: #F7F7F7;
+    $color4: #AE003B;
+    
+    padding: 0px 0px 0px 43px;
+    &.right{
+        .divContent{
+            flex-direction: row-reverse;
+            .divRight{
+                margin: 40px auto 60px 60px;
+            }
+        }
+    }
+    .divContent{
+        display: flex;
+        margin-right: 58px;
+        .divLeft{      
+            width: 40%;
+            margin: 40px 20px 0px 37px;  
+            h3{        
+                margin: 0px;
+                color: $color1;
+                font-family: 'GothamRounded-Book';
+                font-size: 30px;
+                letter-spacing: 0.27px;
+                line-height: 40px;
+            }
+        }
+        &:not(#timeline) .divRight{
+            padding-left: 47px;
+        }
+        .divRight{
+            width: 60%;
+            margin: 40px 60px 60px auto;
+            p{
+                color: $color1;
+                font-family: 'HelveticaNeue';
+                font-size: 14px;
+                letter-spacing: 0.73px;
+                line-height: 22px;
+            }
+        }      
+    }
+
+    #timeline{
+        margin-right: 0px;
+        .divLeft h3{
+            margin-top: 5px;
+        }
+        .divRight{
+            margin-right: 0px;
+            .yearStart{
+                color: $color4;
+                font-family: 'GothamRounded-Medium';
+                font-size: 40px;
+            }           
+            .yearTimeline{
+                color: $color4;
+                font-family: 'GothamRounded-Medium';
+                font-size: 30px;
+                font-weight: 400;
+                line-height: normal;
+            }
+            p{
+                margin: 24px 0px 40px 0px;
+                max-width: 357px;
+            }
+            .img img{
+                width: 100%;
+            }
+
+            .row{
+                margin: 5px 0px 35px 0px;
+                .colLeft{
+                    width: 61%;
+                }
+                .colRight{
+                    width: 39%;
+                }
+            }
+        }
+    }
+
+    @media (max-width: 992px){
+        padding: 0px 0px 0px 20px;
+        &.right{
+            .divContent{           
+                .divRight{
+                    margin: 40px;
+                }
+                .divLeft{
+                    margin: 40px 40px 0px 40px;
+                }
+            }           
+        }
+        .divContent{
+            margin-right: 20px;
+            &:not(#timeline) .divRight{
+                padding-left: 0px;
+            }
+            .divLeft{
+                width: 40%;
+                margin: 40px 40px 0px 30px;
+            }
+            .divRight{
+                width: 60%;
+                margin: 40px 30px 40px 0px;
+            }
+        }
+
+        #timeline{
+            padding: 40px 0px 0px 0px;
+            .divLeft{
+                margin: 0px 0px 0px 30px;
+            }
+            .divRight{
+                margin-top: 0px;
+            }
+            
+            .divRight .row{
+                margin-bottom: 40px;
+                .colLeft{
+                    width: 57%;
+                }
+                .colRight{
+                    width: 43%;
+                }
+            }
+        }
+    }
+
+    @media (max-width: 768px){
+        padding: 0px 0px 0px 15px;
+        .divContent{
+            margin-right: 15px;
+            .divRight{
+                margin-right: 30px;
+                p{
+                    font-size: 12px;
+                }
+            }
+            .divLeft{
+                margin-left: 30px;
+                h3{
+                    font-size: 20px;
+                    margin-right: 15px;
+                }
+            }
+        }    
+       
+        #timeline{
+            .divLeft h3{
+                margin: 0px 0px 0px 10px;
+                font-size: 20px;
+                line-height: normal;
+            }
+            .divRight{
+                .yearStart{
+                    font-size: 25px;
+                }
+                p{
+                    font-size: 12px;
+                    margin-right: 55px;
+                }
+                .yearTimeline{
+                    font-size: 20px;
+                }
+                .row{
+                    .colLeft{
+                        width: 59%;
+                    }
+                    .colRight{
+                        width: 41%;
+                    }
+                }
+            }
+        }
+    }
+
+    @media (max-width: 576px){
+        padding: 0px 0px 0px 15px;
+        .divContent{
+            display: block;
+            padding: 30px;
+            .divLeft, .divRight{
+                width: auto;
+                margin: 0px;
+                padding: 0px;
+            }       
+            .divLeft h3{
+                margin-bottom: 15px;
+            }    
+        }
+        &.right{
+            .divContent{
+                .divLeft, .divRight{
+                    margin: 0px;
+                    padding: 0px;
+                } 
+            }            
+        }
+        #timeline{
+            padding: 40px 0px 0px 30px;
+            .divLeft{
+                margin: 0px;
+                padding: 0px;
+                h3{
+                    margin: 0px;
+                }
+            }
+            .divRight{
+                .yearStart{
+                    margin-top: 15px;
+                }
+                p{
+                    padding: 15px 50px 15px 0px;
+                    margin: 0px;
+                    max-width: 100%;
+                }
+            }         
+        }
+    }
+    @media (max-width: 360px){
+        padding: 0px;
+        margin: 0px;
+        .divContent{
+            margin: 19px 17px 28px 17px;
+            padding: 33px;
+            .divLeft{
+                margin-bottom: 23px;
+                h3{
+                    font-size: 24px;
+                    letter-spacing: 0.22px;
+                    line-height: 34px;
+                    margin: 0px;
+                }
+            }
+            .divRight p{
+                font-size: 13px;
+                letter-spacing: 0.68px;
+                line-height: 22px;
+                margin-left: 1px;
+            }
+        }
+        #timeline{
+            padding-top: 0px;
+            .divLeft{
+                margin-bottom: 52px;
+                h3{
+                    font-size: 24px;
+                    letter-spacing: 0.68px;
+                    line-height: 22px;
+                }
+            }
+            .divRight{
+                .yearStart{
+                    font-size: 40px;
+                }
+                p{
+                    font-size: 14px;
+                    letter-spacing: 0.73px;
+                    line-height: 22px;
+                    padding-right: 32px;
+                }
+            }
+        }
+    }
+}

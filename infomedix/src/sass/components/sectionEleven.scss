@@ -1,0 +1,361 @@
+#sectionEleven{
+    $color1: #000000;
+    $color2: #FFFFFF;
+    $color3: #F7F7F7;
+    $color4: #AE003B;
+
+    padding: 0px;
+    // margin-top: 100px;
+
+    h3{
+        font-family: 'GothamRounded-Book';
+        font-size: 30px;
+        letter-spacing: 0.27px;
+        line-height: normal;
+    }
+
+    p:not(.name){
+        font-family: 'HelveticaNeue';
+        :not(.title){
+            color: $color1;
+        }
+        &:not(.description){
+            font-size: 14px;
+            letter-spacing: 0.73px;
+            line-height: 22px;
+        }
+        &.description{
+            font-size: 12px;
+            letter-spacing: 0.61px;
+            line-height: 20px;
+        }
+    }
+
+    .title{
+        color: $color2;
+        display: flex;
+        padding: 90px 0px 100px 124px;
+        h3{
+            margin: 0px;
+        }
+        p{
+            margin: 15px auto 0px auto;
+            max-width: 450px;
+        }
+    }
+
+    .personList{
+        margin: 0px 49px;
+        padding: 60px 48px 20px 48px;
+        h3{
+            margin: 15px auto 27px 124px;
+        }
+        .content{
+            display: flex;
+            flex-wrap: wrap;
+        }
+        .person{
+            max-width: 352px;
+            width: 100%;
+            margin: 40px 32px 0px 32px;
+            .avatar{
+                max-height: 352px;
+                height: 100%;
+                img{
+                    height: 100%;
+                    width: 100%;
+                    object-fit: cover;
+                }
+            }
+            .name{
+                color: $color1;
+                font-family: 'GothamRounded-Medium';
+                font-size: 18px;
+                letter-spacing: 0.16px;
+                line-height: normal;
+                margin: 40px 0px 16px 0px;
+                height: 36px;
+            }
+
+            .description{             
+                margin: 0px;
+                max-height: 123px;
+                height: 100%;
+                display: -webkit-box;
+                -webkit-line-clamp: 7;
+                -webkit-box-orient: vertical;
+                overflow: hidden;
+            }
+
+            .more{
+                margin-top: 24px;
+                margin-bottom: 50px;
+                a{
+                    font-family: 'GothamRounded-Medium';
+                    font-size: 14px;
+                    letter-spacing: 0.13px;
+                    line-height: normal;
+                    padding-top: 1px;
+                    &.viewMore{
+                        color: $color1;                   
+                    }
+                    &.linkedin{
+                        color: $color4;
+                        float: right;
+                        padding-top: 3px;
+                    }
+                }
+                a:hover{
+                    text-decoration: none;
+                }                
+            }
+        }
+    }
+
+    #team{
+        margin-top: 0px;
+    }
+
+    #recruitment{
+        text-align: center;
+        padding: 60px 0px;
+        margin: 20px 50px 125px 50px;
+        h3{
+            max-width: 582px;
+            margin: 0px auto;
+        }
+        p{
+            max-width: 624px;
+            margin: 40px auto;
+        }
+        button{
+            background-color: #AE003B;
+            color: #FFFFFF;
+            border-radius: 7px;
+            -webkit-border-radius: 7px; 
+            -moz-border-radius: 7px; 
+            width: 163px;
+            height: 42px;
+            color: #FFFFFF;
+            font-family: 'GothamRounded-Medium';
+            font-size: 16px;
+            letter-spacing: 0.15px;
+            line-height: normal;
+        }
+        button:hover{
+            opacity: 90%;
+        }
+    }
+
+    @media (max-width: 1200px){
+        .personList{
+            padding: 60px;
+            margin: 0px 40px 40px 40px;
+            h3{
+                margin: 0px 0px 40px 20px;
+            }
+            .person{
+                max-width: 280px;
+                margin: 20px;
+                .avatar{
+                    max-height: 280px;
+                }
+            }
+        }
+        .title{
+            padding-left: 100px;
+            padding-right: 100px;
+        }
+    }
+
+    @media (max-width: 992px){
+        .personList{
+            padding: 40px;
+            h3{
+                margin: 20px;
+            }
+            .person{
+                max-width: 200px;
+                .avatar{
+                    max-height: 200px;
+                }
+                .name{
+                    font-size: 15px;
+                    margin: 20px 0px 5px 0px;
+                }
+                .more{
+                    margin-bottom: 0px;
+                }
+            }
+        }
+        #recruitment{
+            padding: 50px 0px;
+            h3{
+                margin: 0px 100px;
+                width: auto;
+                font-size: 25px;
+            }
+            p{
+                margin: 30px 80px;
+                width: auto;
+                font-size: 13px;
+            }
+            margin: 20px 50px;
+        }
+    }
+
+    @media (max-width: 768px){
+        .title{
+            padding: 60px 60px 60px 90px;
+            p{
+                margin-top: 0px;
+            }
+        }
+        .personList{
+            padding: 40px 40px 0px 40px;
+            h3{
+                margin: 0px 0px 10px 10px;
+                font-size: 20px;
+            }
+            .person{
+                max-width: 160px;
+                margin: 10px;
+                .avatar{
+                    max-height: 160px;
+                }
+                .name{
+                    font-size: 13px;
+                    margin: 20px 0px 10px 0px;
+                }
+                .description{
+                    font-size: 11px;
+                }
+                .more{
+                    margin: 20px 0px 20px 0px;
+                    a{
+                        font-size: 12px; 
+                    }
+                }
+            }
+        }
+        #recruitment{
+            padding: 40px 0px;
+            h3{
+                margin: 0px 80px;
+                font-size: 20px;
+            }
+            p{
+                margin: 20px 60px;
+                font-size: 12px;
+            }
+            margin: 20px 40px;
+        }
+    }
+
+    @media (max-width: 576px){
+        .title{
+            display: block;
+            text-align: center;
+            p{
+                margin-top: 20px;
+            }
+        }
+        .personList{
+            margin: 0px 15px 15px 15px;
+            h3{
+                margin: 0px auto 10px auto;
+                text-align: center;
+            }
+            .content{
+                justify-content: center;
+            }
+        }
+        #recruitment{
+            h3{
+                font-size: 18px;
+            }
+        }
+    }
+
+    @media (max-width: 480px){
+        p:not(.name, .description){
+            font-size: 13px;
+            letter-spacing: 0.68px;
+            line-height: 22px;
+        }
+
+        h3{
+            font-size: 24px;
+            letter-spacing: 0.22px;
+            line-height: 34px;
+            text-align: left;
+        }
+
+        .title{
+            text-align: left;
+            padding: 20px 0px 55px 29px;
+            margin: 0px;
+            p{
+                margin-top: 23px;
+                margin-left: 0px;
+                max-width: 283px;
+            }
+        }
+        
+        .personList{
+            padding: 34px 30px 20px 30px;
+            margin: 0px;
+            h3{
+                margin-bottom: 35px;
+                text-align: left;
+            }
+            .content{
+                display: block;
+            }
+            .person{
+                max-width: 400px;
+                margin: 0px;
+                .avatar{
+                    max-height: 400px;
+                }
+                .name{
+                    font-size: 18px;
+                    letter-spacing: 0.16px;
+                    line-height: 22px; 
+                    margin: 35px 0px 11px 0px;
+                    height: auto;
+                }
+                .description{
+                    font-size: 13px;
+                    letter-spacing: 0.66px;
+                    line-height: 20px; 
+                    -webkit-line-clamp: 4;
+                }
+                .more{
+                    margin: 11px 0px 0px 0px;
+                    padding-bottom: 50px;
+                    a{
+                        font-size: 13px;
+                    }
+                }
+            }           
+        }
+        #recruitment{
+            padding: 26px 11px 19px 16px;
+            margin: 0px 14px 20px 19px;
+            h3{
+                margin-left: 25px;
+            }
+            p{
+                margin: 22px 0px 42px 0px;
+                padding: 0px;
+                text-align: left;
+            }
+            button{
+                width: 100%;
+                font-size: 16px;
+
+            }
+        }
+    }
+}

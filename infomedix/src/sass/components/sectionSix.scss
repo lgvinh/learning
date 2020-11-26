@@ -1,0 +1,127 @@
+#sectionSix {
+  margin-top: 70px;
+  h2,h3,h4,h5 {
+    margin: 0;
+  }
+  .sectionSix-content {
+    max-width: 1440px;
+    margin: 0 auto;
+  }
+  > .container-fluid {
+    padding: 60px 3.47222222%;
+    background-color: #F7F7F7;
+    &:nth-of-type(n+2) {
+      margin-top: 123px;
+    }
+  }
+  .view-all {
+    display: block;
+    margin-top: 100px;
+    text-align: center;
+    font-family: 'GothamRounded-Medium';
+    font-size: 18px;
+    font-weight: 400;
+    letter-spacing: 0.16px;
+    line-height: 22px;
+    color: black;
+    transition: 0.3s ease-out;
+    &:hover {
+      color: #D00248;
+    }
+  }
+  h3 {
+    font-family: 'GothamRounded-Book';
+    font-size: 30px;
+    font-weight: 400;
+    letter-spacing: 0.27px;
+    text-align: center;
+  }
+  .col-md-4 {
+    margin-top: 40px;
+    &:nth-of-type(3n+1) {
+      margin-left: 0;
+    }
+  }
+  .news {
+    position: relative;
+    width: 100%;
+    background-color: white;
+    &-img {
+      // background-color: #D8D8D8;
+      width: 100%;
+      height: 236px;
+      margin: 0;
+      img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+      }
+    }
+    &-content {
+      padding: 24px 27px 40px;
+      margin: 0;
+      background-color: white;
+      .status {
+        display: block;
+        width: 100%;
+        font-family: 'HelveticaNeue';
+        font-size: 12px;
+        font-weight: bold;
+        letter-spacing: 0.61px;
+        line-height: 20px;
+        text-transform: uppercase;
+        margin-bottom: 8px;
+        &.update {
+          color: #D00248;
+        }
+        &.opinion {
+          color: #40B06D;
+        }
+      }
+      .title {
+        font-family: 'GothamRounded-Medium';
+        font-size: 18px;
+        font-weight: 400;
+        letter-spacing: 0.16px;
+        line-height: 24px;
+        max-width: 250px;
+        display: block;
+        margin-bottom: 16px;
+      }
+      .content {
+        font-family: 'HelveticaNeue';
+        font-size: 12px;
+        font-weight: 400;
+        letter-spacing: 0.61px;
+        line-height: 20px;
+        overflow: hidden;
+        text-overflow: ellipsis;
+        display: -webkit-box;
+        -webkit-line-clamp: 4; /* number of lines to show */
+        -webkit-box-orient: vertical;
+        margin: 0;
+      }
+    }
+    &-btn {
+      font-family: 'GothamRounded-Book';
+      padding: 15px;
+      background-color: #AE003B;
+      border: 2px solid #AE003B;
+      color: white;
+      font-size: 16px;
+      font-weight: 400;
+      letter-spacing: 0.15px;
+      line-height: 19px;
+      border-radius: 8px;
+      bottom: 0;
+      left: 27px;
+      transform: translateY(50%);
+      transition: 0.3s ease-out;
+      cursor: pointer;
+      &:hover {
+        background-color: white;
+        color: #AE003B;
+      }
+    }
+  }
+}

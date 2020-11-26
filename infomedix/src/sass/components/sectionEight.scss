@@ -1,0 +1,154 @@
+#sectionEight{
+    font-weight: 400;
+    color: #000000;
+    padding: 70px 0;
+    .title{
+        color: #A72A26;
+        font-size: 48px;
+        margin-bottom: 20px;
+    }
+    .titleForm{
+        font-size: 30px;
+        letter-spacing: 0.27px;
+        line-height: 40px;
+        font-family: 'GothamRounded-Book';
+    }
+    .infor-ads{
+        font-size: 12px;
+        font-family: 'HelveticaNeue';
+        font-weight: 400;
+        letter-spacing: 0.61px;
+        line-height: 20px;
+        padding-bottom: 40px;
+        margin: auto;
+        max-width: 544px;
+    }
+    .page-customer {
+        > div {
+            margin: 0;
+        }
+    }
+    .page{
+        .row{
+            background-color: #F7F7F7;
+            .form-infor{
+                padding-top:60px;
+                padding-bottom: 80px;
+                .form-input{
+                    .row{
+                        .inputtag{
+                            margin-bottom: 16px;
+                            .input{
+                                padding: 10px 0;
+                                padding-left: 20px;
+                                width:100%;
+                                background-color: #FFFFFF;
+                                border: 1px solid #979797;
+                                font-size: 12px;
+                                letter-spacing: 0.61px;
+                            }
+                            input::placeholder{
+                                color:#000000;
+                            }
+                            select{
+                                width: 100%;
+                                text-align: left;
+                            }
+                        }
+                    }
+                }
+                .btnSubmit{
+                    margin-top: 40px;
+                    background-color: #AE003B;
+                    border-radius: 7px;
+                    width: 163px;
+                    height: 42px;
+                    color: white;
+                }
+                .btnSubmit:hover{
+                    cursor: pointer;
+                    color: #AE003B;
+                    background-color: white;
+                    border: 2px solid #AE003B;
+                }
+            }
+        }
+    }
+    .page-contact{
+        margin: 4% 0;
+        .contact{
+            padding: 60px 60px 80px;
+            margin: 0;
+        }
+        .right-left{
+            flex-direction: row-reverse;
+        }
+        .row{
+            background-color: #F7F7F7;
+            .text-infor{
+                justify-content: left;
+                display: flex;
+                .inforContact{
+                    color: #000000;
+                    padding-top: 60px;
+                    font-family: 'HelveticaNeue';
+                    font-size: 14px;
+                    font-weight: 400;
+                    letter-spacing: 0.73px;
+                    line-height: 22px;
+                    text-align: left;
+                }
+            }
+            .contact-form{
+                .form-input{
+                    .row{
+                        .inputtag{
+                            margin-bottom: 16px;
+                            .input{
+                                padding: 10px 0;
+                                padding-left: 20px;
+                                width:100%;
+                                background-color: #FFFFFF;
+                                border: 1px solid #979797;
+                                font-size: 12px;
+                                letter-spacing: 0.61px;
+                            }
+                            input::placeholder{
+                                color:#000000;
+                            }
+                           textarea::placeholder{
+                                color:#000000;
+                           }
+                        }
+                        .btnSend{
+                            width: 100%;
+                            background-color: #AE003B;
+                            color: white;
+                            border-radius: 7px;
+                        }
+                        .btnSend:hover{
+                            cursor: pointer;
+                            color: #AE003B;
+                            background-color: white;
+                            border: 2px solid #AE003B;
+                        }
+                    }
+                }
+            }
+        } 
+    }
+    @media screen and (max-width: 576px) and (min-width: 320px) {
+        .page-contact{
+            .contact{
+                padding-top: 0px;
+                text-align: center;
+                font-size: 10px !important;
+                .text-infor{
+                    margin: 0;
+                    padding: 0;
+                }
+            }
+        }
+       
+    }
+}

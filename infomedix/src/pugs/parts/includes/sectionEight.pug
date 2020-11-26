@@ -1,0 +1,94 @@
+-var variables = ['Are you a? ','Haiden Namtech'];
+section#sectionEight.w-100.wow.fadeInUpBig
+    .content-container
+        .page.page-customer
+            //- h1.title Customer Success page
+            .row.text-center.justify-content-center
+                .form-infor.col-md-5
+                    .w-80
+                        h2.titleForm Download our case studies
+                        p.infor-ads “The InfoMedix Digital Medical Record has been a welcome addition to patient care in all environments and most particularly in the Emergency Department. The ease of accessibility to the patient file in real time has been a clear and timely advancement in the provision of Emergency Care to our patients. It has been an actual life saver… “
+                    .form-input
+                        .row
+                            .col-md-6.col-12.inputtag
+                                input.input(
+                                    type='text',
+                                    placeholder='First Name'
+                                )
+                            .col-md-6.col-12.inputtag
+                                input.input(
+                                    type='text',
+                                    placeholder='Last Name'
+                                )
+                        .row
+                            .col-md-6.col-12.inputtag
+                                input.input(
+                                    type='text',
+                                    placeholder='Company'
+                                )
+                            .col-md-6.col-12.inputtag
+                                input.input(
+                                    type='text',
+                                    placeholder='Phone Number'
+                                )
+                        .row
+                            .col-12.inputtag
+                                input.input(
+                                    type='text',
+                                    placeholder='Email Address'
+                                )
+                        .row
+                            .col-12.inputtag
+                                select.input
+                                    each variable in variables
+                                        option(value=variable) #{variable}
+                    button.btn.btnSubmit Submit
+        //- .page.page-contact
+        //-     .title
+        //-         h1.title Contact page
+        //-     .row.text-center.contact
+        //-         .col-md-4.col-12.text-infor
+        //-             .inforContact
+        //-                 .top    
+        //-                     p Level 2, 451 Little Bourke Street,
+        //-                     p Melbourne, VIC 3000 Australia
+        //-                 .bottom
+        //-                     p +61 3 8615 4567 
+        //-                     p info@infomedix.com.au 
+        //-                     p Customer Service Desk
+        //-         .col-md-8.col-12
+        //-             row.text-center.justify-content-center
+        //-                 .contact-form
+        //-                     h2.titleForm Contact form
+        //-                     .form-input
+        //-                         .row
+        //-                             .col-md-6.col-12.inputtag
+        //-                                 input.input(
+        //-                                     type='text',
+        //-                                     placeholder='First Name'
+        //-                                 )
+        //-                             .col-md-6.col-12.inputtag
+        //-                                 input.input(
+        //-                                     type='text',
+        //-                                     placeholder='Last Name'
+        //-                                 )
+        //-                         .row    
+        //-                             .col-12.inputtag
+        //-                                 input.input(
+        //-                                     type='text',
+        //-                                     placeholder='Last Name'
+        //-                                 )
+        //-                         .row    
+        //-                             .col-12.inputtag
+        //-                                 input.input(
+        //-                                     type='text',
+        //-                                     placeholder='Subject'
+        //-                                 )
+        //-                         .row    
+        //-                             .col-12.inputtag
+        //-                                 textarea.input#inputTextarea(name="", cols="30", rows="10",placeholder='Message')
+        //-                         .row
+        //-                             .col-6
+        //-                                 p.infor-ads Please allow 24 hours for a response
+        //-                             .col-6 
+        //-                                 button.btn.btnSend Send

@@ -1,0 +1,49 @@
+
+section#sectionEleven.container-fluid.wow.fadeInUpBig
+    mixin person(name, imgName, viewMore, linkedin, description)
+        .person
+            .avatar
+                img(alt='avatar'+imgName title='avatar' src='./assets/imgs/sectionEleven/'+imgName+'.png')
+            p.name=name
+            p.description=description
+            .more
+                a.viewMore(title='viewMore' href='#') View more
+                a.linkedin(title='linkedin' href='#') Linkedin
+
+    .title(style='background-color: #AE003B')
+        h3 Meet our Leaders 
+        p Our leadership team is passionate about working collaboratively to make a difference in healthcare
+ 
+    #directors.personList(style='background-color: #F7F7F7')
+        h3 Board of Directors
+        .content
+            +person('Robert Biancardi','Robert-Biancardi', '#', '#',
+            'Robert Biancardi is an experienced executive with more than 35 years’ commercial experience across the finance, IT, healthcare and services sectors. He has previously held senior roles at IBM, Citibank and ')
+            +person('Chris Flavell','Chris-Flavell', '#', '#',
+            'Chris is a founding Director of AraCapital. AraCapital is an Australasian “Private Capital” firm, targeting expansion capital and management buyout investments up to around $50 million enterprise value. AraCapital ')
+            +person('Ben Thynne','Ben-Thynne', '#', '#',
+            'Over the past 15 years Ben has gained significant expertise in acquiring, redeveloping and managing private hospitals with a focus of delivering excellence in healthcare. Prior to founding Evolution in 2011, Ben was ')          
+                      
+    #team.personList
+        h3 Executive Team
+        .content
+            +person('Jeff Smoot, CEO','Jeff-Smoot', '#', '#',
+            'Jeff has extensive experience in Healthcare in Australia. This includes MD of Cerner Corp APAC, Healthcare Industry Director with Fujitsu Technology Solutions, and VP APAC..')
+            +person('Michael Dewar, CFO','Michael-Dewar', '#', '#',
+            'A strategic minded, entrepreneurial, hands on and driven Qualified Accountant with over a decade within the exciting Healthcare and Technology sector. Passionate about Patient Care, numbers, technology and working with ')
+            +person('James Dent, COO','James-Dent', '#', '#',
+            'A seasoned software delivery professional, with a passion for fostering high-performing teams. James has a track record in Softwareas-a-Service, Agile Development, and IT Delivery across diverse industries including ')
+            +person('Berne Gibbons, Strategic Relationship Manager','Berne-Gibbons', '#', '#',
+            'A respected leader in the healthcare industry with a background in Nursing, Pharmaceutical Industry and Digital Technology spanning 40 years. Berne Gibbons has been committed to advancing Digital health in Australia for the ')
+            +person('Jordie Clark, Product Owner','Jordie-Clark', '#', '#',
+            'Jordie has spent her career working in Healthcare, starting in state health policy, then working for a number of years in hospital infrastructure projects managing commissioning and transition,  and she has now been working with InfoMedix in healthcare software development and delivery for the past 3 years. Jordie is driven to work in healthcare as she is passionate about making a difference and improving the quality of patient care, and ultimately the lives of people in her community. Jordie’s mission as Product Owner is to deliver a fit for purpose, high quality product that means our customers spend more time with patients, and less time on administration and systems.')   
+
+    #recruitment(style='background-color: #F7F7F7')
+        h3 We're looking for people who want to make a difference in Healthcare.
+        p Join InfoMedix and the work you do will make a difference to health services, practitioners and patients. You'll also be working with leaders in health technology and a and have the opportunity to work in a tightknit team based across Melbourne, Sydney and Brisbane. If you'd like to join our growing team, you can send your application to info@infomedix.com.au or keep a lookout on this page for opportunities.
+        button.btn Email Now
+
+    
+    
+
+            

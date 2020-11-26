@@ -1,0 +1,31 @@
+-var variables = ['Electronic Health Records','Population Health Software','Practice Management Software','Medicines Information','Specialist Practice Management','Clinical Content','Population Health Software','Electronic Health Records','Medicines Information','Practice Management Software','Clinical Content','Specialist Practice Management'];
+-var texts = ['InfoMedix is proud to be an Australian owned and operated company with a wealth of experience in delivering software solutions','InfoMedix is proud to be an Australian owned and operated company with a wealth of experience in delivering software solutions'];
+section#sectionFourteen.container-fluid.wow.fadeInUpBig
+    .container-fluid.container-fluidMain
+        .solution-infor.container-fluid
+            .top
+                .container-fluid
+                    .row.justify-content-center
+                        .col-md-7.col-12
+                            .img
+                                img(src="../../assets/imgs/doctors.png", alt="Image-Solution", srcset="")
+                        .col-md-5.col-12
+                            .infor-solution
+                                .infor-solution-text
+                                    h3.title Customer Success
+                                    p.infor Our products enable healthcare organisations to access clinical and administrative data in one place and in real time. Our products enable healthcare organisations to access clinical and administrative data in one place and in real time.
+                                    //- button.btnViewBelow View below
+            .bottom
+                .container-fluid
+                    .row
+                        .col-md-6
+                            h2.titleBlog Unlocking the data in your paper medical records made easy
+                        .col-md-6.row
+                            each text in texts
+                                .col-md-6.col-12
+                                    .Infor-Solution
+                                        p.solution #{text}
+
+
+
+

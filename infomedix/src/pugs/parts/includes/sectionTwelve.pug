@@ -1,0 +1,92 @@
+section#sectionTwelve.container-fluid
+    mixin feature(img, name, content)
+        .feature
+            img(alt='image circle' title='image' src='./assets/imgs/sectionTwelve/'+img)
+            .nameFeature=name
+            .content=content
+
+            
+    .partOne(style='background-color: #F7F7F7')
+        .banner(style='background-image: url("./assets/imgs/sectionTwelve/banner.png")')
+            .img
+                img#computer(alt='banner' title='banner' src='./assets/imgs/sectionTwelve/computer.png')
+        .header
+            .header-container
+                .left
+                    .title
+                        .divLogo(style='background-color: #0889A9')
+                            p IM
+                        h3 Digital Patient Chart
+                    p.content Automated workflow to assist clinical coders every step of the way.
+                .right
+                    p.content InfoMedix is proud to be an Australian owned and operated company with a wealth of experience in delivering software solutions InfoMedix is proud to be an Australian owned and operated company with a wealth of experience in delivering software solutions 
+    .partTwo
+        .d-flex.partTwo-container
+            .listContent.left
+                h3 Fast, Integrated, Compliant Coding Workflow
+                p.content The Infomedix Coding Manager Module is an automated workflow that assists coders in managing the coding process after patient discharge by providing:
+                ul                
+                    li Visibility of all episodes that are currently being coded, and what their status is
+                    li Direct access to the episode within the patient record that is being coded
+                    li Communication links between coders and clinical staff to resolve queries
+                    li Allocation of specific episodes to coders based on a variety of parameters including Length of Stay (LoS), speciality and ward
+                    li Ability to flag records for review
+                    li Ability to review coded discharges for quality assurance purposes
+                    li Key benefits
+                    li Speed
+                    li Tracking
+            .right.img
+                img(alt='image computer' title='image' src='./assets/imgs/sectionTwelve/computerRight.png')
+    .partThree
+        h3 How it works
+        .divFeature.have-slider
+            +feature('featureCircle.png','Feature 01','The Infomedix Coding Manager Module is an automated workflow that assists coders in managing the coding process after patient discharge by providing:')
+            +feature('featureCircle.png','Feature 02','The Infomedix Coding Manager Module is an automated workflow that assists coders in managing the coding process after patient discharge by providing:')
+            +feature('featureCircle.png','Feature 03','The Infomedix Coding Manager Module is an automated workflow that assists coders in managing the coding process after patient discharge by providing:')
+            +feature('featureCircle.png','Feature 04','The Infomedix Coding Manager Module is an automated workflow that assists coders in managing the coding process after patient discharge by providing:')
+    .partFour.divSolution(style='background-color: #F7F7F7')
+        .container-fluid.d-flex.partFour-solution-container
+            .left.img
+                img(alt='image computer' title='image' src='./assets/imgs/sectionTwelve/computer.png')
+            .listContent.right
+                h3 Our Solution
+                    p.content The Infomedix Coding Manager Module is an automated workflow that assists coders in managing the coding process after patient discharge by providing:
+                    ul                
+                        li Visibility of all episodes that are currently being coded, and what their status is
+                        li Direct access to the episode within the patient record that is being coded
+                        li Communication links between coders and clinical staff to resolve queries
+                        li Allocation of specific episodes to coders based on a variety of parameters including Length of Stay (LoS), speciality and ward
+                        li Ability to flag records for review
+                        li Ability to review coded discharges for quality assurance purposes
+                        li Key benefits
+                        li Speed
+                        li Tracking
+    .partFive.row
+        .col-md-6.col-lg-4.partFive-content
+            p Digital Forms
+            p easy-to-use, customisable digital forms which allow for workflow integration, integration of standard nomenclatures (such as SNOMED) and audit trails. InfoMedix provides additional services to assist health services in the development of digital forms.
+        .col-md-6.col-lg-4.partFive-content
+            p Ease of Use
+            p Designed to reflect the health service’s existing records practices so that it is intuitive for clinicians and minimal training is required.
+        .col-md-6.col-lg-4.partFive-content
+            p Digitisation
+            p Scan paper to digital to provide one consolidated patient record and enable remote, concurrent and immediate access for clinicians. Significantly reduce HIS operational costs and HIS clerk time in managing paper-based records.
+        .col-md-6.col-lg-4.partFive-content
+            p Integration
+            p Integrates with over 60 commonly used patient administration and clinical systems in Australia . My Health Record viewing and upload functionalityView our integration solutions
+        .col-md-6.col-lg-4.partFive-content
+            p Security & System Management
+            p System management features and services including, User profiles, Security access management and reporting, backup and disaster recovery processes and full audit trail capability. Available installed on premise or cloud hosted
+        .col-md-6.col-lg-4.partFive-content
+            p HIS Management
+            p To assist with a more efficient and cost effective HIS Department, DPC provides, Records Management, Comprehensive Reporting, Forms management (Digital and paper forms) and improved workflows with integration of our Coding Manager
+    //- .partFour.divStory(style='background-color: #F7F7F7')
+    //-     .imgFull.left
+    //-         img(alt='image computer' title='image' src='./assets/imgs/sectionTwelve/img.png')
+    //-     .story.right
+    //-         h3.titleBlue Customer Success Story
+    //-         p.content “The InfoMedix Digital Medical Record has been a welcome addition to patient care in all environments and most particularly in the Emergency Department. The ease of accessibility to the patient file in real time has been a clear and timely advancement in the provision of Emergency Care to our patients. It has been an actual life saver… “
+    //-         .doctor
+    //-             p.doctorName Dr Helen Hewitt
+    //-             p.doctorPlace Clinical Director Emergency Services, Pensinsula Health
+                

@@ -1,0 +1,31 @@
+-const infordoctor = [["Dr Helen Hewitt","Clinical Director Emergency Services, Pensinsula Health"]];
+-const titles= ['Homepage','Customer Success page'];
+-const InforHomepage= [['Austin Health','Austin Health have been using the Digital Patient Chart across their health services for over 10 years. The Digital Patient Chart  has enabled Austin Health to implement Digital Forms within their clinics.','Austin Health implemented scanning as we could see so many benefits that will help to improve our medical record service and the service we can provide to our clinicians and patients.  We went live on 1st December 2009, and the implementation was very successful.  The users find the application intuitive and easy to use, and our senior clinicians are very positive.',["Kris Jenkins","Director of Health Information Services, Austin Health." ]],['Eastern Health','Eastern Health has implemented the Digital Patient Chart with Digital Forms and Referrals Manager. They have experienced improved continuity of care, reduced records transport costs and reduced HIS department operational costs','InfoMedix Digital Patient Chart "has been a great step forward for Eastern Health in moving from our paper based medical records into the electronic age. This has delivered both greater access to information and quantifiable business benefits. Adoption of the system by both clinical and administrative staff has been high with all seeing the benefit"',["Dr Helen Hewitt","Clinical Director Emergency Services, Pensinsula Health"]]]; 
+section#sectionFour.container-fluid.left.wow.fadeInUpBig
+    .container-fluid.sectionFour-container(style={"background-color": "#F7F7F7"})
+        .row.page.sectionFour-content
+            .col-md-7.page__home-image
+                .img
+                    img(src="../../assets/imgs/shutterstock_317573531.png", alt="Image")
+            .col-md-5
+                .page__infor-homepage
+                    h4.page__infor-homepage__title-head Trusted by leading Australian Healthcare Providers
+                    p.page__infor-homepage__infor-ads__bottom “The InfoMedix Digital Medical Record has been a welcome addition to patient care in all environments and most particularly in the Emergency Department. The ease of accessibility to the patient file in real time has been a clear and timely advancement in the provision of Emergency Care to our patients. It has been an actual life saver…“
+                    .page__infor-homepage__infor-doctor
+                        h5.page__infor-homepage__infor-doctor__title-doctor=infordoctor[0][0]
+                        p.page__infor-homepage__infor-doctor__part-doctor=infordoctor[0][1]
+    each item in InforHomepage
+        .container-fluid.sectionFour-container(style={"background-color": "#F7F7F7"})
+            .row.left-right.container-fluid.page.sectionFour-content
+                .col-md-7.page__home-image
+                    .img
+                        img(src="../../assets/imgs/shutterstock_317573531.png", alt="Image")
+                .col-md-5
+                    .page__infor-homepage
+                        h4.page__infor-homepage__title-head=item[0]
+                        .page__infor-homepage__infor-ads
+                            p.page__infor-homepage__infor-ads__top=item[1]
+                            p.page__infor-homepage__infor-ads__bottom=item[2]
+                        .page__infor-homepage__infor-doctor
+                            h5.page__infor-homepage__infor-doctor__title-doctor=item[3][0]
+                            p.page__infor-homepage__infor-doctor__part-doctor=item[3][1]

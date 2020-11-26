@@ -1,0 +1,22 @@
+-const tags= [['../../assets/imgs/Tag1.svg','Digital Patient Chart','Unlock your patient data with InfoMedix Digital Patient Chart','blue'],['../../assets/imgs/Tag2.svg','Coding Manager','Automate worksflows and gain insight into clinical coding','green'],['../../assets/imgs/Tag3.svg','Referrals Manager','Streamline your referrals process with InfoMedix Referrals Manager','yellow'],['../../assets/imgs/Tag4.svg','Discharge Manager','Seamless, secure, health information transfer with InfoMedix Discharge Manager','purple']]
+section#sectionThree.container-fluid.wow.fadeInUpBig
+    .row.page-tag.have-slider
+        each item in tags
+            .col-xl-3.col-lg-3.col-md-3.col-12.full-tag
+                .container-fluid.tag-container
+                    .im
+                        p(class=item[3]).logo IM
+                    .infor-tag.d-flex
+                        a(href="#").img
+                            img(src=item[0])
+                        .tag-support
+                            h4.title
+                                a(href="#")=item[1]
+                            p.explain=item[2]
+                            button.btn-lm.mybtn(class=item[3]) 
+                                a(href="#") Learn more
+    .btnRequest.d-flex.justify-content-center
+        //button.mybtn.btn-request Request a Demo
+
+
+                

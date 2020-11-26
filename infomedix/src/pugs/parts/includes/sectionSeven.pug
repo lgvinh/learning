@@ -1,0 +1,44 @@
+- const text = "Each Infomedix product addresses a different healthcare challenge. They can be used as standalone modules or used altogether to provide a complete solution Each Infomedix product addresses a different healthcare challenge. They can be used as standalone modules or used altogether to provide a complete solution";
+- const arr = [["Indentify opportunity", text], ["Work together", text], ["Change outcomes", text]];
+-const arrLogo = ["../../assets/imgs/1.svg", "../../assets/imgs/2.svg", "../../assets/imgs/3.svg", "../../assets/imgs/4.svg", "../../assets/imgs/5.svg", "../../assets/imgs/6.svg"];
+section#sectionSeven.container-fluid.wow.fadeInUpBig
+    .container-fluid
+        .page-solution
+            .infor-ads.row.sectionSeven-content
+                .col-12.col-md-5.infor 
+                    .img
+                        img(src="../../assets/imgs/Twofemalehealthcareprofs.png", alt="ImageProfs", srcset="")
+                .col-md-7.col-12.infor
+                    .infor-solution
+                        .infor-solution-text
+                            p.title2  Together, we can achieve more. 
+                            p.information  Each Infomedix product addresses a different healthcare challenge. They can be used as standalone modules or used altogether to provide a complete solution Each Infomedix product addresses a different healthcare challenge. They can be used as standalone modules or used altogether to provide a complete solution
+            .row.ind-wor-cha.have-slider
+                each item in arr
+                    .col-xl-4.col-lg-4.col-md-12.col-sm-12.col-12.infor
+                        .infor-column
+                            h4.title3= item[0]
+                            p.inforInd-Wor-Cha= item[1]
+            .infor-ads.row.sectionSeven-content.right
+                .col-md-5.col-12.infor
+                    .img
+                        img(src="../../assets/imgs/Twofemalehealthcareprofs.png", alt="ImageProfs", srcset="")
+                .col-md-7.col-12.infor
+                    .infor-solution
+                        .infor-solution-text
+                            p.title2  Together, we can achieve more. 
+                            p.information  Each Infomedix product addresses a different healthcare challenge. They can be used as standalone modules or used altogether to provide a complete solution Each Infomedix product addresses a different healthcare challenge. They can be used as standalone modules or used altogether to provide a complete solution
+            .infor-logo.row
+                each item in arrLogo
+                    .col-2.slide-item
+                        .img
+                            img(src=item)
+
+
+                    
+
+
+
+
+
+

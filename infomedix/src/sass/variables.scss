@@ -1,0 +1,84 @@
+/* 
+ *  Theme variables 
+ */
+$primary-color: #ce2028;
+$secondary-color: gray;
+$light-color: white;
+$dark-color: grey;
+$text-color: black;
+
+/* 
+ *  Fonts define 
+ */
+@font-face {
+    font-family: graphik-reg;
+    src: url("../fonts/Graphik-Font/Graphik-Regular.otf");
+}
+
+@font-face {
+    font-family: graphik-bold;
+    src: url("../fonts/Graphik-Font/Graphik-Bold.otf");
+}
+
+@font-face {
+  font-family: 'FoundersGrotesk-Medium';
+  src: url('../webfonts/FoundersGrotesk-Medium.eot');
+  src: url('../webfonts/FoundersGrotesk-Medium.eot?#iefix') format('embedded-opentype'),
+       url('../webfonts/FoundersGrotesk-Medium.svg#FoundersGrotesk-Medium') format('svg'),
+       url('../webfonts/FoundersGrotesk-Medium.ttf') format('truetype'),
+       url('../webfonts/FoundersGrotesk-Medium.woff') format('woff'),
+       url('../webfonts/FoundersGrotesk-Medium.woff2') format('woff2');
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'FoundersGrotesk-Regular';
+  src: url('../webfonts/FoundersGrotesk-Regular.eot');
+  src: url('../webfonts/FoundersGrotesk-Regular.eot?#iefix') format('embedded-opentype'),
+       url('../webfonts/FoundersGrotesk-Regular.svg#FoundersGrotesk-Regular') format('svg'),
+       url('../webfonts/FoundersGrotesk-Regular.ttf') format('truetype'),
+       url('../webfonts/FoundersGrotesk-Regular.woff') format('woff'),
+       url('../webfonts/FoundersGrotesk-Regular.woff2') format('woff2');
+  font-weight: normal;
+  font-style: normal;
+}
+
+
+
+@font-face {
+  font-family: 'GothamRounded-Book';
+  src: url('../webfonts/GothamRounded-Book.eot');
+  src: url('../webfonts/GothamRounded-Book.eot?#iefix') format('embedded-opentype'),
+       url('../webfonts/GothamRounded-Book.svg#GothamRounded-Book') format('svg'),
+       url('../webfonts/GothamRounded-Book.ttf') format('truetype'),
+       url('../webfonts/GothamRounded-Book.woff') format('woff'),
+       url('../webfonts/GothamRounded-Book.woff2') format('woff2');
+  font-weight: normal;
+  font-style: normal;
+}
+
+
+@font-face {
+  font-family: 'GothamRounded-Medium';
+  src: url('../webfonts/GothamRounded-Medium.eot');
+  src: url('../webfonts/GothamRounded-Medium.eot?#iefix') format('embedded-opentype'),
+       url('../webfonts/GothamRounded-Medium.svg#GothamRounded-Medium') format('svg'),
+       url('../webfonts/GothamRounded-Medium.ttf') format('truetype'),
+       url('../webfonts/GothamRounded-Medium.woff') format('woff'),
+       url('../webfonts/GothamRounded-Medium.woff2') format('woff2');
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'HelveticaNeue';
+  src: url('../webfonts/HelveticaNeue.eot');
+  src: url('../webfonts/HelveticaNeue.eot?#iefix') format('embedded-opentype'),
+       url('../webfonts/HelveticaNeue.svg#HelveticaNeue') format('svg'),
+       url('../webfonts/HelveticaNeue.ttf') format('truetype'),
+       url('../webfonts/HelveticaNeue.woff') format('woff'),
+       url('../webfonts/HelveticaNeue.woff2') format('woff2');
+  font-weight: normal;
+  font-style: normal;
+}

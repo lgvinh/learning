@@ -1,0 +1,193 @@
+#sectionFour{
+    background-color: #F7F7F7;
+    font-family: 'HelveticaNeue';
+    font-weight: 400;
+    font-size: 14px;
+    letter-spacing: 0.73px;
+    color: #0A0A0A;
+    text-align: left;
+    padding: 0;
+    .container-fluidMain{
+        padding: 0 !important;
+        max-width: 1440px;
+    }
+    .sectionFour-container {
+        padding: 0;
+    }
+    .sectionFour-content {
+        max-width: 1440px;
+        width: 100%;
+        margin: 0px auto;
+        margin-bottom: 40px;
+    }
+    &.right {
+        .sectionFour-content {
+            flex-direction: row-reverse;
+        }
+    }
+    &.left {
+        .sectionFour-content {
+            flex-direction: row;
+        }
+    }
+    .title{
+        padding-top: 50px;
+        padding-left: 50px;
+        font-size: 48px;
+        letter-spacing: 0.44px;
+        line-height: 58px;
+        color: #9C0E0A;
+        font-family: 'FoundersGrotesk-Regular';
+    }
+    .title1{
+        padding-top: 0px;
+        margin: 0px;
+    }
+    .page{
+        padding: 0;
+        .img{
+            width: 100%;
+            height: 100%;
+            img{
+                object-fit: cover;
+                width: 100%;
+                height: 100%;
+            }
+        }
+        &__home-image{
+            padding: 0;
+        }
+        &__infor-homepage{
+            padding: 40px 5.20833%;
+            // padding-left: 75px;
+            display: flex;
+            flex-direction: column;
+            flex-wrap: wrap;
+            height: 100%;
+            &__title-head{
+                color: #AE003B;
+                font-family: 'GothamRounded-Book';
+                font-size: 30px;
+                letter-spacing: 0.27px;
+                line-height: 40px;
+                padding-bottom: 24px;
+                margin: 0;
+                max-width: 335px;
+            }
+            &__infor-ads{
+                font-size: 14px;
+                line-height: 22px;
+                max-width: 445px !important;
+            }
+            &__infor-doctor{
+                margin-top: auto;
+                font-size: 16px;
+                letter-spacing: 0.16px;
+                line-height: 26px;
+                font-family: 'GothamRounded-Medium';
+                &__title-doctor{
+                    color:#AE003B;
+                }
+                &__part-doctor{
+                    color: #0A0A0A;
+                    margin-bottom: 0 !important;
+                }
+
+            }
+        }
+    }
+    @media screen and (max-width: 1200px){
+        .page{
+            .img{
+                width: 100%;
+                height: 100%;
+                img{
+                    object-fit: cover;
+                    width: 100%;
+                    height: 100%;
+                    max-width: initial !important;
+                }
+            }
+        }
+    }
+    @media screen and (max-width: 1200px) and (min-width: 992px) {
+        .img{
+            width: 100%;
+            height: 100%;
+            img{
+                object-fit: cover;
+                width: 100%;
+                height: 100%;
+                max-width: initial !important;
+            }
+        }
+    }
+    @media screen and (max-width: 991px) and (min-width: 768px) {
+        max-height: initial !important;
+        letter-spacing: 0.1px;
+        .title{
+            padding: auto;
+            font-size: 30px;
+            letter-spacing: 0.44px;
+            line-height: 40px;
+            color: #9C0E0A;
+            font-family: 'FoundersGrotesk-Regular';
+        }
+        .title1{
+            padding-top: 0px;
+            margin: 0px;
+        }
+        .page{
+            // margin: 30px 0px;
+            &__infor-homepage{
+                // padding: 0;
+                margin: 0;
+                &__title-head{
+                    font-size: 25px;
+                }
+                &__infor-ads{
+                    font-size: 10px;
+                }
+                &__infor-doctor{
+                    font-size: 12px;
+                }
+            }
+        }
+    }
+    @media screen and (max-width: 767px) and (min-width: 320px) {
+        max-height: initial !important;
+        letter-spacing: 0.1px;
+        text-align: center;
+        .title{
+            padding: 0 !important ;
+            font-size: 25px;
+            font-weight: 400;
+            letter-spacing: 0.44px;
+            line-height: 40px;
+            color: #9C0E0A;
+            font-family: 'FoundersGrotesk-Regular';
+        }
+        .title1{
+            padding-top: 0px;
+            margin: 0px;
+        }
+        .page{
+            margin: 30px 0px;
+            &__infor-homepage{
+                // padding: 0 !important;
+                align-items: center;
+                &__title-head{
+                    font-size: 20px;
+                    text-align: center;
+                }
+                &__infor-ads{
+                    font-size: 10px;
+                }
+                &__infor-doctor{
+                    font-size: 12px;
+                }
+            }
+        }
+
+    }
+}

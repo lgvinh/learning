@@ -4,14 +4,16 @@
   "description": "",
   "main": "handler.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "offline": "sls offline"
   },
   "keywords": [],
   "author": "",
   "license": "ISC",
   "dependencies": {
     "aws-sdk": "^2.800.0",
-    "serverless-dynamodb-local": "^0.2.10",
+    "serverless": "^2.14.0",
+    "serverless-dynamodb-local": "^0.2.39",
     "serverless-offline": "^6.8.0"
   }
 }

@@ -1,2 +1,2 @@
 - npm i serverless -g
-- install python
+- sls dynamodb install (install java https://www.oracle.com/java/technologies/javase-jre8-downloads.html)

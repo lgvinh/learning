@@ -8,7 +8,7 @@ const docClient = new AWS.DynamoDB.DocumentClient({
 
 module.exports.hello = async (event, context) => {
   const test = await docClient.scan({
-    TableName: "petShopApp",
+    TableName: "petShop",
   }).promise();
 
   return {

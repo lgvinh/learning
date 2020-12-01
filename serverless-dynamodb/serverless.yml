@@ -29,20 +29,20 @@ provider:
 #  region: us-east-1
 
 # you can add statements to the Lambda function's IAM Role here
-#  iamRoleStatements:
-#    - Effect: "Allow"
-#      Action:
-#        - "s3:ListBucket"
-#      Resource: { "Fn::Join" : ["", ["arn:aws:s3:::", { "Ref" : "ServerlessDeploymentBucket" } ] ]  }
-#    - Effect: "Allow"
-#      Action:
-#        - "s3:PutObject"
-#      Resource:
-#        Fn::Join:
-#          - ""
-#          - - "arn:aws:s3:::"
-#            - "Ref" : "ServerlessDeploymentBucket"
-#            - "/*"
+  iamRoleStatements:
+    - Effect: "Allow"
+      Action:
+        - "s3:ListBucket"
+      Resource: { "Fn::Join" : ["", ["arn:aws:s3:::", { "Ref" : "ServerlessDeploymentBucket" } ] ]  }
+    - Effect: "Allow"
+      Action:
+        - "dynamodb:*"
+      Resource: "*"
+        #  Fn::Join:
+        #    - ""
+        #    - - "arn:aws:s3:::"
+        #      - "Ref" : "ServerlessDeploymentBucket"
+        #      - "/*"
 
 # you can define service wide environment variables here
 #  environment:
@@ -56,6 +56,17 @@ provider:
 #  exclude:
 #    - exclude-me.js
 #    - exclude-me-dir/**
+
+custom:
+  tableName: petShopApp
+  # bucketName: myserverlessprojectupload
+  dynamodb:
+    stages:
+      - dev
+    start:
+      port: 8042
+      inMemory: true
+      migrate: true
 
 functions:
   hello:
@@ -103,22 +114,23 @@ functions:
 # you can add CloudFormation resource templates here
 resources:
  Resources:
-  petShop:
+  petShopApp:
     Type: AWS::DynamoDB::Table
     Properties:
-      TableName: petShopApp
+      TableName: petShop
       AttributeDefinitions:
-        - AttributeName: thingId
+        - AttributeName: type
           AttributeType: S
-        - AttributeName: itemId
+        - AttributeName: id
           AttributeType: S
       KeySchema:
-        - AttributeName: thingId
+        - AttributeName: type
           KeyType: HASH
-        - AttributeName: thingId
+        - AttributeName: id
           KeyType: RANGE
       ProvisionedThroughput:
         ReadCapacityUnits: 5
         WriteCapacityUnits: 5
 plugins:
   - serverless-offline
+  - serverless-dynamodb-local

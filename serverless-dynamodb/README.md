@@ -1,0 +1,2 @@
+- npm i serverless -g
+- install python

@@ -17,6 +17,7 @@ module.exports.hello = async (event, context) => {
       {
         message: 'Go Serverless v1.0! Your function executed successfully!',
         test,
+        event
       },
       null,
       2

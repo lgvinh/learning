@@ -1,0 +1,100 @@
+.talent {
+  &-container {
+    width: 100%;
+  }
+  &-content {
+    @include middleContent;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-top: 70px;
+    padding-bottom: 70px;
+    &-vertical {
+      flex-direction: column;
+      text-align: center;
+      &.talent-content-reverse {
+        flex-direction: column-reverse;
+      }
+      &.talent-content-normal {
+        flex-direction: column;
+      }
+    }
+    &-horizontal {
+      flex-direction: row;
+      &.talent-content-reverse {
+        flex-direction: row-reverse;
+      }
+      &.talent-content-normal {
+        flex-direction: row;
+      }
+    }
+    &--verticalize {
+      &:first-of-type {
+        margin-bottom: 50px;
+      }
+    }
+    &--text {
+      max-width: 585px;
+      &.talent-content--horizontalize {
+        margin-right: 20px;
+      }
+    }
+    &-reverse {
+      &.talent-content-horizontal {
+        .talent-content--text {
+          margin-left: 20px;
+          margin-right: 0;
+        }
+      }
+      &.talent-content-vertical {
+        .talent-content--image {
+          margin-bottom: 50px;
+        }
+      }
+      .talent-content--verticalize {
+        &:first-of-type {
+          margin-bottom: 0;
+        }
+      }
+    }
+    @include customBreakPointPcDown(1024px) {
+      justify-content: space-around;
+      &--horizontalize {
+        &.talent-content--text {
+          max-width: 450px;
+          margin-right: 0;
+        }
+      }
+    }
+    @include customBreakPointPcDown($--tablet) {
+      flex-direction: column !important;
+      &--text {
+        margin-right: 0;
+        margin-bottom: 0 !important;
+      }
+      &--image {
+        margin-top: 50px;
+      }
+      &-reverse {
+        .talent-content--text {
+          margin-left: 0;
+        }
+      }
+      &--verticalize {
+        &.talent-content--text {
+          max-width: 450px;
+        }
+      }
+      &-reverse.talent-content-horizontal {
+        .talent-content--horizontalize {
+          margin-left: 0;
+        }
+      }
+    }
+    @include customBreakPointPcDown($--medium-phone) {
+      &--text {
+        text-align: left;
+      }
+    }
+  }
+}

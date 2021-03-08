@@ -1,0 +1,25 @@
+.talents-solution {
+  padding-top: 80px;
+
+  .top {
+    &-container-desktop {
+      > a {
+        max-width: 90px;
+
+        &:first-child {
+          max-width: 150px;
+        }
+      }
+    }
+  }
+
+  @include customBreakPointPcDown(880px) {
+    padding-top: 96px;
+  }
+}
+
+@import './Banner/styles.scss';
+@import './Introduction/styles.scss';
+@import './HowWeWork/styles.scss';
+@import './Empower/styles.scss';
+@import './Workforce/styles.scss';

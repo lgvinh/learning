@@ -1,0 +1,12 @@
+#work-tablet {
+  .talent-content--text {
+    max-width: 1050px;
+    @include customBreakPointPcDown($--tablet) {
+      max-width: 450px;
+      text-align: left;
+    }
+  }
+  .work-tablet--up--content {
+    margin-top: 15px;
+  }
+}

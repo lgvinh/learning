@@ -1,0 +1,373 @@
+#survey-home {
+  padding-top: 80px;
+
+  .banner__wrapper {
+    background-image: url("/images/surveys/home/banner.png");
+    background-position: 55%;
+  }
+
+  .survey {
+    &-simple {
+      padding-bottom: 12px;
+
+      &__title {
+        @include setFont(42px, bold, 1.43);
+        @include customBreakPointPcDown($--tablet) {
+          @include setFont(30px, bold, 1.33);
+          text-align: center;
+          margin-bottom: 10px;
+        }
+      }
+
+      &__content {
+        @include setFont(18px, 300, 1.56, #838383);
+        @include customBreakPointPcDown($--tablet) {
+          @include setFont(16px, 300, 1.75);
+          text-align: center;
+        }
+      }
+
+      .talent-content--text {
+        max-width: 770px;
+      }
+    }
+
+    &-home {
+      &--addressing {
+        background-image: url("/images/surveys/home/addressing.png");
+        min-height: 455px;
+        background-size: 1920px 100%;
+        background-repeat: no-repeat;
+        display: flex;
+        align-items: flex-end;
+        margin-bottom: 45px;
+        background-position-x: 68%;
+
+        &--content {
+          @include middleContent(630px);
+          background: $--main-gradient-color;
+          border-radius: 8px;
+          display: flex;
+          flex-direction: column;
+          align-items: center;
+          padding-top: 40px;
+          padding-bottom: 40px;
+          margin-bottom: -45px;
+          box-shadow: 0 2px 8px 0 rgba(0, 0, 0, 0.2);
+        }
+
+        &--text {
+          @include setFont(16px, 300, 1.63, white);
+          margin-top: 30px;
+          max-width: 455px;
+          text-align: center;
+          opacity: .8;
+        }
+
+        @include customBreakPointMobileUp(1921px) {
+          background-size: cover;
+          background-position-y: 15%;
+        }
+
+        @include customBreakPointPcDown($--tablet) {
+          min-height: 320px;
+          background-size: 1220px 320px;
+          background-position-y: top;
+
+          &--content {
+            border-radius: unset;
+            margin-bottom: 0;
+            min-height: 320px;
+            max-width: unset;
+            width: 100%;
+            padding-top: 70px;
+            opacity: .7;
+          }
+        }
+      }
+
+      &__tabs {
+        background: $--main-gradient-color;
+        padding: 70px 15px 114px;
+        position: relative;
+        min-height: 595px;
+
+        .ant-tabs-nav {
+          display: none;
+        }
+
+        &--title {
+          @include setFont(42px, bold, 1.43, white);
+          text-align: center;
+          padding-bottom: 50px;
+          @include customBreakPointPcDown($--tablet) {
+            font-size: 36px;
+          }
+        }
+
+        &--tab-pane {
+          display: flex;
+          justify-content: space-between;
+          @include middleContent(980px);
+          padding: 0;
+
+          @include customBreakPointPcDown($--tablet) {
+            flex-direction: column;
+          }
+
+          &:last-child {
+            .survey-home__tabs--images {
+              margin-right: 70px;
+              margin-top: 10px;
+
+              @include customBreakPointPcDown($--tablet) {
+                img {
+                  width: 320px;
+                }
+              }
+            }
+          }
+        }
+
+        &--images {
+          margin-right: 100px;
+          max-width: 450px;
+          max-width: 450px;
+
+          img {
+            width: 100%;
+            height: 100%;
+          }
+
+          @include customBreakPointPcDown($--tablet) {
+            margin: 0 auto 50px !important;
+            img {
+              width: 252px;
+              height: 197px;
+            }
+          }
+        }
+
+        &--content {
+          max-width: 555px;
+          color: white;
+
+          &__title {
+            @include setFont(36px, bold, 1.39, inherit);
+            padding-bottom: 10px;
+          }
+
+          &__text {
+            @include setFont(16px, 300, 1.63, inherit);
+            padding-bottom: 25px;
+          }
+
+          &__btn {
+            @include setFont(16px, 500, 1.25, inherit);
+          }
+
+          @include customBreakPointPcDown($--laptop) {
+            max-width: 450px;
+          }
+
+          @include customBreakPointPcDown($--tablet) {
+            margin: 0 auto;
+          }
+        }
+
+        &:hover {
+          .survey-home__tabs--btn {
+            opacity: 0.5;
+          }
+        }
+
+        .carousel--btn {
+          width: 8px;
+          height: 8px;
+          background-color: rgba(255, 255, 255, 0.5);
+          border-radius: 50%;
+          margin: 0 4px;
+          cursor: pointer;
+
+          &.active {
+            opacity: 1;
+            background-color: rgba(255, 255, 255, 1);
+          }
+
+          &--container {
+            position: absolute;
+            bottom: 45px;
+            display: flex;
+            left: 50%;
+            transform: translateX(-50%);
+          }
+        }
+
+        &--btn {
+          height: 66px;
+          width: 30px;
+          background-color: #d2dbe3;
+          position: absolute;
+          top: 50%;
+          transform: translateY(-50%);
+          opacity: 0;
+          transition: all 0.4s ease-in-out;
+
+          display: flex;
+          align-items: center;
+          justify-content: center;
+
+          &:hover {
+            opacity: 0.9 !important;
+          }
+        }
+
+        &--prev {
+          left: 0;
+          border-radius: 0 5px 5px 0;
+          > i {
+            transform: rotate(45deg);
+            border: solid #fff;
+            border-width: 0 0 3px 3px;
+            display: inline-block;
+            padding: 5px;
+          }
+        }
+
+        &--next {
+          right: 0;
+          border-radius: 5px 0 0 5px;
+          > i {
+            transform: rotate(45deg);
+            border: solid #fff;
+            border-width: 3px 3px 0 0;
+            display: inline-block;
+            padding: 5px;
+          }
+        }
+      }
+    }
+  }
+
+  .beautiful-design {
+    &--container {
+      max-width: 455px;
+    }
+
+    .talent-content--text {
+      margin-right: 90px;
+
+      @include customBreakPointPcDown($--tablet) {
+        margin-right: 0;
+      }
+    }
+
+    &__image {
+      &--mobile {
+        display: none;
+      }
+    }
+
+    @include customBreakPointPcDown($--tablet) {
+      &__image {
+        &--mobile {
+          display: block;
+        }
+
+        &--pc {
+          display: none;
+        }
+      }
+    }
+  }
+
+  .powerful-insights {
+    &--container {
+      padding-left: 130px;
+
+      @include customBreakPointPcDown($--tablet) {
+        padding-left: 0;
+      }
+    }
+
+    &__image {
+      &--mobile {
+        display: none;
+      }
+    }
+
+    @include customBreakPointPcDown($--tablet) {
+      &__image {
+        &--mobile {
+          display: block;
+        }
+
+        &--pc {
+          display: none;
+        }
+      }
+    }
+  }
+
+  .features {
+    padding: 70px 15px 120px;
+
+    &--title {
+      @include setFont(42px, bold, 1.43);
+      text-align: center;
+      padding-bottom: 50px;
+
+      @include customBreakPointPcDown($--tablet) {
+        font-size: 36px;
+      }
+    }
+
+    &__list {
+      @include middleContent;
+      display: flex;
+      justify-content: space-around;
+      flex-wrap: wrap;
+
+      &--items {
+        width: 25%;
+        padding: 0 15px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+
+        &__text {
+          padding-top: 30px;
+          text-align: center;
+          @include setFont(16px, 500, 1.5);
+          @include customBreakPointPcDown($--tablet) {
+            @include setFont(22px, 600, 1.89);
+          }
+        }
+
+        &:nth-of-type(n+5) {
+          margin-top: 90px;
+        }
+
+        @include customBreakPointPcDown($--tablet) {
+          width: 50%;
+
+          &:nth-of-type(n+3) {
+            margin-top: 50px;
+          }
+        }
+
+        @include customBreakPointPcDown($--medium-phone) {
+          width: 100%;
+
+          &:nth-of-type(n+2) {
+            margin-top: 50px;
+          }
+        }
+      }
+    }
+  }
+
+  @include customBreakPointPcDown(880px) {
+    padding-top: 96px;
+  }
+}

@@ -1,0 +1,89 @@
+#interview-kit {
+  .good-interview {
+    &--container {
+      position: relative;
+    }
+
+    &--image {
+      position: absolute;
+      top: 0;
+      bottom: 0;
+      right: 0;
+      left: 50%;
+      height: 100%;
+
+      img {
+        height: 100%;
+        width: 100%;
+        object-fit: cover;
+      }
+    }
+  }
+
+  .prepare {
+    &--right-way {
+      max-width: 550px;
+
+      &__title {
+        max-width: 445px;
+      }
+
+      &__text {
+        max-width: 565px;
+      }
+    }
+  }
+  
+  .include-kit {
+    .talent-content--text {
+      max-width: 700px;
+      .c-talents--content {
+        max-width: 585px;
+        text-align: center;
+        margin: 0 auto;
+      }
+    }
+  }
+
+  @include customBreakPointPcDown(1439px) {
+    .good-interview {
+      &--image {
+        img {
+          object-fit: unset;
+        }
+      }
+
+      &--content {
+        padding-right: 110px;
+      }
+    }
+  }
+
+  @include customBreakPointPcDown($--tablet) {
+    .good-interview {
+      &--image {
+        position: relative;
+        top: unset;
+        bottom: unset;
+        right: unset;
+        left: unset;
+        margin-right: -15px;
+      }
+
+      &--content {
+        padding-right: 0;
+      }
+
+      .talent-content--text {
+        max-width: 450px;
+      }
+    }
+
+    .include-kit {
+      &--content {
+        text-align: left;
+        max-width: 450px;
+      }
+    }
+  }
+}

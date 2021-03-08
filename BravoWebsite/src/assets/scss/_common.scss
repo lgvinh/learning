@@ -1,0 +1,90 @@
+.transparent-btn {
+  background: transparent;
+  border: solid 1px #ffffff;
+  box-shadow: 0 2px 8px 0 rgba(0, 0, 0, 0.1);
+  padding: 15px 25px;
+  border-radius: 8px;
+  color: white;
+  outline: none;
+  transition: 0.5s all;
+  opacity: .8;
+  display: inline-block;
+
+  &:hover {
+    opacity: 1;
+    color: white;
+  }
+}
+
+.f-s {
+  &-16 {
+    font-size: 16px;
+    line-height: 1.25;
+  }
+}
+
+.bg {
+  &-light-blue {
+    background-color: $--light--blue;
+  }
+
+  &-white {
+    background-color: white;
+  }
+
+  &-cyan {
+    background-color: #00cccb;
+  }
+}
+
+.c-talents {
+  &--title {
+    @include setFont(36px, bold, 1.39, $--cyan-text);
+  }
+
+  &--content {
+    @include setFont(18px, 300, 1.63);
+    margin-top: 10px;
+  }
+
+  &--page-description {
+    padding: 50px 0;
+    text-align: center;
+    background-color: white;
+
+    &__container {
+      @include middleContent;
+
+      @include customBreakPointPcDown($--tablet) {
+        max-width: 480px;
+        text-align: left;
+      }
+    }
+
+    &__content {
+      @include setFont(18px, 300, 1.56, $--content-gray);
+      margin-top: 5px;
+    }
+
+    @include customBreakPointPcDown($--medium-phone) {
+      &--title {
+        font-size: 33px;
+      }
+
+      &--content {
+        font-size: 15px;
+      }
+    }
+
+    &__break-line {
+      display: none;
+    }
+
+    @include laptop {
+      &__break-line {
+        display: block;
+      }
+    }
+
+  }
+}

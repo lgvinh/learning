@@ -1,0 +1,117 @@
+.banner {
+	&__wrapper {
+		width: 100%;
+		background: url('/images/talents/solution/banner.png') no-repeat;
+		background-size: cover;
+		background-position: center bottom;
+		height: 609px;
+		color: #fff;
+		display: flex;
+		align-items: center;
+		text-align: center;
+	}
+
+	&__content {
+		@include middleContent();
+		padding: 0 40px;
+		display: flex;
+		flex-direction: column;
+		justify-content: center;
+		align-items: center;
+		text-align: center;
+
+		&__logo {
+			height: 30px;
+			margin-bottom: 25px;
+		}
+
+		&__text {
+			@include setFont(1.125em, 300, 1.56, #fff);
+			margin-bottom: 25px;
+		}
+
+		&__button {
+			padding: 20px 63px 18px;
+			border-radius: 8px;
+			background: linear-gradient(to right, #f3cd62, #f2bf62, #f2a960, #f3975e, #f48b5d, #f4835c, #f4815b);
+			text-transform: uppercase;
+			@include setFont(1em, 500, 1.25, #fff);
+			outline: none;
+
+			&__talents, &__growth {
+				min-width: 270px;
+				padding: 20px 0 18px;
+				@include customBreakPointPcDown($--tablet) {
+					margin-top: 20px;
+				}
+			}
+
+			&__growth {
+				background: linear-gradient(to right, #f3cd62, #f2bf62, #f2a960, #f3975e, #f48b5d, #f4835c, #f4815b);
+			}
+
+			&:hover, &:active {
+				@include setFont(1em, 500, 1.25, #fff);
+				opacity: 0.9;
+				transition: all .2s ease-in-out;
+			}
+
+			@include customBreakPointPcDown($--tablet) {
+				&__talents {
+					min-width: 230px;
+				}
+
+				&__growth {
+					min-width: 197px;
+				}
+			}
+		}
+
+		&--group__button {
+			display: flex;
+			align-items: center;
+			justify-content: space-between;
+			max-width: 550px;
+			width: 100%;
+
+			a:hover, a:active {
+				@include setFont(1em, 500, 1.25, #fff);
+			}
+
+			@include customBreakPointPcDown($--tablet) {
+				flex-direction: column;
+			}
+		}
+	}
+
+	@include customBreakPointPcDown($--tablet) {
+		&__wrapper {
+			background-position-x: 67%;
+		}
+	}
+
+	@include tablet {
+		&__wrapper {
+			height: 585px;
+		}
+	}
+
+	@include laptop {
+		&__wrapper {
+			height: 781px;
+		}
+
+		&__content {
+			&__logo {
+				height: 43.5px;
+			}
+		}
+	}
+
+	@include customBreakPointMobileUp(1921px) {
+		&__wrapper {
+			height: 780px;
+			background-position: center;
+		}
+	}
+}

@@ -1,0 +1,268 @@
+#growth {
+  padding-top: 80px;
+
+  .max-w-455 {
+    max-width: 455px;
+  }
+
+  .special--content {
+    &__image {
+      margin-right: -11vw;
+      img {
+        height: 100%;
+      }
+    }
+    @include customBreakPointPcDown($--desktop) {
+      &__text {
+        max-width: 450px;
+      }
+      &__image {
+        margin-right: 0;
+      }
+    }
+
+    @include customBreakPointPcDown($--tablet) {
+      &__image {
+        img {
+          width: 100%;
+        }
+      }
+    }
+  }
+
+  .bravoGrowth {
+    padding-top: 70px;
+    padding-bottom: 0;
+    align-items: flex-end;
+    &--introduction {
+      text-transform: uppercase;
+      @include setFont(14px, 600, 1.57, $--cyan-text);
+      opacity: 0.7;
+      padding-bottom: 15px;
+
+      @include customBreakPointPcDown($--tablet) {
+        text-align: center;
+        font-size: 14px !important;
+      }
+    }
+    .talent-content--text {
+      max-width: 555px;
+      width: 100%;
+      padding-bottom: 70px;
+      @include customBreakPointPcDown($--tablet) {
+        padding-bottom: 0;
+      }
+    }
+    &--content {
+      font-size: 18px;
+    }
+    &--title {
+      @include setFont(42px, bold, 1.43);
+      @include customBreakPointPcDown($--tablet){
+        display: none;
+      }
+    }
+    &--title-mobile{
+      display: none;
+      @include customBreakPointPcDown($--tablet){
+        display: block;
+        @include setFont(30px, bold, 1.2);
+        text-align: center;
+      }
+    }
+    &--text {
+      margin-top: 40px;
+    }
+
+    &--text--mobile {
+      display: none;
+      @include customBreakPointPcDown($--tablet){
+        display: block;
+      }
+    }
+
+    @include customBreakPointPcDown($--tablet) {
+      align-items: center;
+      .talent-content--text {
+        max-width: 450px;
+      }
+    }
+
+    .content-desktop{
+      p{
+        @include setFont(18px, 300, 1.56);
+      }
+      @include customBreakPointPcDown($--tablet){
+        display: none;
+      }
+    }
+
+    .content-mobile{
+      display: none;
+      text-align: center;
+      @include customBreakPointPcDown($--tablet){
+        display: block;
+      }
+    }
+  }
+
+  .growth {
+    &--re-skill {
+      background-image: url("/images/growth/home/re-skill.png");
+      background-size: cover;
+      background-repeat: no-repeat;
+      background-color: $--light--blue;
+      min-height: 414px;
+      display: flex;
+      align-items: flex-end;
+      background-position-x: 0;
+      &--content {
+        background: linear-gradient(to right, #138281, #0d549f);
+        opacity: .9;
+        @include middleContent(770px);
+        padding: 80px 33px 60px;
+        text-align: center;
+        color: white;
+        border-top-left-radius: 8px;
+        border-top-right-radius: 8px;
+        position: relative;
+        @include customBreakPointPcDown($--tablet) {
+          min-height: 414px;
+          padding: 70px 15px 100px;
+          background: none;
+        }
+      }
+      &--title {
+        @include setFont(36px, bold, 1.39, white);
+      }
+      &--text {
+        @include setFont(18px, 300, 1.63, white);
+        padding-top: 15px;
+        max-width: 470px;
+        margin: 0 auto;
+      }
+      &--jump {
+        position: absolute;
+        bottom: 25px;
+        @include customBreakPointPcDown($--tablet) {
+          bottom: 70px;
+        }
+      }
+      &--jump-btn {
+        transform: rotate(45deg);
+        border: solid white;
+        border-width: 0 2.5px 2.5px 0;
+        display: inline-block;
+        padding: 4px;
+        opacity: 0.8;
+        &:hover {
+          opacity: 1;
+        }
+      }
+
+      @include customBreakPointPcDown($--tablet) {
+        background-image: url("/images/growth/home/re-skill-mobile.png");
+        &--title,
+        &--text {
+          max-width: 450px;
+          margin: 0 auto;
+        }
+      }
+    }
+
+    &--solve-problems {
+      .talent-container:last-child {
+        .talent-content {
+          padding-bottom: 100px;
+        }
+      }
+    }
+
+    &--work {
+      text-align: center;
+      padding-top: 70px;
+      &--title {
+        @include setFont(14px, 600, 1.57, $--cyan-text);
+        opacity: 0.7;
+        text-transform: uppercase;
+      }
+      &--text {
+        @include setFont(42px, bold, 1.43, $--light-gray);
+        padding-top: 15px;
+
+        @include customBreakPointPcDown($--tablet){
+          display: none;
+        }
+      }
+      &--text-mobile{
+        @include setFont(24px, bold, 1.42);
+        display: none;
+        padding-top: 15px;
+        @include customBreakPointPcDown($--tablet){
+          display: block;
+        }
+      }
+    }
+    &__banner {
+      background-image: url('/images/growth/home/banner.png');
+    }
+    &-problem {
+      &__find,
+      &__coaching {
+        .talent-content--text {
+          margin-left: 100px;
+        }
+      }
+      &__understanding,
+      &__planning  {
+        .talent-content--text {
+          margin-right: 100px;
+        }
+      }
+      &__understanding--content__title {
+        max-width: 310px;
+      }
+      @include customBreakPointPcDown($--tablet) {
+        &__understanding,
+        &__planning,
+        &__find,
+        &__coaching {
+          .talent-content--text {
+            margin-left: 0;
+            margin-right: 0;
+          }
+        }
+        &__understanding--content__title {
+          max-width: unset;
+        }
+      }
+    }
+  }
+
+  @include customBreakPointPcDown(880px) {
+    padding-top: 96px;
+
+    .growth--solve-problems {
+      .talent-content {
+        padding-top: 35px !important;
+        padding-bottom: 35px !important;
+      }
+    }
+
+    .growth--work {
+      padding-bottom: 17px;
+    }
+  }
+
+  .recruitment__content__upper__image{
+    height: 31px;
+  }
+
+  .recruitment__content__upper__text {
+    @include setFont(1.5625em, normal, 1.44, $--cyan-text);
+
+    @include laptop {
+      @include setFont(2.25em, normal, 1.39, $--cyan-text);
+    }
+  }
+}

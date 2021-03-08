@@ -1,0 +1,12 @@
+#hiring-team {
+  .talent-content--text {
+    max-width: 740px;
+    @include customBreakPointPcDown($--tablet) {
+      max-width: 450px;
+      text-align: left;
+    }
+  }
+  .hiring-team--up--content {
+    margin-top: 15px;
+  }
+}

@@ -1,0 +1,324 @@
+.contact-us--page {
+  background-color: $--light--blue;
+
+  #contact-us {
+    width: 100%;
+    background-image: url("/images/contactUs/background.png");
+    background-size: 100% 100%;
+    background-repeat: no-repeat;
+    padding-top: 164px;
+  
+    .g-recaptcha {
+      width: 100%;
+    }
+  
+    .contact-us--content__form {
+      &-success,
+      &-fail {
+        padding-top: 50px;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+      }
+  
+      &-success {
+        &--text {
+          @include setFont(20px, bold, 1, rgb(64, 148, 64));
+        }
+      }
+  
+      &-fail {
+        &--text {
+          @include setFont(20px, bold, 1, rgb(218, 60, 60));
+        }
+      }
+    }
+  
+    .ant-input {
+      @include setFont(16px, 300, 1.63, black);
+      border: 1px solid transparent;
+  
+      &::placeholder {
+        @include setFont(16px, 300, 1.63);
+      }
+    }
+  
+    textarea {
+      resize: none;
+    }
+  
+    .ant-form-item-has-error {
+      .ant-input {
+        border: 1px solid #ff4d4f;
+        margin: 0;
+      }
+    }
+  
+    .ant-form {
+      &-item {
+        &-explain-error {
+          padding-left: 15px;
+        }
+      }
+    }
+  
+    .light-blue-bg {
+      background-color: #f2fafc;
+      height: 120px;
+    }
+  
+    .contact-us {
+      &--submit-btn {
+        height: 50px;
+        background: linear-gradient(to right, #f3cd62, #f2bf62, #f2a960, #f3975e, #f48b5d, #f4835c, #f4815b);
+  
+        border: none;
+        padding: 15px;
+        max-width: 120px;
+        width: 100%;
+        margin: 0;
+        height: unset;
+        border-radius: 8px;
+        color: white;
+        outline: none;
+        @include setFont(1em, 500, 1.25, #fff);
+
+        &:hover {
+          opacity: 0.8;
+          box-shadow: 0 2px 8px 0 rgba(0, 0, 0, 0.1);
+        }
+      }
+  
+      &--info {
+        &__item {
+          margin-top: 30px;
+          display: flex;
+  
+          &--image {
+            margin-right: 20px;
+          }
+  
+          &--title {
+            @include setFont(1.125em, 600, 1.56, white);
+          }
+  
+          &--content {
+            @include setFont(1.125em, 300, 1.56, white);
+            max-width: 417px;
+  
+            &.contact-us--info__item--content-underline {
+              text-decoration: underline;
+            }
+          }
+  
+          @include customBreakPointPcDown(768px) {
+            flex-direction: column;
+            text-align: center;
+            align-items: center;
+            padding-left: 0;
+  
+            .contact-us--info__item--content-wrapper {
+              max-width: 500px;
+              margin: 0 auto;
+            }
+  
+            &--content {
+              max-width: initial;
+            }
+  
+            a {
+              display: block;
+              margin: 0 auto;
+            }
+  
+            &--image {
+              margin-bottom: 10px;
+            }
+          }
+        }
+      }
+  
+      &--content {
+        @include middleContent;
+        margin-bottom: -71px;
+  
+        &__left {
+          color: white;
+          padding-top: 70px;
+  
+          @include customBreakPointPcDown($--tablet) {
+            padding-top: 0;
+          }
+  
+          &--title {
+            margin-bottom: 20px;
+            @include setFont(2.625em, bold, 1.43, white);
+            text-transform: capitalize;
+          }
+        }
+  
+        &__right {
+          background-color: white;
+          border-radius: 12px;
+          padding: 30px 50px 40px;
+          min-height: 540px;
+          box-shadow: 0 2px 10px 0 rgba(0, 0, 0, 0.08);
+  
+          &--title {
+            @include setFont(2.25em, bold, 1.39);
+            text-align: center;
+          }
+  
+          @include customBreakPointPcDown(768px) {
+            @include middleContent(585px);
+            padding-top: 30px;
+            padding-bottom: 40px;
+            margin-top: 50px;
+          }
+        }
+  
+        &__form {
+          &--item {
+            &:first-of-type {
+              margin-top: 25px;
+            }
+  
+            position: relative;
+  
+            input,
+            textarea {
+              background-color: #f3f3f3;
+              width: 100%;
+              border-radius: 6px;
+              padding: 12px 17px;
+              outline: none;
+  
+              &:focus,
+              &.active {
+                background-color: rgb(232, 240, 254);
+  
+                &+label {
+                  top: -20px;
+                  transform: translateY(0);
+                  z-index: 1;
+                  font-weight: bold;
+                  font-size: 14px;
+                }
+              }
+            }
+  
+            label {
+              transition: 0.2s all;
+              position: absolute;
+              left: 17px;
+              top: 50%;
+              transform: translateY(-50%);
+              @include setFont(16px, 300, 1.63);
+              pointer-events: none;
+            }
+  
+            textarea {
+              min-height: 110px;
+              max-height: 110px;
+  
+              &+label {
+                top: 11px;
+                transform: translateY(0);
+              }
+            }
+          }
+        }
+  
+        @include customBreakPointPcDown(768px) {
+          display: block;
+  
+          &__left {
+            width: 100%;
+            max-width: initial;
+  
+            &--title {
+              margin-bottom: 30px;
+              text-align: center;
+              @include setFont(36px, bold, 1.17, white);
+            }
+          }
+        }
+      }
+    }
+  
+    @include customBreakPointPcDown(1200px) {
+      .light-blue-bg {
+        height: 170px;
+      }
+    }
+  
+    @include customBreakPointPcDown($--tablet) {
+      background-image: url("/images/contactUs/bg-mobile.png");
+  
+      .contact-us {
+        &--info {
+          padding-right: 20px;
+          padding-left: 20px;
+  
+          &__item {
+            &--image {
+              margin-right: 0;
+            }
+          }
+        }
+  
+        &--content {
+          margin-bottom: 0;
+          padding-bottom: 50px;
+  
+          &__right {
+            max-width: 500px;
+            padding: 30px 30px 40px;
+          }
+        }
+      }
+  
+      .light-blue-bg {
+        height: 50px;
+      }
+  
+      .ant-form-item-control-input-content {
+        display: flex;
+        justify-content: center;
+      }
+    }
+  }
+  
+  .contact-us--white-bg {
+    margin-bottom: -1px;
+    @include customBreakPointPcDown($--tablet) {
+      background-color: white !important;
+    }
+  }
+  
+  .contact-us--footer {
+    .footer-information__wrapper {
+      background-color: $--light--blue;
+  
+      @include customBreakPointPcDown($--tablet) {
+        background-color: white;
+      }
+    }
+  }
+
+  @include customBreakPointMobileUp(2560px) {
+    min-height: 100vh;
+
+    .contact-us--footer {
+      position: fixed;
+      left: 0;
+      right: 0;
+      bottom: 0;
+    }
+
+    #contact-us {
+      padding-top: 12vh;
+    }
+  }
+}

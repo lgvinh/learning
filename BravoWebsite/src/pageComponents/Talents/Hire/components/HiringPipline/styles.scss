@@ -1,0 +1,96 @@
+#hiring-pipline {
+  .hiring-pipline {
+    &--proactive {
+      .talent-content--image {
+        width: 100%;
+      }
+
+      .talent-content--text {
+        max-width: 890px;
+      }
+
+      &__image {
+        display: flex;
+        justify-content: space-between;
+        position: relative;
+
+        &::before {
+          content: '';
+          height: 1px;
+          width: 100%;
+          border-bottom: 1px dashed #333;
+          top: 40%;
+          left: 0;
+          transform: translateY(-50%);
+          position: absolute;
+          z-index: 1;
+        }
+
+        &--item {
+          z-index: 2;
+
+          figcaption {
+            margin-top: 10px;
+            @include setFont(16px, 600, 1.5);
+          }
+        }
+
+        img {
+          display: block;
+        }
+
+        @include customBreakPointPcDown($--laptop) {
+          margin: 0 20px;
+
+          img {
+            width: 100px;
+            height: 100px;
+          }
+        }
+
+        @include customBreakPointPcDown($--tablet) {
+          flex-direction: column;
+
+          &::before {
+            display: none;
+          }
+
+          img {
+            width: 120px;
+            height: 120px;
+          }
+
+          &--item {
+            margin: 10px auto;
+
+            &:first-of-type {
+              margin-top: 0;
+            }
+          }
+        }
+      }
+    }
+
+    @include customBreakPointPcDown($--tablet) {
+      &--proactive {
+        max-width: 450px;
+
+        .talent-content--text {
+          text-align: left;
+        }
+      }
+    }
+  }
+
+  .customize-hiring {
+    border-bottom: 1px solid #eeeeee;
+
+    &--content {
+      margin-top: 20px;
+    }
+
+    @include customBreakPointPcDown($--tablet) {
+      border-bottom: none;
+    }
+  }
+}

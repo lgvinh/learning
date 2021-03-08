@@ -1,0 +1,54 @@
+@import "./components/Introduction/styles.scss";
+@import "./components/Communication/styles.scss";
+@import "./components/HowWeWork/styles.scss";
+
+.talents-engage {
+  padding-top: 80px;
+
+  .top {
+    &-container-desktop {
+      > a {
+        max-width: 90px;
+
+        &:first-child {
+          max-width: 150px;
+        }
+      }
+    }
+  }
+
+  @include customBreakPointPcDown(880px){
+    padding-top: 96px;
+  }
+
+  .background {
+    background-image: url('/images/talents/engage/engage_bg.png');
+    background-size: cover;
+    background-position: center bottom;
+    background-repeat: no-repeat;
+    padding: 0 0 35px;
+
+    .talent-tab__title {
+      padding-bottom: 15px;
+    }
+
+    .talent-tab__content {
+      @include setFont(1em, 300, 1.63, #fff);
+    }
+  }
+
+  @include laptop {
+    .background {
+      padding: 45px 0 30px;
+
+      .talent-tab__title {
+        padding-bottom: 10px;
+      }
+
+      .talent-tab__content {
+        max-width: 767px;
+        @include setFont(1.125em, 300, 1.56, #fff);
+      }
+    }
+  }
+}

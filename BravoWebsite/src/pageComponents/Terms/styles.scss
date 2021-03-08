@@ -1,0 +1,56 @@
+.terms{
+  background-color: #f2fafc;
+  padding: 94px 0 50px 0;
+
+  @include customBreakPointPcDown(800px){
+    padding-top: 80px;
+  }
+
+  .mb-30{
+    margin-bottom: 30px;
+  }
+
+  &__container {
+    @include middleContent(600px);
+    @include setFont(16px, normal, 1.71, #777777);
+  }
+
+  &__content {
+    padding-left: 20px;
+
+    @include customBreakPointPcDown($--tablet){
+      padding-left: 0;
+    }
+  }
+
+  .hr{
+    color: $--cyan-text;
+    margin: 40px 0 30px 0;
+  }
+
+  .lower-text{
+    text-transform: lowercase;
+  }
+
+  .bold{
+    font-weight: 600;
+  }
+
+  .rule{
+    @include setFont(16px, 600, 1.5, $--cyan-text)
+  }
+
+  .title{
+    @include setFont(55px, bold, 1, $--cyan-text);
+    padding-top: 50px;
+
+    @include customBreakPointPcDown(576px){
+      @include setFont(35px, bold, 1, $--cyan-text);
+    }
+  }
+
+  .clause{
+    @include setFont(16px, 600, 1.71);
+    margin: 30px 0 10px 0;
+  }
+}

@@ -1,0 +1,241 @@
+.introduction {
+  font-family: $font-hind;
+  max-width: $--max-width-main-layout;
+  width: 100%;
+  margin: 0 auto;
+  padding: 0 15px 190px;
+
+  &__wrapper {
+    width: 100%;
+    padding-top: 80px;
+    background-color: $--light--blue;
+  }
+
+
+  &__body {
+    position: relative;
+    margin-bottom: 75px;
+
+    @include customBreakPointPcDown(768px) {
+      margin-bottom: 50px;
+    }
+  }
+
+  &__image {
+    max-width: 1980px;
+	  margin: 0 auto;
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background-image: url("/images/webp/introduction/computer.webp");
+    background-repeat: no-repeat;
+    background-position-x: 30vw;
+	  background-position-y: bottom;
+    background-size: 1300px;
+    pointer-events: none;
+
+    @include customBreakPointPcDown($--desktop) {
+      max-width: 1580px;
+      margin: 0 auto;
+      background-size: 80vw;
+      background-position-x: 35vw;
+    }
+
+    @include customBreakPointPcDown($--tablet) {
+      background-position-x: 75%;
+      background-size: 500px;
+	    background-position-y: top;
+    }
+
+    @include customBreakPointPcDown(480px) {
+      background-position-x: left;
+    }
+
+    @include customBreakPointPcDown($--medium-phone) {
+      background-position-x: -34%;
+    }
+
+    @include customBreakPointPcDown($--small-phone) {
+      background-position-x: left;
+    }
+
+    @include customBreakPointMobileUp(2560px) {
+      background-position-x: 27vw;
+    }
+  }
+
+  @include customBreakPointPcDown($--desktop) {
+    padding: 0 15px 155px;
+  }
+
+  @include customBreakPointPcDown($--laptop) {
+    padding: 0 15px 100px;
+  }
+
+  @include customBreakPointPcDown($--tablet) {
+    padding: 270px 15px 0;
+  }
+
+  &__container {
+    &--title {
+      @include setFont(0.875em, 600, 1.57, #24b5b5);
+      opacity: 0.7;
+      letter-spacing: 0.28px;
+    }
+
+    @include customBreakPointPcDown($--tablet) {
+      max-width: 550px;
+      width: 100%;
+      margin: 0 auto;
+      &--title {
+        text-align: center;
+        padding-top: 20px;
+      }
+    }
+
+    @include customBreakPointPcDown(480px) {
+      &--title {
+        text-align: left;
+      }
+    }
+  }
+
+  &__content {
+    &--title {
+      @include setFont(2.625em, 700, 1.43, $--light-gray);
+      margin: 15px 0;
+    }
+
+    &--description {
+      @include setFont(1.125em, 300, 1.78, $--content-gray);
+      margin: 15px 0 30px;
+      max-width: 445px;
+      width: 100%;
+    }
+
+    @include customBreakPointPcDown($--tablet) {
+      &--title {
+        text-align: center;
+      }
+
+      &--description {
+        max-width: initial;
+        width: 100%;
+        text-align: center;
+      }
+    }
+
+    @include customBreakPointPcDown(480px) {
+      &--title {
+        text-align: left;
+        font-size: 2.25em;
+        line-height: 1;
+      }
+      &--description {
+        @include setFont(1em, 300, 1.75, #4d4d4d);
+        text-align: left;
+      }
+    }
+
+    @include customBreakPointPcDown($--medium-phone) {
+      &--description {
+        margin-bottom: 20px;
+      }
+    }
+  }
+
+  &__list {
+    .introduction--item {
+      display: flex;
+      margin-bottom: 35px;
+
+      @include customBreakPointPcDown($--medium-phone) {
+        flex-direction: column;
+        margin-bottom: 15px;
+
+        &__image {
+          margin-left: -8px;
+          margin-bottom: 4px;
+        }
+      }
+
+      &__wrapper {
+        margin-left: 20px;
+        cursor: pointer;
+
+        @include customBreakPointPcDown($--medium-phone) {
+          margin-left: 0;
+        }
+
+        &--title {
+          @include setFont(1em, 500, 1.25, $--cyan-text);
+          display: inline-block;
+
+          @include customBreakPointPcDown($--tablet) {
+            font-size: 1.125em;
+            font-weight: 600;
+            line-height: 1.56;
+          }
+        }
+
+        &--description {
+          @include setFont(1em, 300, 1.38, $--content-gray);
+          max-width: 290px;
+          width: 100%;
+          margin-top: 5px;
+
+          @include customBreakPointPcDown($--medium-phone) {
+            max-width: unset;
+          }
+        }
+      }
+    }
+
+    @include customBreakPointPcDown($--tablet) {
+      max-width: 550px;
+      width: 100%;
+      margin: 0 auto;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+
+    @include customBreakPointPcDown(480px) {
+      align-items: flex-start;
+    }
+  }
+
+  &__footer {
+    background-color: $--light--blue;
+    margin: 0 auto;
+    padding-bottom: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    &--image {
+      height: 35px;
+      margin-bottom: 20px;
+
+      > img {
+        height: inherit;
+      }
+    }
+
+    > p {
+      @include setFont(1.125em, 300, 1.56, $--content-gray);
+    }
+
+    @include customBreakPointPcDown($--tablet) {
+      &--image {
+        height: 25px;
+        margin-bottom: 15px;
+      }
+
+      > p {
+        @include setFont(1em, 300, 1.75, $--light-gray);
+      }
+    }
+  }
+}

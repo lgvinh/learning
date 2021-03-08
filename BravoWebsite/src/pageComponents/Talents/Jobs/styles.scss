@@ -1,0 +1,170 @@
+.product-talent-job {
+  padding-top: 80px;
+  width: 100%;
+
+  .top {
+    &-container-desktop {
+      > a {
+        max-width: 90px;
+
+        &:first-child {
+          max-width: 150px;
+        }
+      }
+    }
+  }
+
+  @include customBreakPointPcDown(880px) {
+    padding-top: 96px;
+  }
+
+  .talent-tab__content-container-talents {
+    padding-bottom: 140px !important;
+  }
+
+  .background {
+    background-image: url('../../../../static/images/talents/jobs/job-bg.png');
+    background-size: cover;
+    background-position: bottom;
+    background-repeat: no-repeat;
+    padding-top: 18px;
+
+    @include customBreakPointPcDown($--medium-phone){
+      background-image: url('../../../../static/images/talents/jobs/job-bg-mobile.png');
+    }
+
+    .talent-tab__tab-title {
+      font-size: 18px !important;
+      // padding: 18px 25px 12px;
+    }
+  }
+
+  &__body{
+    @include middleContent;
+  }
+
+  &__description-container{
+    width: 90%;
+    display: block;
+    margin: auto;
+    padding: 50px 0;
+
+    @include customBreakPointPcDown(576px){
+      width: 100%;
+     }
+  }
+
+  .description {
+    @include middleContent;
+    padding: 50px 15px;
+
+    @include customBreakPointPcDown(576px){
+     width: 100%;
+    }
+
+    &__title {
+      @include setFont(36px, bold, 1.39, $--cyan-text);
+      text-align: center;
+
+      @include customBreakPointPcDown(576px){
+        text-align: left;
+      }
+    }
+  
+    &__content{
+      @include setFont(18px, 300, 1.56, $--content-gray);
+      text-align: center;
+      padding-top: 15px;
+      max-width: 1000px;
+      margin: auto;
+
+      @include customBreakPointPcDown(576px){
+        text-align: left;
+        margin: unset;
+        width: 100%;
+      }
+    }
+  }
+
+  .max-width-358{
+    .intro__title{
+      max-width: 358px;
+    }
+  }
+
+  .intro {
+    &__index {
+      @include setFont(100px, bold, 1);
+      opacity: 0.08;
+    }
+
+    &__title{
+      @include setFont(36px, bold, 1.39, $--cyan-text);
+      padding-bottom: 15px;
+      text-align: left;
+      white-space: break-spaces;
+    }
+
+    &__content {
+      @include setFont(16px, 300, 1.63, $--gray-text, $font-hind);
+      white-space: pre-line;
+      overflow: hidden;
+    }
+
+    &__how-it-work-container{
+      @include middleContent;
+      padding: 50px 15px;
+    }
+
+    &__how-it-work{
+      @include setFont(14px, 600, 1.57, #24b5b5);
+      text-align: center;
+
+      @include customBreakPointPcDown($--tablet){
+        display: none;
+      }
+    }
+
+    &__introduction{
+      @include setFont(14px, 600, 1.57, #24b5b5);
+      display: none;
+      text-align: center;
+
+      @include customBreakPointPcDown($--tablet){
+        display: block;
+      }
+    }
+
+    &__how-it-work-description{
+      @include setFont(42px, bold, 1.43);
+      width: 66%;
+      margin: auto;
+      text-align: center;
+
+      @include customBreakPointPcDown($--tablet){
+        width: 100%;
+        @include setFont(24px, bold, 1.42);
+      }
+    }
+
+    .talent-content{
+      @include customBreakPointPcDown($--tablet){
+        padding-top: 0;
+      }
+    }
+
+    .talent-content--text{
+      flex-basis: 50%;
+      padding: 0 10px;
+
+      @include customBreakPointPcDown($--tablet){
+        padding: 0;
+      }
+    }
+
+    .talent-content--image{
+      flex-basis: 50%;
+      padding: 0 40px;
+    }
+  }
+}

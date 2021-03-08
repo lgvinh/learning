@@ -1,0 +1,60 @@
+.policy {
+  &__wrapper {
+    width: 100%;
+    background-color: $--light--blue;
+  }
+
+  &__content {
+    @include middleContent(570px);
+    padding-top: 150px;
+    padding-bottom: 70px;
+
+    &-heading {
+      @include setFont(2.25em, bold, 1.39, $--cyan-text);
+      margin-bottom: 10px;
+      text-transform: capitalize;
+    }
+
+    &-date {
+      @include setFont(0.875em, 500, 1.29, #989898);
+    }
+
+    &-break-line {
+      height: 1px;
+      opacity: 0.1;
+      background-color: $--cyan-text;
+      margin: 29px 0 30px;
+    }
+
+    &-title {
+      @include setFont(1em, 600, 1.5, $--cyan-text);
+      margin-bottom: 15px;
+    }
+
+    &-text {
+      @include setFont(0.875em, normal, 1.71, #6f6f6f);
+      margin-bottom: 20px;
+
+      span {
+        color: #4d6197;
+      }
+    }
+
+    &-text:last-of-type {
+      margin-bottom: 50px;
+    }
+  }
+
+  @include laptop {
+    &__content {
+      &-heading {
+        @include setFont(3.4375em, bold, 1, $--cyan-text);
+        margin-bottom: 15px;
+      }
+
+      &-text {
+        margin-bottom: 25px;
+      }
+    }
+  }
+}

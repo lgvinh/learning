@@ -1,0 +1,394 @@
+.pricing {
+  background-image: url('../../../static/images/webp/background-pricing.webp');
+  background-size: cover;
+  background-position: center bottom;
+  background-repeat: no-repeat;
+  padding-top: 100px;
+
+  @include customBreakPointMobileUp(1921px) {
+    position: relative;
+    min-height: 100vh;
+    padding-top: 7vh;
+
+    .copyright-bar__section-wrapper {
+      position: absolute;
+      bottom: 0;
+    }
+
+    &__wrapper {
+      min-height: 1200px !important;
+    }
+  }
+
+  &__wrapper {
+    width: 100%;
+    min-height: 1110px;
+  }
+
+  &__body {
+    @include middleContent;
+  }
+
+  &__description {
+    color: white;
+    text-align: center;
+    padding: 50px 0;
+  }
+
+  &__description-title {
+    @include setFont(42px, bold, 1.43, white);
+    text-align: center;
+    font-stretch: normal;
+    font-style: normal;
+
+    @include customBreakPointPcDown(576px){
+      @include setFont(34px, bold, 1.17, white);
+    }
+  }
+
+  &__description-content {
+    @include setFont(18px, 300, 1.56, white);
+    width: 35%;
+    margin: auto;
+    font-stretch: normal;
+    font-style: normal;
+    letter-spacing: normal;
+    opacity: 0.9;
+
+    @include customBreakPointPcDown(1100px){
+      width: 40%;
+    }
+
+    @include customBreakPointPcDown($--laptop){
+      width: 50%;
+    }
+
+    @include customBreakPointPcDown($--tablet){
+      width: 65%;
+      margin-top: 15px;
+    }
+
+    @include customBreakPointPcDown(576px){
+      width: 100%;
+      font-size: 17px;
+    }
+  }
+
+  &__description-container {
+    margin-top: 30px;
+    @include middleContent;
+
+    @include customBreakPointPcDown(576px){
+      padding: 0;
+    }
+  }
+
+  &__most-popular {
+    position: absolute;
+    max-height: 37px;
+    left: 0;
+    top: 30px;
+    transform: translateX(-2.3%);
+  }
+
+  &__content-group {
+    padding: 70px 0 20px;
+    background-color: white;
+    border-radius: 10px;
+    position: relative;
+  }
+
+  &__item-container {
+    width: 22.5%;
+    border-radius: 10px;
+
+    @include customBreakPointPcDown($--laptop){
+      @include middleContent;
+      width: 50%;
+      margin-bottom: 30px;
+    }
+
+    @include customBreakPointPcDown($--tablet){
+      @include middleContent;
+      width: 60%;
+      margin-bottom: 30px;
+    }
+
+    @include customBreakPointPcDown(576px){
+      @include middleContent;
+      width: 100%;
+      margin-bottom: 30px;
+      padding: 0;
+    }
+
+    &:first-child {
+      width: 30%;
+
+      .pricing-item__logo{
+        width: 90%;
+
+        @include customBreakPointPcDown($--laptop){
+          width: 70%;
+        }
+
+        @include customBreakPointPcDown($--tablet){
+          width: 70%;
+        }
+
+        @include customBreakPointPcDown(576px){
+          width: 70%;
+        }
+
+        @include customBreakPointPcDown($--medium-phone){
+          width: 90%;
+        }
+      }
+
+      @include customBreakPointPcDown($--laptop){
+        @include middleContent;
+        width: 60%;
+        margin-bottom: 30px;
+      }
+
+      @include customBreakPointPcDown($--tablet){
+        @include middleContent;
+        width: 75%;
+        margin-bottom: 30px;
+      }
+  
+      @include customBreakPointPcDown(576px){
+        @include middleContent;
+        width: 100%;
+        margin-bottom: 30px;
+        padding: 0;
+      }
+
+      .pricing-item__get-started{
+        margin-bottom: 40px;
+        a {
+          padding: 20.5px 25px 18.5px;
+        }
+      }
+
+      .pricing-item__price {
+        font-size: 60px;
+        font-weight: 600;
+        margin: 60px 20px 15px;
+        @include limitText(1);
+      }
+
+      .pricing-item__input-group{
+        margin-bottom: 60px;
+      }
+
+      .pricing-item__info-group {
+        max-height: 178px;
+      }
+
+      .pricing__content-group {
+        padding-top: 103px;
+      }
+    }
+
+    &:nth-child(2) {
+      .pricing-item__info-group {
+        max-height: 151px;
+      }
+    }
+  }
+
+  &__list-item {
+    display: flex;
+    justify-content: space-between;
+
+    @include customBreakPointPcDown($--laptop){
+      display: block;
+    }
+  }
+
+  .pricing-item {
+
+    &__employee{
+      @include setFont(16px, 500, 1.75, #959595);
+
+      @include customBreakPointPcDown(1200px){
+       font-size: 11px
+      }
+
+      @include customBreakPointPcDown($--laptop){
+        font-size: 15px;
+      }
+    }
+
+    &__expand-icon {
+      @include middleContent;
+      outline: none;
+      margin: 10px auto;
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      background-image: linear-gradient(to bottom, transparent, white);
+      opacity: 0.5;
+      &:hover {
+        transition: all 0.5s;
+        opacity: 1;
+      }
+    }
+
+    &__blur-plan-item {
+      background-image: linear-gradient(to bottom, transparent, white);
+      height: 90px;
+      left: 0;
+      width: 100%;
+      position: absolute;
+      bottom: 20px;
+    }
+  
+    &__plan-include {
+      @include setFont(16px, bold, 1 );
+      display: block;
+      margin: 20px 0 10px 0;
+    }
+  
+    &__plan-text {
+      @include setFont(14px, normal, 1.43, #5c5c5c);
+      font-stretch: normal;
+      font-style: normal;
+      letter-spacing: normal;
+      text-align: left;
+    }
+  
+    &__plan-text-group{
+      display: flex;
+      padding: 10px 0;
+    }
+  
+    &__check-icon {
+      display: inline-block;
+      margin-right: 8px;
+      height: fit-content;
+      width: 15px;
+    }
+  
+    &__input {
+      color: #959595;
+      width: 55px;
+      margin-right: 10px;
+      border: solid 1px $--border-gray;
+      border-radius: 5px;
+      padding: 4px 5px 0 5px;
+      text-align: center;
+
+      &:focus {
+        border-color: $--border-gray;
+        box-shadow: 0 0 8px 0 rgba(0, 0, 0, 0.2);
+      }
+
+      &:hover {
+        border-color: $--border-gray;
+      }
+    }
+  
+    &__input-group {
+      color: $--gray-text;
+      display: flex;
+      justify-content: center;
+      margin-bottom: 39px;
+    }
+  
+    &__get-started {
+      display: block;
+      margin: 0 auto 25px;
+      border-radius: 8px;
+
+      @include setFont(15px, 500, 1.2, white);
+      font-stretch: normal;
+      font-style: normal;
+      letter-spacing: normal;
+      text-align: center;
+      background: linear-gradient(to right, #f3cd62, #f2bf62, #f2a960, #f3975e, #f48b5d, #f4835c, #f4815b);
+ 
+      &:hover {
+        opacity: 0.82;
+      }
+      a {
+        display: block;
+        width: 100%;
+        height: 100%;
+        padding: 12px 25px 10px;
+        &:hover {
+          color: white;
+        }
+      }
+    }
+  
+    &__logo {
+      display: block;
+      padding: 0 20px;
+      margin: auto;
+      min-height: 23px;
+
+      @include customBreakPointPcDown(576px){
+        width: 70%;
+      }
+
+      @include customBreakPointPcDown($--medium-phone){
+        width: 90%;
+      }
+    }
+  
+    &__price {
+      @include setFont(42px, 500, 0.97, $--gray-text);
+      display: block;
+      text-align: center;
+      margin: 50px 0 15px;
+      overflow: hidden;
+
+      @include customBreakPointPcDown(576px){
+        font-size:  60px;
+      }
+    }
+  
+    &__info-group {
+      max-height: 219px;
+      overflow: hidden;
+      transition: all 0.5s;
+      position: relative;
+      margin-bottom: 10px;
+      padding: 0 20px;
+    }
+  
+    &__info-group-expand {
+      transition: all 0.5s;
+      overflow: hidden;
+      max-height: 500px;
+      margin-bottom: 15px;
+      padding: 0 20px;
+    }
+
+    &__rotate {
+      transition: all 0.5s;
+      transform: rotate(45deg);
+      border: solid $--cyan-text;
+      border-width: 0 3px 3px 0;
+      display: inline-block;
+      padding: 3px;
+    }
+
+    &__rotate-icon-expanded {
+      transform: rotate(225deg);
+    }
+
+    &__contact-us {
+      font-size: 14px;
+      line-height: 22px;
+      color: $--black-text;
+      margin: 20px 0 5px;
+      padding: 0 20px;
+      text-align: center;
+      .pricing-item__link {
+        color: $--cyan-text;
+      }
+    }
+  }
+}

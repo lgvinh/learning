@@ -1,0 +1,73 @@
+.how-we-work {
+  &__wrapper {
+    padding-top: 70px;
+    background-color: #fff;
+    text-align: center;
+  }
+
+  &__upper-heading {
+    @include setFont(0.875em, 600, 1.57, $--cyan-text);
+    opacity: 0.7;
+    letter-spacing: 0.28px;
+    margin-bottom: 10px;
+    text-transform: uppercase;
+  }
+
+  &__lower-heading {
+    @include setFont(1.875em, bold, 1.4, $--gray-text);
+    padding: 0 37px;
+    margin-bottom: 50px;
+  }
+
+  &__content {
+    @include middleContent;
+    text-align: left;
+
+    &-item {
+      padding: 0 0 70px;
+    }
+
+    .talent-container {
+      >.what-we-work__content-item {
+        padding-top: 0;
+      }
+    }
+
+    &-item-text {
+      h3 {
+        @include setFont(2.25em, bold, 1.39, $--cyan-text);
+        margin-bottom: 15px;
+      }
+
+      p {
+        @include setFont(1em, 300, 1.63, $--gray-text);
+      }
+    }
+  }
+
+  @include laptop {
+    &__content {
+      padding-left: 0;
+      padding-right: 0;
+    }
+
+    &__upper-heading {
+      margin-bottom: 15px;
+    }
+
+    &__lower-heading {
+      @include setFont(2.625em, bold, 1.43, $--gray-text);
+      text-align: center;
+      padding: 0;
+      margin-bottom: 70px;
+    }
+
+    &__content {
+      .talent-container {
+        .talent-content--text {
+          width: 455px;
+        }
+      }
+    }
+  }
+}

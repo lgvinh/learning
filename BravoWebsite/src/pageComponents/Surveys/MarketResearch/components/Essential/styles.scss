@@ -1,0 +1,67 @@
+.essential {
+  &__wrapper {
+    padding: 70px 0 70px;
+    background-image: url('/images/surveys/market-research/essential-bg-mb.png');
+    background-repeat: no-repeat;
+    background-size: cover;
+  }
+
+  &__content {
+    @include middleContent;
+
+    &-heading {
+      @include setFont(1.875em, bold, 1.4, #fff);
+      margin-bottom: 15px;
+    }
+
+    &-text {
+      @include setFont(1em, 300, 1.63, #fff);
+      opacity: 0.8;
+    }
+  }
+
+  @include tablet {
+    &__wrapper {
+      background-image: url('/images/surveys/market-research/essential-bg.png');
+      background-position: center center;
+    }
+
+    &__content {
+      &-heading {
+        max-width: 550px;
+      }
+
+      &-text {
+        max-width: 480px;
+      }
+    }
+  }
+
+  @include laptop {
+    &__content {
+      padding-left: 0;
+      padding-right: 0;
+
+      &-heading {
+        max-width: 600px;
+      }
+
+      &-text {
+        max-width: 500px;
+      }
+    }
+  }
+
+  @include desktop {
+    &__content {
+      &-heading {
+        max-width: 655px;
+        @include setFont(2.25em, bold, 1.39, #fff);
+      }
+
+      &-text {
+        max-width: 587px;
+      }
+    }
+  }
+}

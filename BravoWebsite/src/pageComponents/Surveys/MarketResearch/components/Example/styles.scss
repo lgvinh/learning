@@ -1,0 +1,70 @@
+.example {
+  &__wrapper {
+    display: none;
+  }
+
+  @include laptop {
+    &__wrapper {
+      display: block;
+      @include middleContent(1214px);
+      text-align: center;
+      padding: 70px 0 100px;
+
+      .tip--container {
+        padding: 0;
+        margin-bottom: 0;
+        max-width: 1214px;
+      }
+
+      .tip--wrapper {
+        height: 145px;
+      }
+    }
+
+    &__heading {
+      @include setFont(2.625em, bold, 1.43, $--gray-text);
+      margin-bottom: 70px;
+    }
+
+    &__list {
+      @include middleContent;
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-between;
+      align-items: baseline;
+      margin-bottom: 70px;
+
+      &-item {
+        width: 44%;
+        text-align: left;
+        margin-bottom: 23px;
+
+        &-section {
+          max-width: 514px;
+        }
+      }
+    }
+
+    &__item {
+      &__image {
+        margin-bottom: 25px;
+      }
+
+      &__title {
+        @include setFont(2.25em, bold, 1.39, $--cyan-text);
+        margin-bottom: 10px;
+      }
+
+      &__content {
+        @include setFont(1em, 300, 1.63, $--gray-text);
+      }
+    }
+  }
+
+  @include desktop {
+    &__list {
+      padding-left: 0;
+      padding-right: 0;
+    }
+  }
+}

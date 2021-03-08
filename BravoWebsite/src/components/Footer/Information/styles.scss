@@ -1,0 +1,141 @@
+.footer-information {
+  &__wrapper {
+    width: 100%;
+  }
+
+  &__content-wrapper {
+    @include middleContent(772px);
+    padding-top: 50px;
+    padding-bottom: 40px;
+    display: flex;
+    flex-wrap: wrap;
+  }
+
+  &__technology-wrapper {
+    flex: 50%;
+    margin-bottom: 20px;
+  }
+
+  &__resource-wrapper {
+    flex: 50%;
+  }
+
+  &__company-wrapper {
+    flex: 50%;
+  }
+
+  &__contact-wrapper {
+    flex: 50%;
+  }
+
+  &__list {
+    li {
+      margin-bottom: 5px;
+      font-size: 1em;
+    }
+  }
+
+  &__item {
+    &--title {
+      @include setFont(1em, 600, 1.75, $--cyan-text);
+      margin-bottom: 10px;
+
+      &-contact {
+        margin-bottom: 8px;
+      }
+    }
+
+    &--text {
+      opacity: 0.8;
+      @include setFont(1em, 300, 1.63, $--gray-text);
+    }
+
+    &--img {
+      height: 21px;
+      width: 21px;
+      margin-right: 8px;
+      display: inline-block;
+    }
+
+    &-contact {
+      display: flex;
+      align-items: center;
+    }
+
+    &-contact--text {
+      display: inline-block;
+      @include setFont(0.875em, 600, 2, $--gray-text);
+      margin-top: 2px;
+    }
+  }
+
+  @include tablet {
+    &__content-wrapper {
+      justify-content: space-around;
+    }
+
+    &__technology-wrapper {
+      flex: 45%;
+    }
+
+    &__resource-wrapper {
+      flex: 45%;
+    }
+
+    &__company-wrapper {
+      flex: 45%;
+    }
+
+    &__contact-wrapper {
+      flex: 45%;
+    }
+
+    &__item {
+      &--img {
+        margin-right: 9px;
+      }
+    }
+  }
+
+  @include laptop {
+    &__content-wrapper {
+      @include middleContent(802px);
+      padding: 70px 0 81px;
+    }
+
+    &__technology-wrapper {
+      flex: 1;
+      margin-bottom: 0;
+    }
+
+    &__resource-wrapper {
+      flex: 1;
+    }
+
+    &__company-wrapper {
+      flex: 1;
+    }
+
+    &__contact-wrapper {
+      flex: 1;
+    }
+
+    &__item {
+      &-wrapper {
+        margin-bottom: 0;
+      }
+
+      &--title {
+        margin-bottom: 15px;
+      }
+
+      &-contact {
+        line-height: 1.75;
+      }
+
+      &-contact--text {
+        font-size: 1em;
+      }
+    }
+  }
+}

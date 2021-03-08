@@ -1,0 +1,75 @@
+.market-research {
+  padding-top: 96px;
+
+  .background {
+    background-image: url('/images/surveys/market-research/market-reasearch-bg.png');
+    background-size: cover;
+    background-position-x: 55%;
+    background-position-y: bottom;
+    background-repeat: no-repeat;
+    padding: 30px 0 35px;
+
+    .talent-tab__title {
+      padding-bottom: 15px;
+    }
+
+    .talent-tab__content {
+      @include setFont(1.125em, 300, 1.56, #fff);
+      opacity: 0.8;
+    }
+  }
+
+  @include customBreakPointMobileUp(880px) {
+    padding-top: 80px;
+  }
+
+  @include tablet {
+    .background {
+      background-position-x: center;
+
+      .talent-tab__content {
+        max-width: 565px;
+      }
+    }
+  }
+
+  @include laptop {
+    padding-top: 80px;
+
+    .background {
+      >.talent-tab__content-container {
+        padding-left: 15px;
+      }
+
+      .talent-tab__content {
+        max-width: 555px;
+      }
+    }
+  }
+
+  @include customBreakPointMobileUp(1921px) {
+    .background {
+      background-position-x: center;
+    }
+  }
+
+  .recruitment__content__upper__text {
+    @include customBreakPointPcDown(320px) {
+      @include setFont(1em, normal, 1.5, $--cyan-text);
+    }
+
+    @include setFont(1.1875em, normal, 1.58, $--cyan-text);
+
+    @include laptop {
+      @include setFont(2.25em, normal, 1.39, $--cyan-text);
+    }
+  }
+
+  @include laptop {
+    padding-top: 80px;
+  }
+}
+
+@import './components/HowWeWork/styles.scss';
+@import './components/Example/styles.scss';
+@import './components/Essential/styles.scss';

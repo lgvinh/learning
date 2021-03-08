@@ -1,0 +1,14 @@
+#schedule-interviews {
+  .sync-g-suite {
+    .talent-content--text {
+      max-width: 890px;
+      @include customBreakPointPcDown($--tablet) {
+        text-align: left;
+        max-width: 450px;
+      }
+    }
+    &--content {
+      @include setFont(18px, 300, 1.56);
+    }
+  }
+}

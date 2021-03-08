@@ -1,0 +1,27 @@
+.engage-introduction {
+  &__wrapper {
+    @include middleContent(936px);
+    padding-top: 50px;
+    padding-bottom: 70px;
+  }
+
+  &__heading {
+    @include setFont(2.25em, bold, 1.39, $--cyan-text);
+    margin-bottom: 10px;
+  }
+
+  &__text {
+    @include setFont(1.125em, 300, 1.56, $--content-gray);
+  }
+
+  @include laptop {
+    &__wrapper {
+      padding: 70px 0;
+      text-align: center;
+    }
+
+    &__heading {
+      margin-bottom: 5px;
+    }
+  }
+}

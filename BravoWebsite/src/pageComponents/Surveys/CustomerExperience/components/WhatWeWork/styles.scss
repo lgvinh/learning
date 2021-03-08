@@ -1,0 +1,116 @@
+.what-we-work {
+  &__wrapper {
+    padding-top: 70px;
+    text-align: center;
+  }
+
+  &__upper-heading {
+    @include setFont(0.875em, 600, 1.57, $--cyan-text);
+    letter-spacing: 0.28px;
+    margin-bottom: 10px;
+    text-transform: uppercase;
+    opacity: 0.7;
+  }
+
+  &__lower-heading {
+    @include setFont(1.875em, bold, 1.33, $--gray-text);
+    margin-bottom: 50px;
+  }
+
+  &__content {
+    &-item {
+      &-text {
+        h3 {
+          @include setFont(2.25em, bold, 1.39, $--cyan-text);
+          margin-bottom: 10px;
+        }
+
+        p {
+          @include setFont(1em, 300, 1.63, $--gray-text);
+        }
+      }
+
+      .talent-content--image.talent-content--verticalize {
+        figure {
+          margin-top: 0;
+        }
+      }
+    }
+
+    .talent-container {
+      >.what-we-work__content-item {
+        padding-top: 0;
+      }
+    }
+
+    .talent-container:last-child {
+      .what-we-work__content-item {
+        padding-bottom: 66px;
+      }
+    }
+  }
+
+  @include laptop {
+    &__upper-heading {
+      margin-bottom: 15px;
+    }
+
+    &__lower-heading {
+      @include setFont(2.625em, bold, 1.43, $--gray-text);
+      margin-bottom: 119px;
+    }
+
+    &__content {
+      @include middleContent(1145px);
+      padding-left: 0;
+      padding-right: 0;
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-between;
+      align-items: baseline;
+
+      .talent-container {
+        width: 40%;
+      }
+
+      .talent-content {
+        padding-left: 0;
+        padding-right: 0;
+      }
+
+      &-item-text-communication {
+        max-width: 369px;
+      }
+
+      &-item-text-interaction {
+        max-width: 379px;
+      }
+
+      &-item-text-engagement {
+        max-width: 431px;
+      }
+
+      &-item-text-understanding {
+        max-width: 431px;
+      }
+    }
+
+    &__content {
+      .talent-container:nth-child(3) {
+        .what-we-work__content-item-engagement {
+          padding-bottom: 100px;
+        }
+      }
+    }
+
+    &__content {
+      .talent-container:nth-child(2) {
+        .what-we-work__content-item {
+          .talent-content--image.talent-content--verticalize {
+            margin-bottom: 95px;
+          }
+        }
+      }
+    }
+  }
+}

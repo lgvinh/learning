@@ -1,0 +1,66 @@
+@mixin setFont($size, $weight: 500, $height: 1, $color: #636f6e, $family: "") {
+  font-size: $size;
+  font-weight: $weight;
+  line-height: $height;
+  color: $color;
+  @if $family != "" {
+    font-family: $family;
+  }
+}
+
+@mixin limitText($row: 3) {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  display: -webkit-box;
+  -webkit-line-clamp: $row;
+  -webkit-box-orient: vertical;
+}
+
+@mixin middleContent($max-w: $--max-width-main-layout) {
+  margin: 0 auto;
+  width: 100%;
+  max-width: $max-w;
+  padding: 0 15px;
+}
+
+@mixin customBreakPointPcDown($width) {
+  @media screen and (max-width: $width) {
+    @content;
+  }
+}
+
+@mixin customBreakPointMobileUp($min-w) {
+  @media screen and (min-width: $min-w) {
+    @content;
+  }
+}
+
+@mixin smallPhone {
+  @include customBreakPointMobileUp($--small-phone) {
+    @content;
+  }
+}
+
+@mixin mediumPhone {
+  @include customBreakPointMobileUp($--medium-phone) {
+    @content;
+  }
+}
+
+@mixin tablet {
+  @include customBreakPointMobileUp($--tablet) {
+    @content;
+  }
+}
+
+@mixin laptop {
+  @include customBreakPointMobileUp($--laptop) {
+    @content;
+  }
+}
+
+@mixin desktop {
+  @include customBreakPointMobileUp($--desktop) {
+    @content;
+  }
+}

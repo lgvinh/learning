@@ -1,0 +1,42 @@
+version: "3.3"
+
+services:
+  db:
+    image: mysql:5.7
+    container_name: mssql_server
+    networks:
+     - bravo_network
+    volumes:
+      - /home/bravo/wordpress/database:/var/lib/mysql
+
+    restart: always
+    environment:
+      MYSQL_ROOT_PASSWORD: "bravo@rootXXX"
+      MYSQL_DATABASE: wordpress
+      # MYSQL_USER: bravo
+      # MYSQL_PASSWORD: bravo@userXXX
+
+  wordpress:
+    image: wordpress:5.5.1-php7.2-apache
+    container_name: wordpress
+    depends_on:
+      - db
+    ports:
+      - "443:443"
+      - "80:80"
+    restart: always
+    links:
+      - db
+    networks:
+      - bravo_network
+    volumes:
+      - /home/bravo/wordpress/html:/var/www/html
+    environment:
+      WORDPRESS_DB_HOST: db
+      WORDPRESS_DB_USER: root
+      WORDPRESS_DB_PASSWORD: "bravo@rootXXX"
+      WORDPRESS_DB_NAME: wordpress
+#volumes:
+#    db_data: {}
+networks:
+  bravo_network:

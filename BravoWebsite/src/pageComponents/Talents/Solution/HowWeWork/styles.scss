@@ -1,0 +1,117 @@
+.talents-solution {
+  .how-we-work {
+    &__wrapper {
+      width: 100%;
+      background-color: #f2fafc;
+      padding: 70px 0 50px;
+    }
+
+    &__content {
+      @include middleContent;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      text-align: center;
+    }
+
+    &__heading-upper {
+      opacity: 0.7;
+      @include setFont(0.875em, 600, 1.57, #24b5b5);
+      letter-spacing: 0.28px;
+      margin-bottom: 15px;
+      text-transform: uppercase;
+    }
+
+    &__heading-lower {
+      @include setFont(1.5em, bold, 1.42, #636f6e);
+      margin-bottom: 50px;
+    }
+
+    &__breakline {
+      display: none;
+    }
+
+    &__info {
+      &-wrapper {
+        padding: 0;
+        margin-bottom: 70px;
+
+        .talent-content--image {
+          margin-top: 40px;
+        }
+      }
+
+      &-heading {
+        @include setFont(2.25em, bold, 1.39, #20b4b3);
+        margin-bottom: 15px;
+      }
+
+      &-text {
+        @include setFont(1em, 300, 1.63, #636f6e);
+      }
+
+      &-image-mobile {
+        display: block;
+      }
+
+      &-image {
+        display: none;
+      }
+    }
+
+    @include laptop {
+      &__content {
+        @include middleContent(1273px);
+
+        .talent-container.bg-light-blue:first-of-type {
+          .talent-content--text.talent-content--horizontalize {
+            margin-right: 0;
+            width: 475px;
+          }
+        }
+      }
+
+      &__heading-upper {
+        @include setFont(0.875em, 600, 1.57, #24b5b5);
+      }
+
+      &__heading-lower {
+        max-width: 754px;
+        @include setFont(2.625em, bold, 1.43, #636f6e);
+        margin-bottom: 81px;
+      }
+
+      &__breakline {
+        display: block;
+      }
+
+      &__info {
+        &-wrapper {
+          text-align: left;
+          max-width: 1273px;
+
+          .talent-content--text {
+            margin-left: 70px;
+            width: 475px;
+          }
+        }
+
+        &-heading {
+          @include setFont(2.25em, bold, 1.39, #20b4b3);
+        }
+
+        &-text {
+          max-width: 455px;
+        }
+
+        &-image-mobile {
+          display: none;
+        }
+
+        &-image {
+          display: block;
+        }
+      }
+    }
+  }
+}

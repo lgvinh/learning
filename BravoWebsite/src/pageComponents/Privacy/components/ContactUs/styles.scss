@@ -1,0 +1,39 @@
+.policy-contact-us {
+  &__wrapper {
+    width: 100%;
+    background-color: #fff;
+    border-radius: 10px;
+    display: flex;
+    align-items: center;
+    padding: 30px 15px 30px 20px;
+  }
+
+  &__image {
+    height: 75px;
+    margin-right: 25px;
+  }
+
+  &__heading {
+    @include setFont(1.875em, bold, normal, #20b4b3, Arial);
+    margin-bottom: 5px;
+  }
+
+  &__text {
+    opacity: 0.8;
+    @include setFont(0.875em, normal, 1.71, #000);
+  }
+
+  &__link {
+    color: #4d6197;
+  }
+
+  @include laptop {
+    &__wrapper {
+      padding: 31px 20px 34px 30px;
+    }
+
+    &__heading {
+      margin-bottom: 3px;
+    }
+  }
+}

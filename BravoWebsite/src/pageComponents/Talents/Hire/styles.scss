@@ -1,0 +1,50 @@
+#talents-hire {
+  padding-top: 80px;
+  @import "./components/Collaboration/styles.scss";
+  @import "./components/CandidateProfile/styles.scss";
+  @import "./components/HiringPipline/styles.scss";
+  @import "./components/ScheduleInterviews/styles.scss";
+  @import "./components/OfferTracking/styles.scss";
+  @import "./components/InterviewKit/styles.scss";
+
+  .top {
+    &-container-desktop {
+      > a {
+        max-width: 90px;
+
+        &:first-child {
+          max-width: 150px;
+        }
+      }
+    }
+  }
+
+  .talents-hire {
+    &--tab-background {
+      background-image: url("/images/talents/hire/background.png");
+      background-size: cover;
+      padding-top: 10px;
+      background-position: bottom center;
+      background-repeat: no-repeat;
+
+      .talent-tab__content-container {
+        min-height: 445px;
+      }
+
+      @include customBreakPointMobileUp(1921px) {
+        background-position: center;
+      }
+
+      @include customBreakPointPcDown($--laptop) {
+        background-position: 70%;
+      }
+      @include customBreakPointPcDown($--medium-phone) {
+        background-position: 63%;
+      }
+    }
+  }
+
+  @include customBreakPointPcDown (880px) {
+    padding-top: 96px;
+  }
+}

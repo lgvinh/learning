@@ -1,0 +1,262 @@
+.human-resources {
+  padding-top: 80px;
+  width: 100%;
+
+  @include customBreakPointPcDown(880px){
+    padding-top: 96px;
+  }
+
+  .background{
+    background-image: url('/images/surveys/HR/bg-hr-desktop.png');
+    background-size: cover;
+    background-position: bottom;
+    background-repeat: no-repeat;
+    padding: 30px 0 35px;
+
+    @include customBreakPointPcDown($--tablet){
+      background-position-x: 55%;
+    }
+  }
+
+  .talent-tab__content-container{
+    padding: 120px 15px;
+  }
+
+  .talent-tab__title-container{
+    @include customBreakPointPcDown($--medium-phone){
+      max-width: 300px;
+    }
+  }
+
+  .talent-tab__content{
+    max-width: 565px;
+    
+    @include customBreakPointPcDown($--tablet){
+      @include setFont(18px, 300, 1.56, white);
+    }
+  }
+
+  .what-you-get {
+    @include middleContent;
+    padding: 70px 15px 50px;
+  
+    @include customBreakPointPcDown(576px){
+      padding: 50px 15px 0;
+      width: 100%;
+    }
+  
+    &__title {
+      @include setFont(14px, 600, 1.57, $--cyan-text);
+      text-align: center;
+      opacity: 0.7;
+
+      @include customBreakPointPcDown($--tablet){
+        display: none;
+      }
+    }
+
+    .introduction__title{
+      display: none;
+      @include setFont(14px, 600, 1.57, $--cyan-text);
+      opacity: 0.7;
+      text-align: center;
+      letter-spacing: 0.28px;
+
+      @include customBreakPointPcDown($--tablet){
+        display: block;
+      }
+    }
+  
+    &__content{
+      @include setFont(42px, bold, 1.43, $--content-gray, $font-hind);
+      text-align: center;
+      padding-top: 15px;
+      margin: auto;
+      font-stretch: normal;
+      font-style: normal;
+      overflow: hidden;
+  
+      @include customBreakPointPcDown($--tablet){
+        @include setFont(30px, bold, 1.33, $--content-gray, $font-hind);
+        margin: unset;
+        overflow: unset;
+        white-space: pre-line;
+      }
+    }
+  }
+
+  &-item{
+    &__title{
+      @include setFont(36px, bold, 1.39, $--cyan-text);
+      padding: 0 50px 15px 50px;
+      text-align: left;
+      
+      @include customBreakPointPcDown($--tablet){
+        padding: 0 0 15px 0;
+      }
+    }
+  
+    &__content {
+      @include setFont(16px, 300, 1.63, $--gray-text, $font-hind);
+      white-space: pre-line;
+      overflow: hidden;
+      padding: 0 20px 0 50px;
+
+      @include customBreakPointPcDown($--tablet){
+        padding: 0;
+      }
+    }
+
+    .talent-content {
+      @include customBreakPointPcDown($--tablet){
+        padding-bottom: 0;
+      }
+    }
+  
+    .talent-content--text{
+      flex-basis: 50%;
+      padding: 0 10px;
+
+      @include customBreakPointPcDown($--tablet){
+        padding: 0;
+      }
+    }
+  
+    .talent-content--image{
+      flex-basis: 50%;
+      padding: 0 40px;
+
+      @include customBreakPointPcDown($--tablet){
+        padding: 0;
+      }
+    }
+  }
+
+  .recruitment__content{
+    &__wrapper{
+      max-width: 100%;
+    }
+
+    &__upper__text{
+      @include setFont(36px, normal, 1.39, $--cyan-text);
+
+      @include customBreakPointPcDown($--tablet){
+        @include setFont(19px, normal, 1.58, $--cyan-text);
+        margin-top: 8px;
+      }
+    }
+  }
+
+  .flex-column{
+    padding-top: 50px;
+
+    .human-resources-item:last-child{
+      .human-resources-item__content{
+        max-width: 620px;
+        margin: auto;
+      }
+    }
+
+    .human-resources-item:nth-last-child(2){
+      .human-resources-item__content{
+        max-width: 1030px;
+        margin: auto;
+      }
+    }
+
+    .human-resources-item__middle{
+      background-image: url('/images/surveys/HR/bg-hr-3-desktop.png');
+      background-size: 100% 65%;
+      background-repeat: no-repeat;
+
+      @include customBreakPointPcDown($--tablet){
+        background-image: url('/images/surveys/HR/bg-hr-3-mobile.png');
+        background-size: 100% 75%;
+      }
+
+      .bg-white{
+        background-color: transparent;
+      } 
+
+      .human-resources-item__content{
+        @include setFont(16px, 300, 1.63, white);
+        max-width: 700px;
+        margin: 10px auto;
+        text-align: center;
+
+        @include customBreakPointPcDown($--tablet){
+          padding: 0 16px;
+        }
+      }
+
+      .human-resources-item__title{
+        @include setFont(36px, bold, 1.39, white);
+        max-width: 700px;
+
+        @include customBreakPointPcDown($--tablet){
+          @include setFont(30px, bold, 1.4, white);
+          text-align: center;
+        }
+      }
+    }
+
+    .talent-content {
+      flex-direction: column;
+    }
+
+    .talent-content--image{
+      max-width: 500px;
+    }
+
+    .talent-content--text {
+      max-width: 1170px;
+      text-align: center;
+      margin: 0 auto 50px;
+
+      @include customBreakPointPcDown($--tablet){
+        @include setFont(16px, 300, 1.63);
+        text-align: left;
+      }
+    }
+
+    .human-resources-item__title{
+      max-width: 870px;
+      @include setFont(42px, bold, 1.43);
+      text-align: center;
+      margin: auto;
+
+      @include customBreakPointPcDown($--tablet){
+        @include setFont(30px, bold, 1.4);
+        text-align: left;
+      }
+    }
+
+    .human-resources-item__content{
+      max-width: 1070px;
+    }
+  }
+
+  .surveys-employees{
+    @include middleContent;
+    @include setFont(36px, normal, 1.39);
+    text-align: center;
+    margin: auto;
+
+    &-bold{
+      font-weight: bold;
+    }
+
+    @include customBreakPointPcDown($--tablet){
+      @include setFont(20px, bold, 1.5);
+      padding-top: 30px;
+    }
+  }
+
+  .hr-tip{
+    .tip{
+      &--description{
+        max-width: 836px;
+      }
+    }
+  }
+}

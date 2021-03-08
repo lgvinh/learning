@@ -1,0 +1,35 @@
+.communication {
+  &__wrapper {
+    width: 100%;
+    background-image: url("/images/talents/engage/communication_bg.png");
+    background-size: cover;
+    background-repeat: no-repeat;
+    display: none;
+  }
+
+  &__content {
+    &-wrapper {
+      @include middleContent(801px);
+      text-align: center;
+      padding: 70px 0;
+    }
+
+    &-heading {
+      @include setFont(2.25em, bold, 1.39, #fff);
+      margin: auto;
+      margin-bottom: 15px;
+      max-width: 705px;
+    }
+
+    &-text {
+      @include setFont(1em, 300, 1.63, #fff);
+      opacity: 0.8;
+    }
+  }
+
+  @include laptop {
+    &__wrapper {
+      display: block;
+    }
+  }
+}

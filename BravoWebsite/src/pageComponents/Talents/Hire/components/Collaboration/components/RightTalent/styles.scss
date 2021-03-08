@@ -1,0 +1,21 @@
+#right-talent {
+  display: none;
+
+  padding: 90px 0;
+  background: linear-gradient(to right, #138281, #0d549f);
+  opacity: .9;
+
+  p {
+    @include middleContent;
+    @include setFont(36px, bold, 1.39, white);
+    text-align: center;
+
+    @include customBreakPointPcDown($--tablet) {
+      max-width: 450px;
+    }
+  }
+
+  @include laptop {
+    display: block;
+  }
+}

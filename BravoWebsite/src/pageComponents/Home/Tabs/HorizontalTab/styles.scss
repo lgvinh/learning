@@ -1,0 +1,190 @@
+#horizontal-tab {
+  background: $--main-gradient-color;
+  position: relative;
+  .carousel {
+    &--wrapper {
+      display: none;
+      justify-content: center;
+      position: absolute;
+      bottom: 40px;
+      left: 50%;
+      transform: translateX(-50%);
+    }
+    &__item {
+      width: 8px;
+      height: 8px;
+      opacity: 0.5;
+      background-color: #ffffff;
+      transition: 0.5s all;
+      border-radius: 50%;
+      margin: 0 4px;
+      outline: none;
+      border: none;
+      &.active {
+        opacity: 1;
+      }
+    }
+    &-button {
+      width: 100%;
+      background-color: white;
+      &__wrapper {
+        display: flex;
+        max-width: 1140px;
+        width: 100%;
+        margin: 0 auto;
+        padding: 0 15px;
+        .tab-content--button {
+          padding: 40px;
+          max-width: 270px;
+          width: 100%;
+          min-height: 103px;
+          justify-content: center;
+          position: relative;
+          border: none;
+          background-color: transparent;
+          &-active {
+            background-color: white;
+            &::after {
+              opacity: 1 !important;
+              bottom: -11px !important;
+            }
+          }
+          &::after {
+            content: "";
+            position: absolute;
+            bottom: -5px;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 0;
+            height: 0;
+            border-top: 11px solid white;
+            border-left: 15px solid transparent;
+            border-right: 15px solid transparent;
+            opacity: 0;
+            transition: 0.4s ease-out;
+            z-index: 2;
+            pointer-events: none;
+          }
+        }
+      }
+      @include customBreakPointPcDown($--tablet) {
+        display: none;
+      }
+    }
+    &-dots {
+      bottom: 40px;
+      opacity: 0;
+      >li {
+        width: 8px;
+        height: 8px;
+        margin: 0 4px;
+        >button {
+          width: inherit;
+          height: inherit;
+          border-radius: 50%;
+        }
+      }
+      @include customBreakPointPcDown($--tablet) {
+        opacity: 1;
+      }
+    }
+    @include customBreakPointPcDown($--tablet) {
+      &--wrapper {
+        display: flex;
+      }
+    }
+  }
+
+  .tab-content__logo--wrapper {
+    display: none;
+    .tab-content__logo--image {
+      border: 1px solid white;
+      border-radius: 31.5px;
+      text-align: center;
+      padding: 20px 25px;
+      max-width: 350px;
+      width: 100%;
+      margin: 0 auto;
+      display: flex;
+      justify-content: center;
+      img {
+        display: block;
+        width: 100%;
+        max-width: 200px;
+      }
+    }
+  }
+
+  .tab {
+    &-content {
+      @include middleContent;
+      padding: 50px 15px;
+      &--bg {
+        background-size: 100% 100%;
+        background-repeat: no-repeat;
+        min-height: 500px;
+        &-growth {
+          background-image: url("/images/bg-growth.webp");
+        }
+        &-talent {
+          background-image: url("/images/bg-talents.webp");
+        }
+        &-survey {
+          background-image: url("/images/bg-survey.webp");
+        }
+        &-insight {
+          background-image: url("/images/bg-insight.webp");
+        }
+        @include customBreakPointPcDown($--tablet) {
+          background-image: none;
+          padding-bottom: 100px;
+          min-height: 803px;
+        }
+      }
+      &-right {
+        padding-top: 75px;
+        padding-left: 50px;
+        &__title {
+          @include setFont(36px, bold, 1.17, white);
+          margin-bottom: 15px;
+          max-width: 358px;
+          width: 100%;
+        }
+        &__description {
+          @include setFont(18px, 300, 1.6, white);
+          max-width: 400px;
+          width: 100%;
+          opacity: 0.8;
+          margin-bottom: 20px;
+        }
+      }
+    }
+    @include customBreakPointPcDown($--tablet) {
+      &-content {
+        padding-bottom: 0;
+        &__logo--wrapper {
+          display: block;
+        }
+        &-left {
+          flex: 0 0 100%;
+          margin: 20px auto 0;
+          display: block;
+          text-align: center;
+          max-width: 425px;
+          width: 100%;
+        }
+        &-right {
+          flex: 0 0 100%;
+          padding: 25px 0 0;
+          max-width: 425px;
+          width: 100%;
+          margin: 0 auto;
+          &__title,
+          &__description {
+            max-width: initial;
+          }
+        }
+      }
+    }
+  }  
+}

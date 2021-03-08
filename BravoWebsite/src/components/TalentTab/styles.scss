@@ -1,0 +1,146 @@
+.talent-tab {
+  &__title {
+    @include setFont(42px, bold, 1.43, white);
+    padding-bottom: 15px;
+    text-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+
+    @include customBreakPointPcDown($--tablet) {
+      @include setFont(30px, bold, 1.33, white);
+    }
+  }
+
+  &__title-container{
+    margin-bottom: 15px;
+  }
+
+  &__content-container {
+    @include middleContent;
+    color: white;
+    word-spacing: 1px;
+    padding: 120px 15px 130px 15px !important;
+
+    @include customBreakPointPcDown($--tablet) {
+      padding: 190px 15px 120px 15px !important;
+    }
+
+  }
+
+  &__content-surveys{
+    @include setFont(18px, 300, 1.56, white);
+    max-width: 565px;
+  }
+
+  &__content-talents {
+    @include setFont(18px, 300, 1.56, white);
+    max-width: 762px;
+  }
+
+  &__tab {
+    display: flex;
+    justify-content: center;
+
+    @include customBreakPointPcDown($--tablet) {
+      display: none;
+    }
+  }
+
+  &__tab-title {
+    @include setFont(18px, 600, 1.56);
+    font-size: 18px !important;
+    padding: 17px 25px 13px !important;
+    background-color: #fff;
+    opacity: 0.8;
+
+    &:nth-of-type(1){
+      margin-left: 0;
+    }
+  }
+
+  @include laptop {
+    &__content-container {
+      padding-left: 0;
+      padding-right: 0;
+    }
+  }
+
+  .thin{
+    @include setFont(42px, 300, 1.43, white);
+  }
+}
+
+.dropdown {
+  &--mobile {
+    display: none;
+    margin: auto;
+
+    @include customBreakPointPcDown($--tablet) {
+      display: flex;
+      width: 50%;
+    }
+
+    @include customBreakPointPcDown(576px) {
+      display: flex;
+      width: 70%;
+    }
+
+    @include customBreakPointPcDown(480px) {
+      display: flex;
+      width: 90%;
+    }
+
+    .tab {
+      &-title {
+        @include setFont(18px, 600, 1.56);
+        padding: 10px;
+        background-color: white;
+
+        &:focus > span {
+          color: $--cyan-text;
+        }
+      }
+
+      &-selected-menu {
+        background-color: $--cyan-text;
+        padding: 5px 10px;
+        border-radius: 2px;
+        border: 0.5px solid $--cyan-text;
+
+        &:focus > span{
+          color: $--cyan-text;
+        }
+        &:focus {
+          background-color: white !important;
+        }
+      }
+
+      &-selected-menu-text {
+        @include setFont(18px, 600, 1.56, white)
+      }
+    }
+
+    .menu-container {
+      padding: 10px 15px;
+      background-color: white;
+    }
+  }
+
+  &--solution-mobile {
+    width: 100%;
+    border: solid 1px $--cyan-text;
+    border-radius: 8px;
+    padding: 10px 20px;
+    margin-top: 20px;
+    @include setFont(18px, 600, 1.56);
+    outline: none;
+  }
+
+  &--selected-solution-mobile {
+    display: flex;
+    justify-content: space-between;
+
+    span {
+      color: $--cyan-text;
+      padding-top: 5px;
+    }
+  }
+}

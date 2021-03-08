@@ -1,0 +1,17 @@
+const EMAIL_PATTERN = /^([a-zA-Z0-9.]{4,})@([a-zA-Z0-9]{4,}).([\w]+)((.([\w]+))*)$/;
+
+const TEXT_WITH_SPACE_PATTERN_MAX_30 = /^[\w\s,'.?!()]{4,30}$/;
+
+const TEXT_WITH_SPACE_PATTERN_MAX_70 = /^[\w\s,'.?!()]{4,70}$/;
+
+const TEXT_WITH_SPACE_PATTERN_MAX_16 = /^[\w\s,'.?!()]{4,16}$/;
+
+const TEXT_WITH_SPACE_AND_SPECIAL_CHAR_PATTERN_MAX_400 = /^[\w\s!:/,.?()]{4,400}$/;
+
+export {
+  EMAIL_PATTERN,
+  TEXT_WITH_SPACE_PATTERN_MAX_30,
+  TEXT_WITH_SPACE_PATTERN_MAX_16,
+  TEXT_WITH_SPACE_PATTERN_MAX_70,
+  TEXT_WITH_SPACE_AND_SPECIAL_CHAR_PATTERN_MAX_400
+};

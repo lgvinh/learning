@@ -1,0 +1,72 @@
+.engage {
+  &__how-we-work {
+    .talent-content--image {
+      margin-top: 40px;
+    }
+
+    &__item-1 {
+      padding-top: 50px;
+      padding-bottom: 0;
+
+      .talent-content--image {
+        margin-top: 50px;
+      }
+    }
+  }
+
+  &__info {
+    text-align: left;
+
+    &-heading {
+      @include setFont(2.125em, bold, 1.39, $--cyan-text);
+      margin-bottom: 10px;
+    }
+
+    &-content {
+      @include setFont(1em, 300, 1.63, $--gray-text);
+    }
+  }
+
+  @include laptop {
+    &__how-we-work {
+      &__item-1 {
+        padding: 54px 0 0;
+
+        .talent-content--text.talent-content--horizontalize {
+          .engage__info {
+            &-heading {
+              max-width: 516px;
+            }
+          }
+        }
+      }
+
+      &__item-2 {
+        .talent-content--text.talent-content--horizontalize {
+          margin-left: 62px;
+        }
+      }
+    }
+
+    &__info {
+      &-heading {
+        font-size: 2.25em;
+        margin-bottom: 15px;
+        max-width: 555px;
+      }
+
+      &-content {
+        max-width: 555px;
+      }
+    }
+  }
+
+  @include desktop {
+    &__how-we-work {
+      &__item-2 {
+        padding-left: 0;
+        padding-right: 0;
+      }
+    }
+  }
+}

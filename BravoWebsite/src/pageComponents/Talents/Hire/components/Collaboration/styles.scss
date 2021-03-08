@@ -1,0 +1,14 @@
+#collaboration {
+  @import "./components/Communication/styles.scss";
+  @import "./components/WorkTablet/styles.scss";
+  @import "./components/HiringTeam/styles.scss";
+  @import "./components/RightTalent/styles.scss";
+}
+
+.collaboration {
+  &--footer {
+    .footer-information__section-wrapper {
+      background-color: white;
+    }
+  }
+}

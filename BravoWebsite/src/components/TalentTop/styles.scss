@@ -1,0 +1,186 @@
+.top {
+  position: relative;
+
+  @include customBreakPointPcDown($--tablet) {
+    background-color:#fcfcfc;
+    padding: 10px 0;
+    min-height: unset;
+  }
+
+  &-container {
+    display: none;
+    max-width: 600px;
+    margin: auto;
+
+    @include customBreakPointPcDown($--tablet) {
+      display: flex;
+      justify-content: space-evenly;
+    }
+  }
+
+  &-container-desktop {
+    background-color:#fbfbfb;
+    opacity: 0.8;
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    bottom: -50px;
+    min-height: 50px;
+    width: 100%;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0 auto;
+    z-index: 2;
+
+    > a {
+      flex: 1;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      max-width: 195px;
+
+      &:last-child {
+        max-width: 170px;
+      }
+    }
+
+    @include customBreakPointPcDown($--tablet) {
+      display: none;
+    }
+
+    .bravo-title-desktop {
+      @include setFont(1em, 600, 1.25, #4d4d4d);
+      padding-left: 25px;
+      min-height: inherit;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      padding-top: 3px;
+      opacity: 0.8;
+    }
+  }
+
+  .menu-container {
+    background-color: white;
+  }
+
+  &-selected-item {
+    padding: 0 5px;
+    border-radius: 2px;
+    border: 0.5px solid $--cyan-text;
+
+    span {
+      color: $--cyan-text !important;
+    }
+    &:focus {
+      background-color: white !important;
+    }
+  }
+
+  .menu-item {
+    background-color: white;
+
+    &:focus {
+      background-color: $--cyan-text;
+    }
+
+    &:focus > span {
+      color: white;
+    }
+  }
+
+  &-selected-item-text {
+    @include setFont(14px, 500, 1.43, white);
+
+    &:focus {
+      color: $--cyan-text;
+      background-color: transparent;
+    }
+  }
+
+  &-selected-item-desktop {
+    background-color: rgba(112, 112, 112, 0.1);
+  }
+
+  &-item-desktop {
+    @include setFont(1em, 500, 1.25,  #4d4d4d);
+    padding-top: 3px;
+    min-height: inherit;
+    text-align: center;
+    opacity: 0.8;
+    &:hover {
+      color: #4d4d4d;
+    }
+  }
+
+
+  &-item-text {
+    @include setFont(14px, 500, 1.43, $--gray-text);
+  }
+
+  &-icon-arrow {
+    border: solid $--cyan-text;
+    border-width: 0 2px 2px 0;
+    display: inline-block;
+    padding: 3px;
+    transform: rotate(45deg);
+    -webkit-transform: rotate(45deg);
+    margin: 4px 10px 2px;
+    opacity: 0.8;
+  }
+  
+  .bravo-title {
+    @include setFont(14px, 600, 1.43);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    margin-left: 130px;
+
+    @include customBreakPointPcDown($--tablet){
+      margin: 0;
+    }
+  }
+
+  .dropdown {
+    &--solution {
+      @include setFont(14px, 500, 1.43);
+      background-color: #f1f1f1;
+      padding: 5px 10px;
+      border-radius: 5px;
+      margin-left: 85px;
+
+      &:focus {
+        outline: 0;
+      }
+
+      @include customBreakPointPcDown($--tablet){
+        margin-left: 0;
+      }
+    }
+  }
+
+  .solution {
+    @include setFont(14px, 500, 1.43);
+    margin-right: 5px;
+    opacity: 0.8;
+  }
+
+  .hide {
+    @include customBreakPointPcDown($--tablet){
+      display: none;
+    }
+  }
+
+  .selected-solution {
+    @include setFont(14px, 500, 1.43, $--cyan-text);
+    opacity: .8;
+    margin-left: 5px;
+  }
+
+  .menu-container {
+    padding: 10px 15px;
+    width: 140px;
+  }
+}

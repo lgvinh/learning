@@ -1,0 +1,54 @@
+#candidate-profiles {
+  .communication--candidate {
+    border-bottom: 1px solid #dddddd;
+  }
+  .communication-team {
+    &--content {
+      margin-top: 20px;
+    }
+  }
+  .talent-list {
+    &--content {
+      @include customBreakPointPcDown($--tablet) {
+        max-width: 450px;
+        text-align: left;
+      }
+    }
+    &--images {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      img {
+        margin-left: 66px;
+        &:first-of-type {
+          margin: 0;
+          height: 378px;
+        }
+      }
+      @include customBreakPointPcDown(1200px) {
+        img {
+          width: 300px;
+          &:first-of-type {
+            width: 350px;
+            height: 250px;
+          }
+        }
+      }
+      @include customBreakPointPcDown($--tablet) {
+        margin-top: -20px;
+        img {
+          display: none;
+          &:first-of-type {
+            display: block;
+            margin: 0 auto;
+          }
+        }
+      }
+    }
+  }
+  @include customBreakPointPcDown($--tablet) {
+    .communication--candidate {
+      border-bottom: unset;
+    }
+  }
+}

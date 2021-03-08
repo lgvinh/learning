@@ -1,0 +1,31 @@
+/* reset */
+* {
+  box-sizing: border-box;
+}
+
+html {
+  background-color: #fff !important;
+}
+
+html, body {
+  height: 100%;
+}
+
+body,
+p,
+a,
+ul,
+li {
+  margin: 0;
+  padding: 0;
+  text-decoration: none;
+}
+
+li {
+  list-style-type: none;
+}
+
+body {
+  font-family: 'Hind', sans-serif !important;
+  font-size: 16px !important;
+}

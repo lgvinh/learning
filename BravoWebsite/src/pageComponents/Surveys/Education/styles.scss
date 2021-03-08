@@ -1,0 +1,111 @@
+.surveys-education{
+  width: 100%;
+  padding-top: 80px;
+
+  @include customBreakPointPcDown(880px){
+    padding-top: 96px;
+  }
+
+  .background {
+    background-image: url('/images/surveys/education/education-bg-desktop.png');
+    background-size: cover;
+    background-position: bottom;
+    background-repeat: no-repeat;
+    padding: 30px 0 35px;
+
+    @include customBreakPointPcDown($--tablet){
+      background-image: url('/images/surveys/education/education-bg-mobile.png');
+     }
+  } 
+
+  .talent-tab__content{
+    max-width: 570px;
+  }
+
+  .intro {
+    @include middleContent;
+    padding: 70px 15px 50px;
+  
+    @include customBreakPointPcDown(576px){
+      padding: 50px 15px 0;
+      width: 100%;
+    }
+  
+    &__title {
+      @include setFont(14px, 600, 1.57, $--cyan-text);
+      text-align: center;
+      opacity: 0.7;
+    }
+  
+    &__content{
+      @include setFont(43px, bold, 1.43, $--content-gray);
+      text-align: center;
+      padding-top: 15px;
+      width: 60%;
+      margin: auto;
+      font-stretch: normal;
+      font-style: normal;
+  
+      @include customBreakPointPcDown($--tablet){
+        @include setFont(30px, bold, 1.33, $--content-gray);
+        margin: unset;
+        width: 100%;
+      }
+    }
+  }
+
+  .education-item{
+    &__title{
+      @include setFont(36px, bold, 1.38, $--cyan-text);
+      padding: 0 50px 15px 50px;
+      text-align: left;
+      
+      @include customBreakPointPcDown($--tablet){
+        padding: 0;
+      }
+    }
+  
+    &__content {
+      @include setFont(16px, 300, 24px, $--gray-text, $font-hind);
+      white-space: pre-line;
+      overflow: hidden;
+      word-spacing: 0.7px;
+      padding: 0 50px 0 50px;
+
+      @include customBreakPointPcDown($--tablet){
+        padding: 0;
+      }
+    }
+
+    &__quote{
+      @include setFont(15px, 600, 24px, $--gray-text, $font-hind);
+      white-space: pre-line;
+      overflow: hidden;
+      word-spacing: 0.7px;
+      padding-right: 10px;
+    }
+  
+    .talent-content--text{
+      flex-basis: 50%;
+    }
+  
+    .talent-content--image{
+      flex-basis: 50%;
+    }
+  }
+  
+  .recruitment__content{
+    &__wrapper{
+      max-width: 100%;
+    }
+
+    &__upper__text{
+      @include setFont(36px, normal, 1.39, $--cyan-text);
+
+      @include customBreakPointPcDown($--tablet){
+        @include setFont(19px, normal, 1.58, $--cyan-text);
+        margin-top: 8px;
+      }
+    }
+  }
+}

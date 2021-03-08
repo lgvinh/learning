@@ -1,0 +1,94 @@
+.workforce {
+  &__wrapper {
+    width: 100%;
+    box-shadow: 0 2px 8px 0 rgba(0, 0, 0, 0.2);
+    height: 343px;
+    background-image: url("/images/talents/solution/workforce.png");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position-x: 77%;
+    height: 407px;
+    display: flex;
+    align-items: center;
+  }
+
+  &__content {
+    text-align: center;
+    background-color: #20B4B3;
+    color: #fff;
+    width: 555px;
+    height: 207px;
+    padding: 70px 43px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+
+    &__wrapper {
+      @include middleContent;
+      @include customBreakPointPcDown($--tablet) {
+        padding: 0;
+        height: 100%;
+      }
+    }
+
+    &-heading {
+      @include setFont(2.25em, bold, 1.39, #fff);
+      margin-bottom: 5px;
+    }
+
+    &-text {
+      @include setFont(1em, 300, 1.63, #fff);
+    }
+  }
+
+  @include customBreakPointPcDown($--small-phone) {
+    &__content {
+      padding: 60px 20px;
+    }
+  }
+
+  @include tablet {
+    &__wrapper {
+      background-position-x: 100%;
+    }
+
+    &-heading {
+      @include setFont(2.25em, bold, 1.39, #fff);
+    }
+  }
+
+  @include laptop {
+    &__content {
+      &-text {
+        max-width: 450px;
+      }
+    }
+  }
+
+  @include desktop {
+    &__wrapper {
+      height: 407px;
+      display: flex;
+      align-items: center;
+    }
+
+    &__content {
+      margin: 0;
+      width: 555px;
+      height: 207px;
+      padding: 50px;
+      background-color: #20b4b3;
+      opacity: 1;
+      border-radius: 8px;
+    }
+  }
+
+  @include customBreakPointPcDown($--tablet) {
+    &__content {
+      width: 100%;
+      height: 100%;
+      opacity: 0.9;
+    }
+  }
+}

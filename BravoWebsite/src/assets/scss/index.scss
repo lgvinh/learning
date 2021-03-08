@@ -1,0 +1,34 @@
+// reset
+@import '_default.scss';
+
+// variables
+@import '_variables.scss';
+@import '_mixins.scss';
+@import '_common.scss';
+
+// components
+@import '../../components/Footer/Copyright/styles.scss';
+@import '../../components/Footer/Information/styles.scss';
+@import '../../components/Footer/GetInTouch/styles.scss';
+@import '../../components/TalentTop/styles.scss';
+@import '../../components/TalentsRecruitment/styles.scss';
+@import '../../components/TalentContent/styles.scss';
+@import '../../components/TalentTab/styles.scss';
+@import '../../components/SurveysTip/styles.scss';
+
+// pages
+@import '../../pageComponents/Talents/Jobs/styles.scss';
+@import '../../pageComponents/Home/styles.scss';
+@import '../../pageComponents/Talents/Solution/styles.scss';
+@import "../../pageComponents/Talents/Hire/styles.scss";
+@import '../../pageComponents/Talents/Engage/styles.scss';
+@import '../../pageComponents/ContactUs/styles.scss';
+@import "../../pageComponents/Pricing/styles.scss";
+@import "../../pageComponents/Privacy/styles.scss";
+@import "../../pageComponents/Surveys/CustomerExperience/styles.scss";
+@import "../../pageComponents/Surveys/Education/styles.scss";
+@import "../../pageComponents/Surveys/HumanResources/styles.scss";
+@import "../../pageComponents/Surveys/Home/styles.scss";
+@import "../../pageComponents/Growth/styles.scss";
+@import "../../pageComponents/Terms/styles.scss";
+@import "../../pageComponents/Surveys/MarketResearch/styles.scss";
